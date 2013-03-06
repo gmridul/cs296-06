@@ -1,4 +1,4 @@
-/home/sagar/cs296-06/myobjs/main.o: /home/sagar/cs296-06/src/main.cpp \
+/home/sudipto/cs296-06/myobjs/main.o: /home/sudipto/cs296-06/src/main.cpp \
  /usr/include/c++/4.6/iostream \
  /usr/include/c++/4.6/i686-linux-gnu/./bits/c++config.h \
  /usr/include/c++/4.6/i686-linux-gnu/./bits/os_defines.h \
@@ -80,9 +80,9 @@
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
  /usr/include/i386-linux-gnu/bits/select2.h \
- /home/sagar/cs296-06/src/render.hpp \
- /home/sagar/cs296-06/external/include/Box2D/Box2D.h \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2Settings.h \
+ /home/sudipto/cs296-06/src/render.hpp \
+ /home/sudipto/cs296-06/external/include/Box2D/Box2D.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2Settings.h \
  /usr/include/c++/4.6/cassert /usr/include/assert.h \
  /usr/include/c++/4.6/cmath /usr/include/math.h \
  /usr/include/i386-linux-gnu/bits/huge_val.h \
@@ -93,16 +93,16 @@
  /usr/include/i386-linux-gnu/bits/mathdef.h \
  /usr/include/i386-linux-gnu/bits/mathcalls.h \
  /usr/include/i386-linux-gnu/bits/mathinline.h \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2Draw.h \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2Math.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2Draw.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2Math.h \
  /usr/include/c++/4.6/cfloat \
  /usr/lib/gcc/i686-linux-gnu/4.6/include/float.h \
  /usr/include/c++/4.6/cstddef /usr/include/c++/4.6/limits \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2Timer.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/Shapes/b2CircleShape.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/Shapes/b2Shape.h \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2BlockAllocator.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/b2Collision.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2Timer.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/Shapes/b2CircleShape.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/Shapes/b2Shape.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2BlockAllocator.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/b2Collision.h \
  /usr/include/c++/4.6/climits \
  /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h \
  /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h \
@@ -111,12 +111,12 @@
  /usr/include/i386-linux-gnu/bits/posix2_lim.h \
  /usr/include/i386-linux-gnu/bits/xopen_lim.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/Shapes/b2EdgeShape.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/Shapes/b2ChainShape.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/Shapes/b2PolygonShape.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/b2BroadPhase.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/b2DynamicTree.h \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2GrowableStack.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/Shapes/b2EdgeShape.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/Shapes/b2ChainShape.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/Shapes/b2PolygonShape.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/b2BroadPhase.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/b2DynamicTree.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2GrowableStack.h \
  /usr/include/c++/4.6/cstring /usr/include/string.h \
  /usr/include/i386-linux-gnu/bits/string3.h \
  /usr/include/c++/4.6/algorithm /usr/include/c++/4.6/utility \
@@ -131,33 +131,33 @@
  /usr/include/c++/4.6/bits/stl_heap.h \
  /usr/include/c++/4.6/bits/stl_tempbuf.h \
  /usr/include/c++/4.6/bits/stl_construct.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/b2Distance.h \
- /home/sagar/cs296-06/external/include/Box2D/Collision/b2TimeOfImpact.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/b2Body.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/b2Distance.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Collision/b2TimeOfImpact.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/b2Body.h \
  /usr/include/c++/4.6/memory \
  /usr/include/c++/4.6/bits/stl_uninitialized.h \
  /usr/include/c++/4.6/bits/stl_raw_storage_iter.h \
  /usr/include/c++/4.6/backward/auto_ptr.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/b2Fixture.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/b2WorldCallbacks.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/b2TimeStep.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/b2World.h \
- /home/sagar/cs296-06/external/include/Box2D/Common/b2StackAllocator.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/b2ContactManager.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Contacts/b2Contact.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2DistanceJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2Joint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2FrictionJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2GearJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2WheelJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2MouseJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2PulleyJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
- /home/sagar/cs296-06/external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
- /home/sagar/cs296-06/src/cs296_base.hpp \
- /home/sagar/cs296-06/src/callbacks.hpp /usr/include/GL/glui.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/b2Fixture.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/b2WorldCallbacks.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/b2TimeStep.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/b2World.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Common/b2StackAllocator.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/b2ContactManager.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Contacts/b2Contact.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2DistanceJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2Joint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2FrictionJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2GearJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2WheelJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2MouseJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
+ /home/sudipto/cs296-06/external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
+ /home/sudipto/cs296-06/src/cs296_base.hpp \
+ /home/sudipto/cs296-06/src/callbacks.hpp /usr/include/GL/glui.h \
  /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
  /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
