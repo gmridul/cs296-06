@@ -1,15 +1,18 @@
-#take the novel name as input
-print("Enter the name of the novel")
-fileName=input()
+def readInput():
+    #take the novel name as input
+    print("Enter the name of the novel")
+    fileName=input()
 
-#open the file
-file=open(fileName)
+    #open the file
+    file=open(fileName)
 
-#read the whole file into a string str
-str=file.read()
-#and replace all newline characters by spaces
-str=str.replace ("\n",' ')
+    #read the whole file into a string str
+    str=file.read()
+    #and replace all newline characters by spaces
+    str=str.replace ("\n",' ')
+    return str
 
+str = readInput()
 #this creates a vector (of) words where each word is separated by a space in str
 words=str.split(' ')
 
