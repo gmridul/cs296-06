@@ -43,8 +43,12 @@ for x in characters:
 
 filtered_characters=set()
 
+special_words = ['a','an','is','are','the','this','oh','of','for','yes','no','with','not','he','she','project','in','what','his','her','there','their','where','how','why','when','which','come','go','to','it','and','','miss','mr','mrs','sir','lady','you','that','but','chapter','i']
+
 for x in freq:
     if freq[x] > 30:
+        if x in special_words:
+            continue
         filtered_characters.add(x)
 
 freq1={}
@@ -62,4 +66,3 @@ for x in words:
         freq1[pick]=freq1[pick]+1
 
 print(freq1)
-
