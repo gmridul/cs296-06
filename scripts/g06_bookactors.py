@@ -22,8 +22,8 @@ for x in cl:
     else:
     	d[x]='Undetermined'
 
-for x in cl:
-    print('%s : %i : %s'%(x,cl[x],d[x]))
+for x in sorted(cl):
+    print('%s - %i - %s'%(x,cl[x],d[x]))
 print('\n')
 hero=''
 heroine=''
