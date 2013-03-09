@@ -8,10 +8,6 @@ while True:
     if "Author:" in line:
         print (line,end='')
         break;
+
+
 file.close()
-
-
-
-
-
-
