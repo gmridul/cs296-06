@@ -180,4 +180,5 @@ for x in sorted(freq1):
                 if fullNames[y] > maxLen:
                     maxLen=fullNames[y]
                     title=y[1]
+        #print([x+' '+title,freq1[x]])
         print(x[0].upper()+x[1:],title[0].upper()+title[1:],'-',freq1[x])
