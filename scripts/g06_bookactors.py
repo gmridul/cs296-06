@@ -4,6 +4,7 @@ from give_characters import giveCharacters
 vec=giveCharacters()
 cl = vec[1]
 str1 = vec[0]
+
 d = {}
 temp=[]
 str2=''
@@ -30,7 +31,8 @@ vil=''
 freqhm=0
 freqhf=0
 freqvil=0
-
+mf=0
+ff=0
 for x in d:
     d[x]=(cl[x],d[x])
 #d[x] = (frequency of x, gender of x)

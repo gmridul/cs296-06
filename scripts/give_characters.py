@@ -183,5 +183,5 @@ def giveCharacters():
                         maxLen=fullNames[y]
                         title=y[1]
             result[x[0].upper()+x[1:]+' '+title[0].upper()+title[1:]]=freq1[x]
-    return [str,result]
+    return [str,result,fileName]
 
