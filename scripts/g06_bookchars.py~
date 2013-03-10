@@ -1,3 +1,0 @@
-print("Enter the name of the novel")
-fileName=input()
-file=open(fileName)
