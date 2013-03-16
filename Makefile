@@ -64,6 +64,7 @@ SRCS := $(wildcard $(SRCDIR)/*.cpp)
 INCS := $(wildcard $(SRCDIR)/*.hpp)
 MYOBJS := $(SRCS:$(SRCDIR)/%.cpp=$(MYOBJDIRS)/%.o)
 MAINOBJS := $(filter-out $(MYOBJDIRS)/main.o,$(MYOBJS))
+BOX2D = "Box2D"
 
 .PHONY: exe exelib doc report clean plot01 plot02 debug_prof release_prof
 
@@ -132,16 +133,31 @@ doc:
 	@$(DOXYGEN) $(DOCDIR)/Doxyfile 2 > /dev/null
 	@$(ECHO) "Done"
 
-report:
-	@cd doc; \
-	latex report_cs296_06; \
-	bibtex report_cs296_06; \
-	latex report_cs296_06; \
-	latex report_cs296_06; \
-	dvipdf report_cs296_06.dvi report_cs296_06.pdf; \
-	latex g06_report.tex; \
-	dvipdf g06_report.dvi g06_report.pdf; \
-	rm *.dvi *.log *.aux *.bbl *.blg
+report: setup
+	@cd external/src/; \
+	if [ ! -d Box2D ]; then \
+		tar zxvf Box2D.tgz -k; \
+		cd Box2D; \
+		mkdir -p build296; \
+		cd build296/; \
+		rm -r *; \
+		cmake -DCMAKE_BUILD_TYPE=Release ../; \
+		make install; \
+		make; \
+	fi
+	@make exe_release
+	@cd scripts; \
+	python3 g06_gen_csv.py; \
+	python3 g06_gen_plots.py
+# @cd doc; \
+# latex report_cs296_06; \
+# bibtex report_cs296_06; \
+# latex report_cs296_06; \
+# latex report_cs296_06; \
+# dvipdf report_cs296_06.dvi report_cs296_06.pdf; \
+# latex g06_report.tex; \
+# dvipdf g06_report.dvi g06_report.pdf; \
+# rm *.dvi *.log *.aux *.bbl *.blg
 
 plot02:
 	@mkdir -p data plots
