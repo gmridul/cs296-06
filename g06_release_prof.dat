@@ -1,0 +1,2571 @@
+profile for iteration no. 1000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.01     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+ 50.00      0.02     0.01                             b2ContactSolver::SolveVelocityConstraints()
+  0.00      0.02     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.02     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.02     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.02     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.02     0.00        2     0.00     0.00  _init
+  0.00      0.02     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.02     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.02     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.01     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 50.00      0.02     0.01                             b2ContactSolver::WarmStart()
+  0.00      0.02     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.02     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.02     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.02     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.02     0.00        2     0.00     0.00  _init
+  0.00      0.02     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.02     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.02     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.01     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+ 33.33      0.02     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 33.33      0.03     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.03     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.03     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.03     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.03     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.03     0.00        2     0.00     0.00  _init
+  0.00      0.03     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.03     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.03     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+100.00      0.01     0.01                             b2World::Step(float, int, int)
+  0.00      0.01     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.01     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.01     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.01     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.01     0.00        2     0.00     0.00  _init
+  0.00      0.01     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.01     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.01     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.01     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+ 33.33      0.02     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+ 33.33      0.03     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  0.00      0.03     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.03     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.03     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.03     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.03     0.00        2     0.00     0.00  _init
+  0.00      0.03     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.03     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.03     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+100.00      0.02     0.02                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  0.00      0.02     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.02     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.02     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.02     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.02     0.00        2     0.00     0.00  _init
+  0.00      0.02     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.02     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.02     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+100.00      0.02     0.02                             b2ContactSolver::SolveVelocityConstraints()
+  0.00      0.02     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.02     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.02     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.02     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.02     0.00        2     0.00     0.00  _init
+  0.00      0.02     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.02     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.02     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.01     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+ 33.33      0.02     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 33.33      0.03     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.03     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.03     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.03     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.03     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.03     0.00        2     0.00     0.00  _init
+  0.00      0.03     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.03     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.03     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.01     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 33.33      0.02     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 33.33      0.03     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  0.00      0.03     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.03     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.03     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.03     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.03     0.00        2     0.00     0.00  _init
+  0.00      0.03     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.03     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.03     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 1000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.01     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 33.33      0.02     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 33.33      0.03     0.01                             b2StackAllocator::Free(void*)
+  0.00      0.03     0.00    12173     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.03     0.00    12156     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.03     0.00       91     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.03     0.00       57     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.03     0.00        2     0.00     0.00  _init
+  0.00      0.03     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.03     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.03     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 57.14      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.05     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+ 14.29      0.06     0.01                             b2StackAllocator::Allocate(int)
+ 14.29      0.07     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.00      0.07     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.07     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.07     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.07     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.07     0.00        2     0.00     0.00  _init
+  0.00      0.07     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.07     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.07     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 20.00      0.01     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+ 20.00      0.02     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 20.00      0.03     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 20.00      0.04     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 20.00      0.05     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  0.00      0.05     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.05     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.05     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.05     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.05     0.00        2     0.00     0.00  _init
+  0.00      0.05     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.05     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.05     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 60.00      0.03     0.03                             b2ContactSolver::SolveVelocityConstraints()
+ 20.00      0.04     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 20.00      0.05     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.00      0.05     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.05     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.05     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.05     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.05     0.00        2     0.00     0.00  _init
+  0.00      0.05     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.05     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.05     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.05     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+ 12.50      0.06     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+ 12.50      0.07     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 12.50      0.08     0.01                             b2Body::SynchronizeFixtures()
+  0.00      0.08     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.08     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.08     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.08     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.08     0.00        2     0.00     0.00  _init
+  0.00      0.08     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.08     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.08     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 20.00      0.01     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+ 20.00      0.02     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+ 20.00      0.03     0.01                             b2DynamicTree::Balance(int)
+ 20.00      0.04     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+ 20.00      0.05     0.01                             b2World::Step(float, int, int)
+  0.00      0.05     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.05     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.05     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.05     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.05     0.00        2     0.00     0.00  _init
+  0.00      0.05     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.05     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.05     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.03     0.03                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.04     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 16.67      0.05     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 16.67      0.06     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.00      0.06     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.06     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.06     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.06     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.06     0.00        2     0.00     0.00  _init
+  0.00      0.06     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.06     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.06     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.01     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+ 33.33      0.02     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 33.33      0.03     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  0.00      0.03     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.03     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.03     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.03     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.03     0.00        2     0.00     0.00  _init
+  0.00      0.03     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.03     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.03     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 60.00      0.03     0.03                             b2ContactSolver::SolveVelocityConstraints()
+ 20.00      0.04     0.01                             b2Timer::Reset()
+ 20.00      0.05     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.05     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.05     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.05     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.05     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.05     0.00        2     0.00     0.00  _init
+  0.00      0.05     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.05     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.05     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 16.67      0.01     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+ 16.67      0.02     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+ 16.67      0.03     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 16.67      0.04     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.05     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+ 16.67      0.06     0.01                             b2StackAllocator::Allocate(int)
+  0.00      0.06     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.06     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.06     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.06     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.06     0.00        2     0.00     0.00  _init
+  0.00      0.06     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.06     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.06     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 2000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.02     0.02                             b2ContactManager::Collide()
+ 16.67      0.03     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+ 16.67      0.04     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 16.67      0.05     0.01                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.06     0.01                             b2Timer::Reset()
+  0.00      0.06     0.00    29738     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.06     0.00    29721     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.06     0.00      143     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.06     0.00      102     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.06     0.00        2     0.00     0.00  _init
+  0.00      0.06     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.06     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.06     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 75.00      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.07     0.01                             b2ContactSolver::WarmStart()
+ 12.50      0.08     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.08     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.08     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.08     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.08     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.08     0.00        2     0.00     0.00  _init
+  0.00      0.08     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.08     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.08     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 40.00      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 20.00      0.06     0.02                             b2ContactSolver::SolvePositionConstraints()
+ 10.00      0.07     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+ 10.00      0.08     0.01                             b2ContactManager::Collide()
+ 10.00      0.09     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+ 10.00      0.10     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.10     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.10     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.10     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.10     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.10     0.00        2     0.00     0.00  _init
+  0.00      0.10     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.10     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.10     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 62.50      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.06     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+ 12.50      0.07     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 12.50      0.08     0.01                             b2ContactManager::Collide()
+  0.00      0.08     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.08     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.08     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.08     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.08     0.00        2     0.00     0.00  _init
+  0.00      0.08     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.08     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.08     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.05     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 12.50      0.06     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+ 12.50      0.07     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 12.50      0.08     0.01                             b2ContactManager::Collide()
+  0.00      0.08     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.08     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.08     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.08     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.08     0.00        2     0.00     0.00  _init
+  0.00      0.08     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.08     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.08     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 28.57      0.02     0.02                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.03     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+ 14.29      0.04     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 14.29      0.05     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+ 14.29      0.06     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 14.29      0.07     0.01                             b2Timer::Reset()
+  0.00      0.07     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.07     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.07     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.07     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.07     0.00        2     0.00     0.00  _init
+  0.00      0.07     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.07     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.07     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.02     0.02                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.03     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 16.67      0.04     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+ 16.67      0.05     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+ 16.67      0.06     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.00      0.06     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.06     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.06     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.06     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.06     0.00        2     0.00     0.00  _init
+  0.00      0.06     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.06     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.06     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 22.22      0.02     0.02                             b2ContactSolver::SolveVelocityConstraints()
+ 11.11      0.03     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+ 11.11      0.04     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+ 11.11      0.05     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 11.11      0.06     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 11.11      0.07     0.01                             b2StackAllocator::Free(void*)
+ 11.11      0.08     0.01                             b2Body::Dump()
+ 11.11      0.09     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.09     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.09     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.09     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.09     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.09     0.00        2     0.00     0.00  _init
+  0.00      0.09     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.09     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.09     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 20.00      0.02     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+ 10.00      0.03     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+ 10.00      0.04     0.01                             b2DynamicTree::InsertLeaf(int)
+ 10.00      0.05     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+ 10.00      0.06     0.01                             b2ContactSolver::WarmStart()
+ 10.00      0.07     0.01                             b2Body::SynchronizeFixtures()
+ 10.00      0.08     0.01                             b2World::Step(float, int, int)
+ 10.00      0.09     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+ 10.00      0.10     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.10     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.10     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.10     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.10     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.10     0.00        2     0.00     0.00  _init
+  0.00      0.10     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.10     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.10     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 42.86      0.03     0.03                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.04     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+ 14.29      0.05     0.01                             b2ContactSolver::SolvePositionConstraints()
+ 14.29      0.06     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 14.29      0.07     0.01                             b2World::Step(float, int, int)
+  0.00      0.07     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.07     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.07     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.07     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.07     0.00        2     0.00     0.00  _init
+  0.00      0.07     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.07     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.07     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 3000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 36.36      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 18.18      0.06     0.02                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  9.09      0.07     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  9.09      0.08     0.01                             b2ContactSolver::SolvePositionConstraints()
+  9.09      0.09     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  9.09      0.10     0.01                             b2Contact::Update(b2ContactListener*)
+  9.09      0.11     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.00      0.11     0.00    50909     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.11     0.00    50892     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.11     0.00      160     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.11     0.00      119     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.11     0.00        2     0.00     0.00  _init
+  0.00      0.11     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.11     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.11     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 38.46      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+  7.69      0.06     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  7.69      0.07     0.01                             b2DynamicTree::InsertLeaf(int)
+  7.69      0.08     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  7.69      0.09     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  7.69      0.10     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  7.69      0.11     0.01                             b2Timer::b2Timer()
+  7.69      0.12     0.01                             b2World::Step(float, int, int)
+  7.69      0.13     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.13     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.13     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.13     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.13     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.13     0.00        2     0.00     0.00  _init
+  0.00      0.13     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.13     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.13     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 38.46      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+ 15.38      0.07     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  7.69      0.08     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  7.69      0.09     0.01                             b2ContactSolver::StoreImpulses()
+  7.69      0.10     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  7.69      0.11     0.01                             b2StackAllocator::Allocate(int)
+  7.69      0.12     0.01                             b2World::Step(float, int, int)
+  7.69      0.13     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.13     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.13     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.13     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.13     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.13     0.00        2     0.00     0.00  _init
+  0.00      0.13     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.13     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.13     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 62.50      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+  6.25      0.11     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  6.25      0.12     0.01                             b2ContactSolver::StoreImpulses()
+  6.25      0.13     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.25      0.14     0.01                             b2ContactManager::Collide()
+  6.25      0.15     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  6.25      0.16     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.16     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.16     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.16     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.16     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.16     0.00        2     0.00     0.00  _init
+  0.00      0.16     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.16     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.16     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 35.71      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+  7.14      0.06     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  7.14      0.07     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  7.14      0.08     0.01                             b2DynamicTree::InsertLeaf(int)
+  7.14      0.09     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  7.14      0.10     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  7.14      0.11     0.01                             b2ContactSolver::SolvePositionConstraints()
+  7.14      0.12     0.01                             b2Body::Dump()
+  7.14      0.13     0.01                             b2World::Step(float, int, int)
+  7.14      0.14     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.14     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.14     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.14     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.14     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.14     0.00        2     0.00     0.00  _init
+  0.00      0.14     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.14     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.14     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ns/call  ns/call  name    
+ 15.38      0.02     0.02                             b2ContactSolver::SolveVelocityConstraints()
+ 15.38      0.04     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  7.69      0.05     0.01    71888   139.11   139.11  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  7.69      0.06     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  7.69      0.07     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  7.69      0.08     0.01                             b2BroadPhase::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  7.69      0.09     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  7.69      0.10     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  7.69      0.11     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  7.69      0.12     0.01                             b2World::Step(float, int, int)
+  7.69      0.13     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.13     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.13     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.13     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.13     0.00        2     0.00     0.00  _init
+  0.00      0.13     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.13     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.13     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 41.67      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+  8.33      0.06     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  8.33      0.07     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  8.33      0.08     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  8.33      0.09     0.01                             b2RevoluteJoint::SolvePositionConstraints(b2SolverData const&)
+  8.33      0.10     0.01                             b2StackAllocator::Free(void*)
+  8.33      0.11     0.01                             b2Body::SynchronizeFixtures()
+  8.33      0.12     0.01                             b2Contact::Update(b2ContactListener*)
+  0.00      0.12     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.12     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.12     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.12     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.12     0.00        2     0.00     0.00  _init
+  0.00      0.12     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.12     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.12     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 35.71      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+  7.14      0.06     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  7.14      0.07     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  7.14      0.08     0.01                             b2ContactSolver::SolvePositionConstraints()
+  7.14      0.09     0.01                             b2ContactSolver::WarmStart()
+  7.14      0.10     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  7.14      0.11     0.01                             b2ContactManager::Collide()
+  7.14      0.12     0.01                             b2Body::Dump()
+  7.14      0.13     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  7.14      0.14     0.01                             b2Contact::Update(b2ContactListener*)
+  0.00      0.14     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.14     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.14     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.14     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.14     0.00        2     0.00     0.00  _init
+  0.00      0.14     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.14     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.14     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 44.44      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 22.22      0.06     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+ 11.11      0.07     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+ 11.11      0.08     0.01                             b2DynamicTree::InsertLeaf(int)
+ 11.11      0.09     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  0.00      0.09     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.09     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.09     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.09     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.09     0.00        2     0.00     0.00  _init
+  0.00      0.09     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.09     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.09     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ns/call  ns/call  name    
+ 23.08      0.03     0.03                             b2ContactSolver::SolveVelocityConstraints()
+ 15.38      0.05     0.02                             b2World::Step(float, int, int)
+ 15.38      0.07     0.02                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  7.69      0.08     0.01    71905   139.07   139.07  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  7.69      0.09     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  7.69      0.10     0.01                             b2ContactSolver::SolvePositionConstraints()
+  7.69      0.11     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  7.69      0.12     0.01                             b2Body::SynchronizeFixtures()
+  7.69      0.13     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.13     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.13     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.13     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.13     0.00        2     0.00     0.00  _init
+  0.00      0.13     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.13     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.13     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 4000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 42.86      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+  7.14      0.07     0.01                             b2DynamicTree::InsertLeaf(int)
+  7.14      0.08     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  7.14      0.09     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  7.14      0.10     0.01                             b2StackAllocator::Free(void*)
+  7.14      0.11     0.01                             b2Timer::Reset()
+  7.14      0.12     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  7.14      0.13     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  7.14      0.14     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.14     0.00    71905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.14     0.00    71888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.14     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.14     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.14     0.00        2     0.00     0.00  _init
+  0.00      0.14     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.14     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.14     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 63.16      0.12     0.12                             b2ContactSolver::SolveVelocityConstraints()
+ 10.53      0.14     0.02                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  5.26      0.15     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  5.26      0.16     0.01                             b2ContactSolver::SolvePositionConstraints()
+  5.26      0.17     0.01                             b2ContactManager::Collide()
+  5.26      0.18     0.01                             b2EdgeAndCircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  5.26      0.19     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.19     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.19     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.19     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.19     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.19     0.00        2     0.00     0.00  _init
+  0.00      0.19     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.19     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.19     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 31.25      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+  6.25      0.06     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  6.25      0.07     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  6.25      0.08     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.25      0.09     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  6.25      0.10     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  6.25      0.11     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  6.25      0.12     0.01                             b2StackAllocator::Allocate(int)
+  6.25      0.13     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.25      0.14     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  6.25      0.15     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  6.25      0.16     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.16     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.16     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.16     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.16     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.16     0.00        2     0.00     0.00  _init
+  0.00      0.16     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.16     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.16     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 38.46      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+ 23.08      0.08     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  7.69      0.09     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  7.69      0.10     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  7.69      0.11     0.01                             b2ContactSolver::SolvePositionConstraints()
+  7.69      0.12     0.01                             b2PolygonAndCircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  7.69      0.13     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.13     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.13     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.13     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.13     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.13     0.00        2     0.00     0.00  _init
+  0.00      0.13     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.13     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.13     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 60.00      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+  6.67      0.10     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.67      0.11     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.67      0.12     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  6.67      0.13     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  6.67      0.14     0.01                             b2ContactManager::Collide()
+  6.67      0.15     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.00      0.15     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.15     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.15     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.15     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.15     0.00        2     0.00     0.00  _init
+  0.00      0.15     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.15     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.15     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 29.41      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+ 11.76      0.07     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+ 11.76      0.09     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  5.88      0.10     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  5.88      0.11     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  5.88      0.12     0.01                             b2ContactManager::Collide()
+  5.88      0.13     0.01                             b2StackAllocator::Allocate(int)
+  5.88      0.14     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  5.88      0.15     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  5.88      0.16     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  5.88      0.17     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.17     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.17     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.17     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.17     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.17     0.00        2     0.00     0.00  _init
+  0.00      0.17     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.17     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.17     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 53.33      0.08     0.08                             b2ContactSolver::SolveVelocityConstraints()
+ 13.33      0.10     0.02                             b2ContactSolver::WarmStart()
+  6.67      0.11     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.67      0.12     0.01                             b2ContactManager::AddPair(void*, void*)
+  6.67      0.13     0.01                             b2StackAllocator::Allocate(int)
+  6.67      0.14     0.01                             b2PolygonAndCircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  6.67      0.15     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.15     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.15     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.15     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.15     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.15     0.00        2     0.00     0.00  _init
+  0.00      0.15     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.15     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.15     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.07     0.07                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.09     0.02                             b2ContactSolver::SolvePositionConstraints()
+ 14.29      0.11     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  7.14      0.12     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  7.14      0.13     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  7.14      0.14     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.14     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.14     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.14     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.14     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.14     0.00        2     0.00     0.00  _init
+  0.00      0.14     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.14     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.14     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 27.78      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.08     0.03                             b2ContactSolver::SolvePositionConstraints()
+ 11.11      0.10     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  5.56      0.11     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  5.56      0.12     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  5.56      0.13     0.01                             b2DynamicTree::InsertLeaf(int)
+  5.56      0.14     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  5.56      0.15     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  5.56      0.16     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  5.56      0.17     0.01                             b2Timer::b2Timer()
+  5.56      0.18     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.18     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.18     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.18     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.18     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.18     0.00        2     0.00     0.00  _init
+  0.00      0.18     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.18     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.18     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 46.67      0.07     0.07                             b2ContactSolver::SolveVelocityConstraints()
+  6.67      0.08     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  6.67      0.09     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.67      0.10     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.67      0.11     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  6.67      0.12     0.01                             b2ContactManager::Collide()
+  6.67      0.13     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.67      0.14     0.01                             b2Contact::Update(b2ContactListener*)
+  6.67      0.15     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.15     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.15     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.15     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.15     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.15     0.00        2     0.00     0.00  _init
+  0.00      0.15     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.15     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.15     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 5000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 36.36      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 18.18      0.06     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 18.18      0.08     0.02                             b2Timer::GetMilliseconds() const
+  9.09      0.09     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  9.09      0.10     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  9.09      0.11     0.01                             b2World::Step(float, int, int)
+  0.00      0.11     0.00    92905     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.11     0.00    92888     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.11     0.00      163     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.11     0.00      122     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.11     0.00        2     0.00     0.00  _init
+  0.00      0.11     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.11     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.11     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 40.00      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+  6.67      0.07     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  6.67      0.08     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  6.67      0.09     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  6.67      0.10     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.67      0.11     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.67      0.12     0.01                             b2ContactManager::Collide()
+  6.67      0.13     0.01                             b2StackAllocator::Allocate(int)
+  6.67      0.14     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.67      0.15     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  0.00      0.15     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.15     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.15     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.15     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.15     0.00        2     0.00     0.00  _init
+  0.00      0.15     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.15     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.15     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 42.86      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.08     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  7.14      0.09     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  7.14      0.10     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  7.14      0.11     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  7.14      0.12     0.01                             b2StackAllocator::Free(void*)
+  7.14      0.13     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  7.14      0.14     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.14     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.14     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.14     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.14     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.14     0.00        2     0.00     0.00  _init
+  0.00      0.14     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.14     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.14     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 58.33      0.07     0.07                             b2ContactSolver::SolveVelocityConstraints()
+  8.33      0.08     0.01                             b2ContactSolver::WarmStart()
+  8.33      0.09     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  8.33      0.10     0.01                             b2World::Step(float, int, int)
+  8.33      0.11     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  8.33      0.12     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.12     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.12     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.12     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.12     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.12     0.00        2     0.00     0.00  _init
+  0.00      0.12     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.12     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.12     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 56.25      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.11     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.25      0.12     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.25      0.13     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  6.25      0.14     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  6.25      0.15     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  6.25      0.16     0.01                             b2ContactManager::AddPair(void*, void*)
+  0.00      0.16     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.16     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.16     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.16     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.16     0.00        2     0.00     0.00  _init
+  0.00      0.16     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.16     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.16     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 43.75      0.07     0.07                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.09     0.02                             b2StackAllocator::Allocate(int)
+  6.25      0.10     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  6.25      0.11     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.25      0.12     0.01                             b2ContactSolver::StoreImpulses()
+  6.25      0.13     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.25      0.14     0.01                             b2StackAllocator::Free(void*)
+  6.25      0.15     0.01                             b2World::Step(float, int, int)
+  6.25      0.16     0.01                             b2Contact::Update(b2ContactListener*)
+  0.00      0.16     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.16     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.16     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.16     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.16     0.00        2     0.00     0.00  _init
+  0.00      0.16     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.16     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.16     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 47.37      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 10.53      0.11     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  5.26      0.12     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  5.26      0.13     0.01                             b2ContactSolver::SolvePositionConstraints()
+  5.26      0.14     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  5.26      0.15     0.01                             b2ContactManager::Collide()
+  5.26      0.16     0.01                             b2StackAllocator::Free(void*)
+  5.26      0.17     0.01                             b2World::Step(float, int, int)
+  5.26      0.18     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  5.26      0.19     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.19     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.19     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.19     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.19     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.19     0.00        2     0.00     0.00  _init
+  0.00      0.19     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.19     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.19     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 11.11      0.11     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+ 11.11      0.13     0.02                             b2Contact::Update(b2ContactListener*)
+  5.56      0.14     0.01                             b2DistanceProxy::Set(b2Shape const*, int)
+  5.56      0.15     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  5.56      0.16     0.01                             b2ContactManager::Collide()
+  5.56      0.17     0.01                             b2World::Step(float, int, int)
+  5.56      0.18     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.18     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.18     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.18     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.18     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.18     0.00        2     0.00     0.00  _init
+  0.00      0.18     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.18     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.18     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 27.78      0.05     0.05                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.08     0.03                             b2World::Step(float, int, int)
+ 11.11      0.10     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 11.11      0.12     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  5.56      0.13     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  5.56      0.14     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  5.56      0.15     0.01                             b2ContactSolver::SolvePositionConstraints()
+  5.56      0.16     0.01                             b2ContactSolver::~b2ContactSolver()
+  5.56      0.17     0.01                             b2Contact::Update(b2ContactListener*)
+  5.56      0.18     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.00      0.18     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.18     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.18     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.18     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.18     0.00        2     0.00     0.00  _init
+  0.00      0.18     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.18     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.18     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 35.00      0.07     0.07                             b2ContactSolver::SolveVelocityConstraints()
+ 15.00      0.10     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  5.00      0.11     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  5.00      0.12     0.01                             b2ContactSolver::SolvePositionConstraints()
+  5.00      0.13     0.01                             b2ContactSolver::WarmStart()
+  5.00      0.14     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  5.00      0.15     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  5.00      0.16     0.01                             b2Timer::Reset()
+  5.00      0.17     0.01                             b2World::Step(float, int, int)
+  5.00      0.18     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  5.00      0.19     0.01                             b2Contact::Update(b2ContactListener*)
+  5.00      0.20     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.20     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.20     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.20     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.20     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.20     0.00        2     0.00     0.00  _init
+  0.00      0.20     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.20     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.20     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 6000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 25.00      0.04     0.04                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.06     0.02                             b2ContactSolver::SolvePositionConstraints()
+  6.25      0.07     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  6.25      0.08     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  6.25      0.09     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  6.25      0.10     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  6.25      0.11     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  6.25      0.12     0.01                             b2ContactManager::Collide()
+  6.25      0.13     0.01                             b2StackAllocator::Free(void*)
+  6.25      0.14     0.01                             b2World::Step(float, int, int)
+  6.25      0.15     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  6.25      0.16     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.16     0.00   113096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.16     0.00   113079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.16     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.16     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.16     0.00        2     0.00     0.00  _init
+  0.00      0.16     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.16     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.16     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 37.50      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+  8.33      0.11     0.02                             b2ContactSolver::SolvePositionConstraints()
+  8.33      0.13     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  4.17      0.14     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  4.17      0.15     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  4.17      0.16     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  4.17      0.17     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.17      0.18     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  4.17      0.19     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  4.17      0.20     0.01                             b2StackAllocator::Free(void*)
+  4.17      0.21     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.17      0.22     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  4.17      0.23     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  4.17      0.24     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.24     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 42.86      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.12     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  9.52      0.14     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  4.76      0.15     0.01                             b2ContactSolver::SolvePositionConstraints()
+  4.76      0.16     0.01                             b2ContactManager::Collide()
+  4.76      0.17     0.01                             b2PolygonAndCircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  4.76      0.18     0.01                             b2Timer::b2Timer()
+  4.76      0.19     0.01                             b2World::Step(float, int, int)
+  4.76      0.20     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  4.76      0.21     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.21     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.21     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.21     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.21     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.21     0.00        2     0.00     0.00  _init
+  0.00      0.21     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.21     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.21     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 52.94      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 11.76      0.11     0.02                             b2ContactSolver::SolvePositionConstraints()
+ 11.76      0.13     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  5.88      0.14     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  5.88      0.15     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  5.88      0.16     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  5.88      0.17     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.17     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.17     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.17     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.17     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.17     0.00        2     0.00     0.00  _init
+  0.00      0.17     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.17     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.17     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 53.85      0.14     0.14                             b2ContactSolver::SolveVelocityConstraints()
+  7.69      0.16     0.02                             b2ContactManager::Collide()
+  3.85      0.17     0.01                             b2DynamicTree::InsertLeaf(int)
+  3.85      0.18     0.01                             b2DynamicTree::RemoveLeaf(int)
+  3.85      0.19     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  3.85      0.20     0.01                             b2ContactSolver::SolvePositionConstraints()
+  3.85      0.21     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.85      0.22     0.01                             b2ContactSolver::WarmStart()
+  3.85      0.23     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.85      0.24     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  3.85      0.25     0.01                             b2Contact::Update(b2ContactListener*)
+  3.85      0.26     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.26     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.26     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.26     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.26     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.26     0.00        2     0.00     0.00  _init
+  0.00      0.26     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.26     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.26     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+ 10.00      0.12     0.02                             b2ContactSolver::SolvePositionConstraints()
+ 10.00      0.14     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  5.00      0.15     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  5.00      0.16     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  5.00      0.17     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  5.00      0.18     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  5.00      0.19     0.01                             b2World::Step(float, int, int)
+  5.00      0.20     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.20     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.20     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.20     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.20     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.20     0.00        2     0.00     0.00  _init
+  0.00      0.20     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.20     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.20     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 36.36      0.08     0.08                             b2ContactSolver::SolveVelocityConstraints()
+ 13.64      0.11     0.03                             b2World::SolveTOI(b2TimeStep const&)
+  9.09      0.13     0.02                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  9.09      0.15     0.02                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  4.55      0.16     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.55      0.17     0.01                             b2DynamicTree::Balance(int)
+  4.55      0.18     0.01                             b2ContactSolver::SolvePositionConstraints()
+  4.55      0.19     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.55      0.20     0.01                             b2Timer::b2Timer()
+  4.55      0.21     0.01                             b2World::Step(float, int, int)
+  4.55      0.22     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.22     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.22     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.22     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.22     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.22     0.00        2     0.00     0.00  _init
+  0.00      0.22     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.22     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.22     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 52.17      0.12     0.12                             b2ContactSolver::SolveVelocityConstraints()
+  8.70      0.14     0.02                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  4.35      0.15     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  4.35      0.16     0.01                             b2ContactSolver::SolvePositionConstraints()
+  4.35      0.17     0.01                             b2ContactManager::Collide()
+  4.35      0.18     0.01                             b2StackAllocator::Allocate(int)
+  4.35      0.19     0.01                             b2Timer::Reset()
+  4.35      0.20     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.35      0.21     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  4.35      0.22     0.01                             b2Contact::Update(b2ContactListener*)
+  4.35      0.23     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.23     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.23     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.23     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.23     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.23     0.00        2     0.00     0.00  _init
+  0.00      0.23     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.23     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.23     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 25.00      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.09     0.03                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  8.33      0.11     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  4.17      0.12     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  4.17      0.13     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  4.17      0.14     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  4.17      0.15     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.17      0.16     0.01                             b2BroadPhase::QueryCallback(int)
+  4.17      0.17     0.01                             b2ContactSolver::SolvePositionConstraints()
+  4.17      0.18     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.17      0.19     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  4.17      0.20     0.01                             b2ContactManager::Collide()
+  4.17      0.21     0.01                             b2Timer::Reset()
+  4.17      0.22     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.17      0.23     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  4.17      0.24     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.24     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 44.00      0.11     0.11                             b2ContactSolver::SolveVelocityConstraints()
+  8.00      0.13     0.02                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  8.00      0.15     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  8.00      0.17     0.02                             b2World::Step(float, int, int)
+  4.00      0.18     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  4.00      0.19     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.00      0.20     0.01                             b2ContactSolver::SolvePositionConstraints()
+  4.00      0.21     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.00      0.22     0.01                             b2StackAllocator::Allocate(int)
+  4.00      0.23     0.01                             b2Body::Dump()
+  4.00      0.24     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.00      0.25     0.01                             b2Contact::Update(b2ContactListener*)
+  0.00      0.25     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.25     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.25     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.25     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.25     0.00        2     0.00     0.00  _init
+  0.00      0.25     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.25     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.25     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 7000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 31.58      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+ 10.53      0.08     0.02                             b2RevoluteJoint::SolvePositionConstraints(b2SolverData const&)
+ 10.53      0.10     0.02                             b2World::Step(float, int, int)
+  5.26      0.11     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  5.26      0.12     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  5.26      0.13     0.01                             b2ContactSolver::SolvePositionConstraints()
+  5.26      0.14     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  5.26      0.15     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  5.26      0.16     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  5.26      0.17     0.01                             b2ContactManager::Collide()
+  5.26      0.18     0.01                             b2Timer::b2Timer()
+  5.26      0.19     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.19     0.00   133096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.19     0.00   133079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.19     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.19     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.19     0.00        2     0.00     0.00  _init
+  0.00      0.19     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.19     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.19     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 37.50      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+  8.33      0.11     0.02                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  8.33      0.13     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  8.33      0.15     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  8.33      0.17     0.02                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  4.17      0.18     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.17      0.19     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  4.17      0.20     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  4.17      0.21     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  4.17      0.22     0.01                             b2RevoluteJoint::SolvePositionConstraints(b2SolverData const&)
+  4.17      0.23     0.01                             b2ContactManager::Collide()
+  4.17      0.24     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.24     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 40.74      0.11     0.11                             b2ContactSolver::SolveVelocityConstraints()
+ 11.11      0.14     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  7.41      0.16     0.02                             b2ContactSolver::SolvePositionConstraints()
+  7.41      0.18     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  7.41      0.20     0.02                             b2World::Step(float, int, int)
+  7.41      0.22     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  7.41      0.24     0.02                             b2Contact::Update(b2ContactListener*)
+  3.70      0.25     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.70      0.26     0.01                             b2ContactManager::Collide()
+  3.70      0.27     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.27     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.27     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.27     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.27     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.27     0.00        2     0.00     0.00  _init
+  0.00      0.27     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.27     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.27     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 40.00      0.12     0.12                             b2ContactSolver::SolveVelocityConstraints()
+ 10.00      0.15     0.03                             b2World::SolveTOI(b2TimeStep const&)
+ 10.00      0.18     0.03                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.67      0.20     0.02                             b2ContactSolver::SolvePositionConstraints()
+  6.67      0.22     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  6.67      0.24     0.02                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.67      0.26     0.02                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  3.33      0.27     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.33      0.28     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.33      0.29     0.01                             b2StackAllocator::Free(void*)
+  3.33      0.30     0.01                             b2Timer::b2Timer()
+  0.00      0.30     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.30     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.30     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.30     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.30     0.00        2     0.00     0.00  _init
+  0.00      0.30     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.30     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.30     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 40.00      0.06     0.06                             b2ContactSolver::SolveVelocityConstraints()
+  6.67      0.07     0.01                             b2EPCollider::ComputePolygonSeparation()
+  6.67      0.08     0.01                             b2ContactSolver::SolvePositionConstraints()
+  6.67      0.09     0.01                             b2ContactSolver::WarmStart()
+  6.67      0.10     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  6.67      0.11     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  6.67      0.12     0.01                             b2StackAllocator::Free(void*)
+  6.67      0.13     0.01                             b2World::Step(float, int, int)
+  6.67      0.14     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  6.67      0.15     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.00      0.15     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.15     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.15     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.15     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.15     0.00        2     0.00     0.00  _init
+  0.00      0.15     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.15     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.15     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.07     0.07                             b2ContactSolver::SolveVelocityConstraints()
+  9.52      0.09     0.02                             b2ContactSolver::SolvePositionConstraints()
+  9.52      0.11     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  9.52      0.13     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  4.76      0.14     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  4.76      0.15     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  4.76      0.16     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.76      0.17     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  4.76      0.18     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  4.76      0.19     0.01                             b2ContactSolver::WarmStart()
+  4.76      0.20     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  4.76      0.21     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.21     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.21     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.21     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.21     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.21     0.00        2     0.00     0.00  _init
+  0.00      0.21     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.21     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.21     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 54.17      0.13     0.13                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.16     0.03                             b2World::Step(float, int, int)
+  4.17      0.17     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.17      0.18     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  4.17      0.19     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  4.17      0.20     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.17      0.21     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  4.17      0.22     0.01                             b2StackAllocator::Allocate(int)
+  4.17      0.23     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.17      0.24     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.00      0.24     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 34.48      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+ 13.79      0.14     0.04                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+ 10.34      0.17     0.03                             b2ContactSolver::SolvePositionConstraints()
+  6.90      0.19     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  6.90      0.21     0.02                             b2Timer::GetMilliseconds() const
+  3.45      0.22     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.45      0.23     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.45      0.24     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  3.45      0.25     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.45      0.26     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.45      0.27     0.01                             b2StackAllocator::Free(void*)
+  3.45      0.28     0.01                             b2Timer::Reset()
+  3.45      0.29     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  0.00      0.29     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.29     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.29     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.29     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.29     0.00        2     0.00     0.00  _init
+  0.00      0.29     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.29     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.29     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 50.00      0.12     0.12                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.15     0.03                             b2ContactSolver::SolvePositionConstraints()
+  4.17      0.16     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.17      0.17     0.01                             b2DynamicTree::Balance(int)
+  4.17      0.18     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.17      0.19     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  4.17      0.20     0.01                             b2ContactManager::Collide()
+  4.17      0.21     0.01                             b2StackAllocator::Allocate(int)
+  4.17      0.22     0.01                             b2World::Step(float, int, int)
+  4.17      0.23     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  4.17      0.24     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.24     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 35.71      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+ 14.29      0.14     0.04                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  7.14      0.16     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  7.14      0.18     0.02                             b2World::Step(float, int, int)
+  3.57      0.19     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.57      0.20     0.01                             b2DynamicTree::InsertLeaf(int)
+  3.57      0.21     0.01                             b2ContactSolver::SolvePositionConstraints()
+  3.57      0.22     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.57      0.23     0.01                             b2ContactSolver::WarmStart()
+  3.57      0.24     0.01                             b2ContactManager::Collide()
+  3.57      0.25     0.01                             b2StackAllocator::Free(void*)
+  3.57      0.26     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  3.57      0.27     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  3.57      0.28     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.28     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.28     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.28     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.28     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.28     0.00        2     0.00     0.00  _init
+  0.00      0.28     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.28     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.28     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 8000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 37.04      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+  7.41      0.12     0.02                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  7.41      0.14     0.02                             b2ContactSolver::SolvePositionConstraints()
+  7.41      0.16     0.02                             b2RevoluteJoint::SolvePositionConstraints(b2SolverData const&)
+  3.70      0.17     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.70      0.18     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.70      0.19     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.70      0.20     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.70      0.21     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.70      0.22     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  3.70      0.23     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  3.70      0.24     0.01                             b2Contact::Update(b2ContactListener*)
+  3.70      0.25     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  3.70      0.26     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  3.70      0.27     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.27     0.00   153096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.27     0.00   153079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.27     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.27     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.27     0.00        2     0.00     0.00  _init
+  0.00      0.27     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.27     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.27     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 30.00      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 10.00      0.12     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  6.67      0.14     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  6.67      0.16     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  6.67      0.18     0.02                             b2Timer::Reset()
+  6.67      0.20     0.02                             b2Contact::Update(b2ContactListener*)
+  6.67      0.22     0.02                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  6.67      0.24     0.02                             b2Mat33::Solve22(b2Vec2 const&) const
+  3.33      0.25     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  3.33      0.26     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  3.33      0.27     0.01                             b2ContactSolver::SolvePositionConstraints()
+  3.33      0.28     0.01                             b2ContactSolver::WarmStart()
+  3.33      0.29     0.01                             b2World::Step(float, int, int)
+  3.33      0.30     0.01                             b2Island::b2Island(int, int, int, b2StackAllocator*, b2ContactListener*)
+  0.00      0.30     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.30     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.30     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.30     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.30     0.00        2     0.00     0.00  _init
+  0.00      0.30     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.30     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.30     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 48.28      0.14     0.14                             b2ContactSolver::SolveVelocityConstraints()
+  6.90      0.16     0.02                             b2ContactSolver::SolvePositionConstraints()
+  6.90      0.18     0.02                             b2RevoluteJoint::SolvePositionConstraints(b2SolverData const&)
+  6.90      0.20     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  3.45      0.21     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.45      0.22     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.45      0.23     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.45      0.24     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  3.45      0.25     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.45      0.26     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.45      0.27     0.01                             b2ContactManager::Collide()
+  3.45      0.28     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  3.45      0.29     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.29     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.29     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.29     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.29     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.29     0.00        2     0.00     0.00  _init
+  0.00      0.29     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.29     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.29     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 46.43      0.13     0.13                             b2ContactSolver::SolveVelocityConstraints()
+  7.14      0.15     0.02                             b2ContactSolver::SolvePositionConstraints()
+  7.14      0.17     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  7.14      0.19     0.02                             b2World::Step(float, int, int)
+  7.14      0.21     0.02                             b2Contact::Update(b2ContactListener*)
+  3.57      0.22     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.57      0.23     0.01                             b2DynamicTree::InsertLeaf(int)
+  3.57      0.24     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.57      0.25     0.01                             b2ContactSolver::WarmStart()
+  3.57      0.26     0.01                             b2ContactManager::Collide()
+  3.57      0.27     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  3.57      0.28     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.28     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.28     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.28     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.28     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.28     0.00        2     0.00     0.00  _init
+  0.00      0.28     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.28     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.28     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 38.46      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+ 11.54      0.13     0.03                             b2ContactSolver::SolvePositionConstraints()
+ 11.54      0.16     0.03                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  7.69      0.18     0.02                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.85      0.19     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.85      0.20     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  3.85      0.21     0.01                             b2ContactSolver::WarmStart()
+  3.85      0.22     0.01                             b2ContactManager::Collide()
+  3.85      0.23     0.01                             b2Timer::b2Timer()
+  3.85      0.24     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  3.85      0.25     0.01                             b2Contact::Update(b2ContactListener*)
+  3.85      0.26     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.26     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.26     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.26     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.26     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.26     0.00        2     0.00     0.00  _init
+  0.00      0.26     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.26     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.26     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 34.48      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+ 13.79      0.14     0.04                             b2ContactSolver::SolvePositionConstraints()
+ 10.34      0.17     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  6.90      0.19     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  6.90      0.21     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  6.90      0.23     0.02                             b2Contact::Update(b2ContactListener*)
+  3.45      0.24     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  3.45      0.25     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.45      0.26     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  3.45      0.27     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.45      0.28     0.01                             b2World::Step(float, int, int)
+  3.45      0.29     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.29     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.29     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.29     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.29     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.29     0.00        2     0.00     0.00  _init
+  0.00      0.29     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.29     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.29     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 33.33      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+ 11.11      0.12     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+ 11.11      0.15     0.03                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  7.41      0.17     0.02                             b2ContactSolver::SolvePositionConstraints()
+  7.41      0.19     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.70      0.20     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.70      0.21     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.70      0.22     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.70      0.23     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  3.70      0.24     0.01                             b2StackAllocator::Free(void*)
+  3.70      0.25     0.01                             b2World::Step(float, int, int)
+  3.70      0.26     0.01                             b2Contact::Update(b2ContactListener*)
+  3.70      0.27     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.27     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.27     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.27     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.27     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.27     0.00        2     0.00     0.00  _init
+  0.00      0.27     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.27     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.27     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 48.28      0.14     0.14                             b2ContactSolver::SolveVelocityConstraints()
+ 10.34      0.17     0.03                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  6.90      0.19     0.02                             b2ContactSolver::SolvePositionConstraints()
+  6.90      0.21     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  3.45      0.22     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.45      0.23     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  3.45      0.24     0.01                             b2ContactSolver::WarmStart()
+  3.45      0.25     0.01                             b2World::Step(float, int, int)
+  3.45      0.26     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  3.45      0.27     0.01                             b2Contact::Update(b2ContactListener*)
+  3.45      0.28     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  3.45      0.29     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.29     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.29     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.29     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.29     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.29     0.00        2     0.00     0.00  _init
+  0.00      0.29     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.29     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.29     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 44.00      0.11     0.11                             b2ContactSolver::SolveVelocityConstraints()
+  8.00      0.13     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  8.00      0.15     0.02                             b2ContactManager::Collide()
+  4.00      0.16     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  4.00      0.17     0.01                             b2ContactSolver::SolvePositionConstraints()
+  4.00      0.18     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  4.00      0.19     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  4.00      0.20     0.01                             b2StackAllocator::Allocate(int)
+  4.00      0.21     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.00      0.22     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  4.00      0.23     0.01                             b2Contact::Update(b2ContactListener*)
+  4.00      0.24     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  4.00      0.25     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.25     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.25     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.25     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.25     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.25     0.00        2     0.00     0.00  _init
+  0.00      0.25     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.25     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.25     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 48.28      0.14     0.14                             b2ContactSolver::SolveVelocityConstraints()
+  6.90      0.16     0.02                             b2ContactSolver::SolvePositionConstraints()
+  3.45      0.17     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.45      0.18     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.45      0.19     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.45      0.20     0.01                             b2DynamicTree::InsertLeaf(int)
+  3.45      0.21     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.45      0.22     0.01                             b2ContactSolver::WarmStart()
+  3.45      0.23     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.45      0.24     0.01                             b2Body::SynchronizeFixtures()
+  3.45      0.25     0.01                             b2Timer::Reset()
+  3.45      0.26     0.01                             b2World::Step(float, int, int)
+  3.45      0.27     0.01                             b2Contact::Update(b2ContactListener*)
+  3.45      0.28     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  3.45      0.29     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.29     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.29     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.29     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.29     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.29     0.00        2     0.00     0.00  _init
+  0.00      0.29     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.29     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.29     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 9000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 54.55      0.18     0.18                             b2ContactSolver::SolveVelocityConstraints()
+  9.09      0.21     0.03                             b2ContactSolver::SolvePositionConstraints()
+  6.06      0.23     0.02                             b2DynamicTree::InsertLeaf(int)
+  6.06      0.25     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  3.03      0.26     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.03      0.27     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  3.03      0.28     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.03      0.29     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.03      0.30     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.03      0.31     0.01                             b2Timer::Reset()
+  3.03      0.32     0.01                             b2Contact::Update(b2ContactListener*)
+  3.03      0.33     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.33     0.00   173096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.33     0.00   173079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.33     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.33     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.33     0.00        2     0.00     0.00  _init
+  0.00      0.33     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.33     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.33     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 1000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 43.24      0.16     0.16                             b2ContactSolver::SolveVelocityConstraints()
+  8.11      0.19     0.03                             b2World::Step(float, int, int)
+  8.11      0.22     0.03                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  5.41      0.24     0.02                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  5.41      0.26     0.02                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  5.41      0.28     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  2.70      0.29     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  2.70      0.30     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  2.70      0.31     0.01                             b2DynamicTree::Balance(int)
+  2.70      0.32     0.01                             b2ContactSolver::StoreImpulses()
+  2.70      0.33     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  2.70      0.34     0.01                             b2ContactSolver::WarmStart()
+  2.70      0.35     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  2.70      0.36     0.01                             b2Body::SynchronizeFixtures()
+  2.70      0.37     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.00      0.37     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.37     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.37     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.37     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.37     0.00        2     0.00     0.00  _init
+  0.00      0.37     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.37     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.37     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 2000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 45.16      0.14     0.14                             b2ContactSolver::SolveVelocityConstraints()
+  6.45      0.16     0.02                             b2ContactSolver::SolvePositionConstraints()
+  6.45      0.18     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  6.45      0.20     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.45      0.22     0.02                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  3.23      0.23     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  3.23      0.24     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.23      0.25     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  3.23      0.26     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.23      0.27     0.01                             b2ContactManager::Collide()
+  3.23      0.28     0.01                             b2World::Step(float, int, int)
+  3.23      0.29     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  3.23      0.30     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  3.23      0.31     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.31     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.31     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.31     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.31     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.31     0.00        2     0.00     0.00  _init
+  0.00      0.31     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.31     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.31     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 3000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 41.67      0.10     0.10                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.13     0.03                             b2Contact::Update(b2ContactListener*)
+  8.33      0.15     0.02                             b2ContactSolver::SolvePositionConstraints()
+  8.33      0.17     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  8.33      0.19     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  4.17      0.20     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  4.17      0.21     0.01                             b2Timer::b2Timer()
+  4.17      0.22     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  4.17      0.23     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  4.17      0.24     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.00      0.24     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 4000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 39.29      0.11     0.11                             b2ContactSolver::SolveVelocityConstraints()
+ 10.71      0.14     0.03                             b2ContactSolver::SolvePositionConstraints()
+ 10.71      0.17     0.03                             b2World::SolveTOI(b2TimeStep const&)
+  7.14      0.19     0.02                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  7.14      0.21     0.02                             b2Timer::GetMilliseconds() const
+  3.57      0.22     0.01                             b2DynamicTree::InsertLeaf(int)
+  3.57      0.23     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.57      0.24     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  3.57      0.25     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.57      0.26     0.01                             b2ContactManager::Collide()
+  3.57      0.27     0.01                             b2StackAllocator::Free(void*)
+  3.57      0.28     0.01                             b2Body::SynchronizeFixtures()
+  0.00      0.28     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.28     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.28     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.28     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.28     0.00        2     0.00     0.00  _init
+  0.00      0.28     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.28     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.28     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 5000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 46.43      0.13     0.13                             b2ContactSolver::SolveVelocityConstraints()
+  7.14      0.15     0.02                             b2Timer::GetMilliseconds() const
+  3.57      0.16     0.01                             b2DynamicTree::Balance(int)
+  3.57      0.17     0.01                             b2ContactSolver::SolvePositionConstraints()
+  3.57      0.18     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.57      0.19     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.57      0.20     0.01                             b2ContactManager::Collide()
+  3.57      0.21     0.01                             b2World::Step(float, int, int)
+  3.57      0.22     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  3.57      0.23     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  3.57      0.24     0.01                             b2Contact::Update(b2ContactListener*)
+  3.57      0.25     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  3.57      0.26     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  3.57      0.27     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  3.57      0.28     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.00      0.28     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.28     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.28     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.28     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.28     0.00        2     0.00     0.00  _init
+  0.00      0.28     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.28     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.28     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 6000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 46.67      0.14     0.14                             b2ContactSolver::SolveVelocityConstraints()
+ 16.67      0.19     0.05                             b2ContactSolver::SolvePositionConstraints()
+  6.67      0.21     0.02                             b2Contact::Update(b2ContactListener*)
+  3.33      0.22     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.33      0.23     0.01                             b2BroadPhase::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  3.33      0.24     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  3.33      0.25     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.33      0.26     0.01                             b2ContactManager::Collide()
+  3.33      0.27     0.01                             b2World::Step(float, int, int)
+  3.33      0.28     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  3.33      0.29     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  3.33      0.30     0.01                             b2Timer::GetMilliseconds() const
+  0.00      0.30     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.30     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.30     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.30     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.30     0.00        2     0.00     0.00  _init
+  0.00      0.30     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.30     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.30     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 7000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 35.48      0.11     0.11                             b2ContactSolver::SolveVelocityConstraints()
+  9.68      0.14     0.03                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  9.68      0.17     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  6.45      0.19     0.02                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  6.45      0.21     0.02                             b2Body::SynchronizeFixtures()
+  6.45      0.23     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.45      0.25     0.02                             b2Contact::Update(b2ContactListener*)
+  3.23      0.26     0.01                             b2CollidePolygons(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  3.23      0.27     0.01                             b2PulleyJoint::InitVelocityConstraints(b2SolverData const&)
+  3.23      0.28     0.01                             b2PulleyJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.23      0.29     0.01                             b2ContactSolver::SolvePositionConstraints()
+  3.23      0.30     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  3.23      0.31     0.01                             b2Timer::Reset()
+  0.00      0.31     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.31     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.31     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.31     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.31     0.00        2     0.00     0.00  _init
+  0.00      0.31     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.31     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.31     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 8000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 37.50      0.09     0.09                             b2ContactSolver::SolveVelocityConstraints()
+  8.33      0.11     0.02                             b2ContactSolver::SolvePositionConstraints()
+  8.33      0.13     0.02                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  4.17      0.14     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  4.17      0.15     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  4.17      0.16     0.01                             b2DynamicTree::MoveProxy(int, b2AABB const&, b2Vec2 const&)
+  4.17      0.17     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  4.17      0.18     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  4.17      0.19     0.01                             b2RevoluteJoint::SolvePositionConstraints(b2SolverData const&)
+  4.17      0.20     0.01                             b2ContactManager::Collide()
+  4.17      0.21     0.01                             b2StackAllocator::Free(void*)
+  4.17      0.22     0.01                             b2World::Step(float, int, int)
+  4.17      0.23     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  4.17      0.24     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.00      0.24     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.24     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.24     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.24     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.24     0.00        2     0.00     0.00  _init
+  0.00      0.24     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.24     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.24     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 9000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 45.45      0.15     0.15                             b2ContactSolver::SolveVelocityConstraints()
+  9.09      0.18     0.03                             b2ContactSolver::SolvePositionConstraints()
+  9.09      0.21     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  6.06      0.23     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  6.06      0.25     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  6.06      0.27     0.02                             b2Contact::Update(b2ContactListener*)
+  3.03      0.28     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  3.03      0.29     0.01                             b2FindMaxSeparation(int*, b2PolygonShape const*, b2Transform const&, b2PolygonShape const*, b2Transform const&)
+  3.03      0.30     0.01                             b2DynamicTree::InsertLeaf(int)
+  3.03      0.31     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  3.03      0.32     0.01                             b2StackAllocator::Allocate(int)
+  3.03      0.33     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.00      0.33     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.33     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.33     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.33     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.33     0.00        2     0.00     0.00  _init
+  0.00      0.33     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.33     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.33     0.00        1     0.00     0.00  main
+*************************************************************
+
+profile for iteration no. 10000 and rerun no. 10000 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 48.39      0.15     0.15                             b2ContactSolver::SolveVelocityConstraints()
+ 12.90      0.19     0.04                             b2ContactSolver::SolvePositionConstraints()
+  6.45      0.21     0.02                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  6.45      0.23     0.02                             b2PolygonAndCircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  3.23      0.24     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  3.23      0.25     0.01                             b2TimeOfImpact(b2TOIOutput*, b2TOIInput const*)
+  3.23      0.26     0.01                             b2ContactSolver::StoreImpulses()
+  3.23      0.27     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.23      0.28     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  3.23      0.29     0.01                             b2Body::SynchronizeFixtures()
+  3.23      0.30     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  3.23      0.31     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.00      0.31     0.00   193096     0.00     0.00  b2ContactListener::PostSolve(b2Contact*, b2ContactImpulse const*)
+  0.00      0.31     0.00   193079     0.00     0.00  b2ContactListener::PreSolve(b2Contact*, b2Manifold const*)
+  0.00      0.31     0.00      165     0.00     0.00  b2ContactListener::BeginContact(b2Contact*)
+  0.00      0.31     0.00      125     0.00     0.00  b2ContactListener::EndContact(b2Contact*)
+  0.00      0.31     0.00        2     0.00     0.00  _init
+  0.00      0.31     0.00        1     0.00     0.00  cs296::base_sim_t::base_sim_t()
+  0.00      0.31     0.00        1     0.00     0.00  cs296::dominos_t::dominos_t()
+  0.00      0.31     0.00        1     0.00     0.00  main
+*************************************************************
+
