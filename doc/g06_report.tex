@@ -22,30 +22,30 @@ In the file b2Timer.cpp present in the common folder of Box2D package, there was
 \section{Observations and Conclusions}
 \subsection{Plot 01 : Step time and Total Loop time averaged over Reruns}
 \begin{center}
-\includegraphics[scale=0.4]{plot1}
+\includegraphics[scale=0.4]{plot01}
 \end{center}
 1.\ Loop time is greater than the Step time at all points except the first point where both are equal.
 \\* 2.\ Total Loop time increases with the number of iterations whereas the Step time stays nearly constant or slightly decreases. \ \ This is because the loop executes iteration times but the step time is averaged over total iterations.
 \subsection{Plot 02 : Step time, Velocity update time, Position update time and Collision time averaged over Reruns}
 \begin{center}
-\includegraphics[scale=0.4]{plot2}
+\includegraphics[scale=0.4]{plot02}
 \end{center}
 1.\ Step time \textgreater \ velocity update time \textgreater \ position update time \textgreater \ collision time
 \\*2.\ Each of these decrease slightly with the number of iterations
 \\*3.\ The time taken to update velocity is highest becuase it involves more calculations than the other two.
 \subsection{Plot 03 : Step time and Loop time averaged over Iterations}
 \begin{center}
-\includegraphics[scale=0.4]{plot3}
+\includegraphics[scale=0.4]{plot03}
 \end{center}
 Since, there is no difference among the reruns, Step time and Loop time are very closely deviated about the average with the rerun number.
 \subsection{Plot 04 : Step time, Velocity update time, Position update time and Collision time averaged over Iterations}
 \begin{center}
-\includegraphics[scale=0.4]{plot4}
+\includegraphics[scale=0.4]{plot04}
 \end{center}
 Same is the case with this plot of collision time, velocity update time and position update time. Like the previous plot, all of them are slightly deviated about their respective averages with the rerun number.
 \subsection{Plot 05 : Deviation in all the Time measurements}
 \begin{center}
-\includegraphics[scale=0.4]{plot5}
+\includegraphics[scale=0.4]{plot05}
 \end{center}
 1.\ Deviation of Step time \textgreater \ Velocity update time \textgreater \ Position update time \textgreater \ Collision time
 \\*2.\ This together with the second plot shows that the percentage deviation of all the three is nearly equal.
