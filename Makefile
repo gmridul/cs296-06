@@ -148,7 +148,10 @@ report: setup
 	@make exe_release
 	@cd scripts; \
 	python3 g06_gen_csv.py; \
-	python3 g06_gen_plots.py
+	python3 g06_gen_plots.py; \
+	cp ../doc/g06_lab09_compare1.png . ;\
+	cp ../doc/g06_lab09_compare2.png . ;\
+	python3 g06_gen_html.py
 # @cd doc; \
 # latex report_cs296_06; \
 # bibtex report_cs296_06; \
@@ -203,4 +206,5 @@ clean:
 	@rm -rf $(DOCDIR)/html $(DOCDIR)/*.pdf
 	@rm -rf plots
 	@rm -rf data
+	@rm -rf doc/*.html
 	@rm -rf *.dat gmon.out
