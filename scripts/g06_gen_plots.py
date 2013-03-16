@@ -1,4 +1,4 @@
-from pylab import *
+import matplotlib.pyplot as plt
 
 datafile = open('../data/lab05_g06_data.csv')
 
@@ -36,10 +36,15 @@ for index in range(numIterations):
     avg_loop_rerun[index] = avg_loop_rerun[index]/numReruns
 
 x=range(numIterations)
-figure(0)
-plot(x,avg_step_rerun)
-plot(x,avg_loop_rerun)
-savefig("g06_lab09_plot01.png")
+fig1=plt.figure()
+plt.plot(x,avg_step_rerun,label="step time")
+plt.plot(x,avg_loop_rerun,label="loop time")
+plt.legend(loc="upper left")
+fig1.suptitle('Step time and loop time averaged over reruns', fontsize=12, fontweight='bold')
+ax=fig1.add_subplot(111)
+ax.set_xlabel("Number of iterations")
+ax.set_ylabel("Time(in milliseconds)")
+plt.savefig("g06_lab09_plot01.png")
 
 # A plot showing the step time averaged over all reruns (Y) for various iteration values (X).
 # Also, plot the collision time, velocity and poition update times averaged over all reruns (Y) for various iteration values (X) on the same graph. 
@@ -58,12 +63,17 @@ for index in range(numIterations):
     avg_velocity[index] = avg_velocity[index]/numReruns
     avg_position[index] = avg_position[index]/numReruns
 
-figure(1)
-plot(x,avg_step_rerun)
-plot(x,avg_collision)
-plot(x,avg_velocity)
-plot(x,avg_position)
-savefig("g06_lab09_plot02.png")
+fig2=plt.figure()
+plt.plot(x,avg_step_rerun,label="step time")
+plt.plot(x,avg_collision,label="collision time")
+plt.plot(x,avg_velocity,label="velocity update time")
+plt.plot(x,avg_position,label="position update time")
+plt.legend(loc="upper left")
+fig2.suptitle('Step time, collision time, velocy and position update time averaged over reruns', fontsize=12, fontweight='bold')
+ax=fig2.add_subplot(111)
+ax.set_xlabel("Number of iterations")
+ax.set_ylabel("Time(in milliseconds)")
+plt.savefig("g06_lab09_plot02.png")
 
 # Do the same plots as avg_rerun1, with the quantity on the Y axis 
 # now averaged over all iteration values (Y) for various reruns (X).
@@ -80,10 +90,15 @@ for index in range(numReruns):
     avg_loop_iter[index] = avg_loop_iter[index]/numIterations
 
 x=range(numReruns)
-figure(2)
-plot(x,avg_step_iter)
-plot(x,avg_loop_iter)
-savefig("g06_lab09_plot03.png")
+fig3=plt.figure()
+plt.plot(x,avg_step_iter,label="step time")
+plt.plot(x,avg_loop_iter,label="loop time")
+plt.legend(loc="upper left")
+fig3.suptitle('Step time and loop time averaged over iterations', fontsize=12, fontweight='bold')
+ax=fig3.add_subplot(111)
+ax.set_xlabel("Rerun number")
+ax.set_ylabel("Time(in milliseconds)")
+plt.savefig("g06_lab09_plot03.png")
 
 # Do the same plots as avg_rerun2, with the quantity on the Y axis 
 # now averaged over all iteration values (Y) for various reruns (X).
@@ -102,25 +117,30 @@ for index in range(numIterations):
     avg_velocity[index] = avg_velocity[index]/numIterations
     avg_position[index] = avg_position[index]/numIterations
 
-figure(3)
-plot(x,avg_step_iter)
-plot(x,avg_collision)
-plot(x,avg_velocity)
-plot(x,avg_position)
-savefig("g06_lab09_plot04.png")
+fig4=plt.figure()
+plt.plot(x,avg_step_iter,label="step time")
+plt.plot(x,avg_collision,label="collision time")
+plt.plot(x,avg_velocity,label="velocity update time")
+plt.plot(x,avg_position,label="position update time")
+plt.legend(loc="upper left")
+fig4.suptitle('Step time, collision time, velocity and position update time averaged over iterations', fontsize=12, fontweight='bold')
+ax=fig4.add_subplot(111)
+ax.set_xlabel("Rerun number")
+ax.set_ylabel("Time(in milliseconds)")
+plt.savefig("g06_lab09_plot04.png")
 
-# Consider the variation in time over reruns to be the deviation in the time measurement 
-# and plot the step time for various iteration values with error bars corresponding to the deviation. 
+# # Consider the variation in time over reruns to be the deviation in the time measurement 
+# # and plot the step time for various iteration values with error bars corresponding to the deviation. 
 
-deviation_step = [0]*numIterations
+# deviation_step = [0]*numIterations
 
-for index in range(numValues):
-    deviation_step[iteration_value[index]-1] = deviation_step[iteration_value[index]-1] + (step_time[index] - avg_step_rerun[iteration_value[index]-1])**2
+# for index in range(numValues):
+#     deviation_step[iteration_value[index]-1] = deviation_step[iteration_value[index]-1] + (step_time[index] - avg_step_rerun[iteration_value[index]-1])**2
 
-for index in range(numIterations):
-    deviation_step[index] = (deviation_step[index]/numReruns)**(0.5)
+# for index in range(numIterations):
+#     deviation_step[index] = (deviation_step[index]/numReruns)**(0.5)
 
-x=range(numIterations)
-figure(5)
-errorbar(x,avg_step_rerun,yerr=deviation_step)
-savefig("g06_lab09_plot05.png")
+# x=range(numIterations)
+# figure(5)
+# errorbar(x,avg_step_rerun,yerr=deviation_step)
+# savefig("g06_lab09_plot05.png")
