@@ -15,7 +15,12 @@ public class BookAnalysisG06 {
 	BookStatistics bookStats = new BookStatistics(args[0]);
 	System.out.println(bookStats.countBookWords());
 	System.out.println(bookStats.countBookCharacters());
-	bookStats.determineCharGender(); 
+	String [] sortedCharacters = bookStats.sortBookCharacters();
+	for (int i = 0, size = sortedCharacters.length; i < size; ++i)
+	    {
+		System.out.println(sortedCharacters[i]);
+	    }
+	// bookStats.determineCharGender(); 
     }
 }
 

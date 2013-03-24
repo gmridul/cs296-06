@@ -10,7 +10,8 @@ public class BookStatistics
 
     Book B;
     int count = 0;
-    Map<String, Integer> result = new TreeMap<String, Integer> ();
+    Map<String, Integer> result = new HashMap<String, Integer> ();
+    String [] sortedCharacters;
 
     public BookStatistics(String path) throws FileNotFoundException, IOException 
     {
@@ -197,27 +198,40 @@ public class BookStatistics
 	return result.size();
     }
     
-    public void determineCharGender() 
+    public String [] sortBookCharacters()
     {
-        if(result.isEmpty()) 
+	if (result.size() == 0)
+	    findBookCharacters();
+	sortedCharacters = new String [result.size()];
+	int i = 0;
+	for (Map.Entry <String, Integer> entry : result.entrySet())
 	    {
-		this.findBookCharacters();
+		sortedCharacters[i] = entry.getKey();
+		++i;
 	    }
-        String around = null;
-        Pair[] charGender = new Pair[characters.size()];
-        for(int i=0;i<characters.size();i++) 
-	    {
-		charGender[i].l = characters.get(i);
-		Pattern pattern = Pattern.compile("(\\S*[ ]){,10}"+charGender[i].l+"(\\S*[ ]){,20}");
-		Matcher surround = pattern.matcher(B.text);
-		while(surround.find()) 
-		    {
-			around += surround.group(1);
-		    }
-		System.out.println(around);
-		// pattern = Pattern.compile("")
-	    }
-        
-    
+	Arrays.sort(sortedCharacters);
+	return sortedCharacters;
     }
+
+    // public void determineCharGender() 
+    // {
+    //     if(result.isEmpty()) 
+    // 	    {
+    // 		this.findBookCharacters();
+    // 	    }
+    //     String around = null;
+    //     Pair[] charGender = new Pair[characters.size()];
+    //     for(int i=0;i<characters.size();i++) 
+    // 	    {
+    // 		charGender[i].l = characters.get(i);
+    // 		Pattern pattern = Pattern.compile("(\\S*[ ]){,10}"+charGender[i].l+"(\\S*[ ]){,20}");
+    // 		Matcher surround = pattern.matcher(B.text);
+    // 		while(surround.find()) 
+    // 		    {
+    // 			around += surround.group(1);
+    // 		    }
+    // 		System.out.println(around);
+    // 		// pattern = Pattern.compile("")
+    // 	    }
+    // }
 }
