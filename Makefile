@@ -201,6 +201,14 @@ plot01:
 	@cd data; \
 	rm avg_rerun.csv avg_iteration.csv avg_deviation.csv freq.csv
 
+compile:
+	@javac BookAnalysisG06.java
+	@java BookAnalysisG06 oliver_twist.txt
+
+doc:
+	@cd cs296BookAnalysis; \
+	javadoc *.java
+
 clean:
 	@rm -rf my*
 	@rm -rf $(DOCDIR)/html $(DOCDIR)/*.pdf

@@ -3,19 +3,35 @@ package cs296BookAnalysis;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Calculates various statistics of the book like the number of words, the characters, their gender and count
+ * @see Book
+ */
 public class BookStatistics {
 
     Book B;
     int count = 0;
-    Map<String, Integer> result = new TreeMap<String, Integer>();
+    Map<String, Integer> result = new HashMap <String, Integer>();
     Set<String> firstNames;
+    String [] firstNamesArray;
+    Map<String, String> getGender = new HashMap <String,String> ();
+    String [] sortedCharacters;
+    Map<String, Integer> freq1;
 
+    /**
+     * @param path the path of the book file
+     * Creates an object B and calls its getBookWords function
+     * @see Book#getBookWords
+     */
     public BookStatistics(String path) throws FileNotFoundException, IOException {
         B = new Book(path);
         B.getBookWords();
         result = new HashMap<String, Integer>();
     }
 
+    /**
+     * Counts the number of words of the book
+     */
     public int countBookWords() {
         for (int i = 0, size = B.words.length; i < size; ++i) {
             if (B.words[i].length() != 0) {
@@ -33,6 +49,7 @@ public class BookStatistics {
 		if(a<b) { return b;} 
 		return a;
 	}
+
     private void findBookCharacters() {
         ArrayList<String> characters = new ArrayList<String>();
         for (int i = 1, size = B.words.length; i < size; ++i) {
@@ -110,8 +127,15 @@ public class BookStatistics {
         }
 
         lastNames.removeAll(firstNames);
+	int alpha = 0;
+	firstNamesArray = new String [firstNames.size()];
+	for (String s : firstNames)
+	    {
+		firstNamesArray[alpha] = s;
+		++alpha;
+	    }
 
-        Map<String, Integer> freq1 = new HashMap<String, Integer>();
+        freq1 = new HashMap<String, Integer>();
         for (int i = 0, size = B.words.length; i < size; ++i) {
             String str = B.words[i];
             str = str.replace("'s", "");
@@ -161,6 +185,10 @@ public class BookStatistics {
         }
     }
 
+    /**
+     * Counts the number of characters of the book by calling the private function findBookCharacters first
+     * @see BookStatistics#findBookCharacters
+     */
     public int countBookCharacters() {
         if (result.isEmpty()) {
             this.findBookCharacters();
@@ -168,6 +196,28 @@ public class BookStatistics {
         return result.size();
     }
 
+    /**
+     * Sorts the characters of the book alphabetically
+     */
+    public String [] sortBookCharacters()
+    {
+	if (result.size() == 0)
+	    findBookCharacters();
+	sortedCharacters = new String [result.size()];
+	int i = 0;
+	for (Map.Entry <String, Integer> entry : result.entrySet())
+	    {
+		sortedCharacters[i] = entry.getKey();
+		++i;
+	    }
+	Arrays.sort(sortedCharacters);
+	return sortedCharacters;
+    }
+
+    /** 
+     * Determines the gender of each character
+     * @see BookStatistics#findBookCharacters
+     */
     public void determineCharGender() {
         if (result.isEmpty()) {
             this.findBookCharacters();
@@ -191,38 +241,46 @@ public class BookStatistics {
                         if (B.words[k].toLowerCase().equals("he") || B.words[k].toLowerCase().equals("his") || B.words[k].toLowerCase().equals("him")) {
                             gen++;
                             
-                            //System.out.println("hihi");
-                        } else if (B.words[k].toLowerCase().equals("she") || B.words[k].toLowerCase().equals("her"))  {
+                            } else if (B.words[k].toLowerCase().equals("she") || B.words[k].toLowerCase().equals("her"))  {
                             gen--;
-                            //System.out.println("hihihi");
-                        }
+                            }
                     }
                 }
             }
             if (gen > 0) {
                             charGender[i].setr("Male");
-                            //System.out.println("reached male gender");
-                        } else if (gen < 0) {
+                            } else if (gen < 0) {
                             charGender[i].setr("Female");
-                            //System.out.println("reached female gender");
-                        } else {
+                            } else {
                             charGender[i].setr("Undetermined");
-                            //System.out.println("reached und gender");
-                        }
+                            }
+	    getGender.put (key,charGender[i].getr());
             i++;
         }
     }
 
+    /** 
+     * Prints the count of all the characters present in the novel
+     * @see BookStatistics#countBookCharacters
+     */
     public void printCharCounts() {
         if(result == null) {
             this.countBookCharacters();
         }
+	System.out.println("The counts of the characters in the novel are :-");
         for(String key : result.keySet()) {
             System.out.println(key+" : "+result.get(key));
         }
     }
     
+    /**
+     * Prints the character counts with their gender
+     */
     public void printCharCountsWithGender() {
-    	if(   
+    	System.out.println("The character counts with the gender are :-");
+	for (String key : getGender.keySet())
+	    {
+		System.out.println(key + " : " + getGender.get(key) + " : " + result.get(key));
+	    }
     }
 }

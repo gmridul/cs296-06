@@ -18,24 +18,27 @@ public class FindActors {
     public FindActors (String path) throws FileNotFoundException, IOException
     {
 	BS = new BookStatistics(path);
+	BS.determineCharGender();
+	BS.countBookWords();
+	BS.countBookCharacters();
     }
 
     /**
      * Used by the findHero and findHeroine functions
      * @param gender The gender of the character
      */
-    public String findProtagonist (String gender)
+    private String findProtagonist (String gender)
     {
 	String protagonist = "";
 	int maxFreq = 0;
-	for (int i = 0, size = BS.sortedCharacters.length; i < size; ++i)
+	for (int i = 0, size = BS.firstNamesArray.length; i < size; ++i)
 	    {
-		String candidateForProtagonist = BS.sortedCharacters[i];
-		if (BS.getGender.get (candidateForProtagonist) == gender)
-		    if (BS.result.get (candidateForProtagonist) > maxFreq)
+		String candidateForProtagonist = BS.firstNamesArray[i];
+		if (BS.getGender.get (candidateForProtagonist).equals(gender))
+		    if (BS.freq1.get (candidateForProtagonist) > maxFreq)
 			{
 			    protagonist = candidateForProtagonist;
-			    maxFreq = BS.result.get (candidateForProtagonist);
+			    maxFreq = BS.freq1.get (candidateForProtagonist);
 			}
 	    }
 	return protagonist;
@@ -47,7 +50,7 @@ public class FindActors {
      */
     public String findHero ()
     {
-	return this.findProtagonist ("M");
+	return this.findProtagonist ("Male");
     }
 
     /**
@@ -56,7 +59,7 @@ public class FindActors {
      */
     public String findHeroine ()
     {
-	return this.findProtagonist ("F");
+	return this.findProtagonist ("Female");
     }
 
     /**
@@ -68,14 +71,14 @@ public class FindActors {
 	String heroine = this.findHeroine ();
 	String villain = "";
 	int maxFreq = 0;
-	for (int i = 0, size = BS.sortedCharacters.length; i < size; ++i)
+	for (int i = 0, size = BS.firstNamesArray.length; i < size; ++i)
 	    {
-		String candidateForVillain = BS.sortedCharacters[i];
+		String candidateForVillain = BS.firstNamesArray[i];
 		if (candidateForVillain != hero && candidateForVillain != heroine)
-		    if (BS.result.get (candidateForVillain) > maxFreq)
+		    if (BS.freq1.get (candidateForVillain) > maxFreq)
 			{
 			    villain = candidateForVillain;
-			    maxFreq = BS.result.get (candidateForVillain);
+			    maxFreq = BS.freq1.get (candidateForVillain);
 			}
 	    }
 	return villain;	
