@@ -10,8 +10,7 @@ public class BookStatistics
 
     Book B;
     int count = 0;
-    Map<String, Integer> result = new HashMap<String, Integer> ();
-    ArrayList<String> characters = new ArrayList<String> ();    
+    Map<String, Integer> result = new TreeMap<String, Integer> ();
 
     public BookStatistics(String path) throws FileNotFoundException, IOException 
     {
@@ -34,6 +33,7 @@ public class BookStatistics
     
     private void findBookCharacters() 
     {
+	ArrayList<String> characters = new ArrayList<String> ();    
         for (int i = 1, size = B.words.length; i < size; ++i) 
 	    {
 		if (B.words[i - 1].contains("\"") || B.words[i - 1].contains("?") || B.words[i - 1].contains("!") && B.words[i - 1].contains(".")) 
@@ -48,15 +48,7 @@ public class BookStatistics
 			    }
 		    }
 	    }
-    }
-    
-    public Map<String, Integer> countBookCharacters() 
-    {
-        if(result.isEmpty()) 
-	    {
-		this.findBookCharacters();
-	    }
-        String[] newCharacters = new String[characters.size()];
+	String[] newCharacters = new String[characters.size()];
         characters.toArray(newCharacters);
         Map<String, Integer> freq = new HashMap<String, Integer>();
         for (int i = 0, size = newCharacters.length; i < size; ++i) 
@@ -163,7 +155,7 @@ public class BookStatistics
 	    {
 		sum += freq1.get(s);
 	    }
-        //Map<String, Integer> result = new HashMap<String, Integer>();
+
         int threshold = (int) (sum * 0.015);
         for (String s : filtered_characters) 
 	    {
@@ -197,7 +189,12 @@ public class BookStatistics
 			result.put((s + " " + title), freq1.get(s));
 		    }
 	    }
-        return result;
+    }
+    
+    public int countBookCharacters() 
+    {
+	findBookCharacters();
+	return result.size();
     }
     
     public void determineCharGender() 
