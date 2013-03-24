@@ -5,14 +5,22 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Calculates various statistics of the book like the number of words, the characters, their gender and count
+ * @see Book
+ */
 public class BookStatistics 
 {
-
     Book B;
     int count = 0;
     Map<String, Integer> result = new HashMap<String, Integer> ();
     String [] sortedCharacters;
 
+    /**
+     * @param path the path of the book file
+     * Creates an object B and calls its getBookWords function
+     * @see Book#getBookWords
+     */
     public BookStatistics(String path) throws FileNotFoundException, IOException 
     {
         B = new Book(path);
@@ -20,6 +28,9 @@ public class BookStatistics
         result = new HashMap<String, Integer>();
     }
 
+    /**
+     * Counts the number of words of the book
+     */
     public int countBookWords() 
     {
         for (int i = 0, size = B.words.length; i < size; ++i) 
@@ -192,12 +203,19 @@ public class BookStatistics
 	    }
     }
     
+    /**
+     * Counts the number of characters of the book by calling the private function findBookCharacters first
+     * @see BookStatistics#findBookCharacters
+     */
     public int countBookCharacters() 
     {
 	findBookCharacters();
 	return result.size();
     }
     
+    /**
+     * Sorts the characters of the book alphabetically
+     */
     public String [] sortBookCharacters()
     {
 	if (result.size() == 0)

@@ -2,11 +2,13 @@ import cs296BookAnalysis.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-
+/**
+ * The driver class for the complete analysis of the book
+ */
 public class BookAnalysisG06 {
 
     /**
-     * @param args the command line arguments
+     * @param args Accepts the name of the book file
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Book mybook = new Book(args[0]);
