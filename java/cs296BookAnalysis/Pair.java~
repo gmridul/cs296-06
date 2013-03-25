@@ -23,7 +23,7 @@ import java.io.*;
     }
     
     public void print() {
-    	System.out.println(l+" : "+r);
+    	System.out.println(l+" : ");
     }
 }
 

@@ -16,7 +16,6 @@ public class BookAnalysisG06 {
 	System.out.println(bookStats.countBookWords());
 	System.out.println(bookStats.countBookCharacters());
 	bookStats.determineCharGender(); 
-	bookStats.printCharCounts(); 
     }
 }
 

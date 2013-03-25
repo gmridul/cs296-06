@@ -2,10 +2,6 @@ package cs296BookAnalysis;
 
 import java.io.*;
 
-/** 
- * Represents the book object
- * Contains the name, author, title and words in the book
- */
 public class Book {
 
     String bookFileName;
@@ -13,9 +9,6 @@ public class Book {
     String[] words = null;
     String text = null;
 
-    /**
-     * The constructor function for the class
-     */
     public Book(String path) throws FileNotFoundException {
         bookFileName = path;
     }
@@ -42,9 +35,6 @@ public class Book {
         return text;
     }
 
-    /**
-     * Finds the title of the book
-     */
     public String getBookTitle() throws IOException {
         BufferedReader br;
         br = new BufferedReader(new FileReader(bookFileName));
@@ -62,9 +52,6 @@ public class Book {
         }
     }
 
-    /**
-     * Finds the author of the book
-     */
     public String getBookAuthor() throws IOException {
         BufferedReader br;
         br = new BufferedReader(new FileReader(bookFileName));
@@ -82,10 +69,6 @@ public class Book {
         }
     }
 
-    /**
-     * Prints the title of the book by calling getBookTitle
-     * @see Book#getBookTitle
-     */
     public void printBookTitle() throws IOException {
         if (title == null) {
             this.getBookTitle();
@@ -93,10 +76,6 @@ public class Book {
         System.out.println(title);
     }
 
-    /**
-     * Prints the author of the book by calling getBookAuthor
-     * @see Book#getBookAuthor
-     */
     public void printBookAuthor() throws IOException {
         if (author == null) {
             this.getBookAuthor();
@@ -104,10 +83,6 @@ public class Book {
         System.out.println(author);
     }
 
-    /**
-     * Gets all the words of the book in the array words by calling getContent
-     * @see Book#getContent
-     */
     public String[] getBookWords() throws IOException {
         if (words != null) {
             return words;
@@ -116,7 +91,17 @@ public class Book {
             this.getContent();
         }
         words = text.split(" ");
+        
         return words;
+    }
+
+    public String[] getBookCharacters() throws IOException {
+        BufferedReader br;
+        br = new BufferedReader(new FileReader(bookFileName));
+        if (words == null) {
+            words = getBookWords();
+        }
+        return null;
     }
 }
 
