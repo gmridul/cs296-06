@@ -9,38 +9,38 @@ import java.io.*;
  * @author mridul
  */
 class Pair {
-     String l,r;
+    String l,r;
     /** The constructor initialises both l and r to empty strings
      */
     public Pair() {
-	 l="";
-	 r="";
-     }
+	l="";
+	r="";
+    }
     
     /** Sets the first argument of the pair
      */
-     public void setl(String s) {
-	 l=s;
-     }
+    public void setl(String s) {
+	l=s;
+    }
 
     /** Sets the second argument of the pair
      */
-     public void setr(String s) {
-	 r=s;
-     }
+    public void setr(String s) {
+	r=s;
+    }
   
     /** Gives the first argument of the pair
      */
-     public String getl()
-     {
-	 return l;
-     }
+    public String getl()
+    {
+	return l;
+    }
 
     /** Gives the second argument of the pair
      */
-     public String getr()
-     {
-	 return r;
-     }
+    public String getr()
+    {
+	return r;
+    }
 }
 
