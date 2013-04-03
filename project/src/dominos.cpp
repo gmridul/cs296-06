@@ -1,4 +1,3 @@
-
 #include "cs296_base.hpp"
 #include "render.hpp"
 
@@ -17,14 +16,17 @@ namespace cs296
 {
   dominos_t::dominos_t()
   {
-    float g1_l=4.0, g1_b=0.2, g1_x=-35.0, g1_y=30.0;
-    float g2_l=12.0, g2_b=0.20, g2_x=-21.0, g2_y=22.0;
-    float g3_l=2.0, g3_b=0.4, g3_x=28.0, g3_y=21.0;
-    float g4_l=2.0, g4_b=0.4, g4_x=39.4, g4_y=40.0;
+    float g1_l=4.0, g1_b=0.2, g1_x=-45.0, g1_y=40.0;
+    float g2_l=12.0, g2_b=0.20, g2_x=-31.0, g2_y=31.0;
+    float g3_l=2.0, g3_b=0.4, g3_x=18.0, g3_y=21.0;
+    float g4_l=2.0, g4_b=0.4, g4_x=29.4, g4_y=40.0;
     float g5_l=3.0, g5_b=0.2, g5_x=42.0, g5_y=21.0;
-    float g6_l=8.0, g6_b=10, g6_x=39.0, g6_y=0.0;
-    float offset1=2.0, offset2=1.5, pendulum1_l=6.0, r1=0.5;
-    float domino1_l=0.1, domino1_b=1.5, offset3=1.5, offset4=1.25;
+    float g6_l=7.0, g6_b=14, g6_x=40.0, g6_y=0.0;
+		
+		float offset1=2.0, offset2=1.5, pendulum1_l=6.0, r1=0.5; //pendulum    
+		
+    float domino1_l=0.1, domino1_b=1.5, offset3=1.5, offset4=1.25; //dominos
+
     float r2=2.0, r3=1.6, offset5=3.0, offset6=3.0;
     float bs1_l=3.0, bs1_b=0.2, bs2_l=0.2, bs2_b=1;
     float r4=1.6, pulley_y=26.0, rope_l=4.0;
@@ -32,6 +34,8 @@ namespace cs296
     float stick_x=g5_x-stick_l, stick_y=g6_y+g6_b+stick_b;
     float plank_l=6.0, plank_b=0.2, plank_x=g1_x, plank_y=-4.0;
     float box_l=1.5, box_b=1.5, box_x=plank_x-plank_l+box_l/2.0, box_y=plank_y+plank_b+box_b;
+		
+		float slide1_l=17, slide1_b=0.2, slide1_x=-0.75, slide1_y=26;
     
     // for g1
     b2PolygonShape g1_shape; //! Define a polygon g1_shape
@@ -42,6 +46,16 @@ namespace cs296
     b2Body* g1_b2 = m_world->CreateBody(&g1_bd); //! Create the body
     g1_b2->CreateFixture(&g1_shape, 0.0f); //! Create the fixture of the body
     
+		// for slide
+		b2PolygonShape slide1;
+		slide1.SetAsBox(slide1_l,slide1_b); 
+		b2BodyDef slide1_bd;
+    slide1_bd.position.Set(slide1_x, slide1_y); //! Position the body on (g1_x, g1_y)
+		slide1_bd.angle=0.925f*b2_pi;
+    b2Body* slide1_b2 = m_world->CreateBody(&slide1_bd); //! Create the body
+    slide1_b2->CreateFixture(&slide1, 0.0f); //! Create the fixture of the body
+
+		// for sphere1
     b2Body* sphere1_body;
     b2CircleShape circle1; //! Create a circle shape
     circle1.m_radius = r1; //! Set the radius of the balls to be r1 m
@@ -53,7 +67,9 @@ namespace cs296
     ball1_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
     
     //create four pendulums in the loop
-    for (int i = 0; i < 4; ++i)
+		
+
+    for (int i = 0; i < 3; ++i)
       {
 	b2BodyDef ballbd;
 	ballbd.type = b2_dynamicBody;
@@ -66,6 +82,17 @@ namespace cs296
 	jd.Initialize(g1_b2, sphere1_body, anchor); //! Initialise the joint to be between g1_b2 and sphere1_body
 	m_world->CreateJoint(&jd); //! Create the joint
       }
+
+b2BodyDef ballbd0;
+	ballbd0.type = b2_dynamicBody;
+	ballbd0.position.Set (g1_x + offset1 - offset2*3 - pendulum1_l, g1_y);
+	sphere1_body = m_world->CreateBody(&ballbd0);
+	sphere1_body->CreateFixture(&ball1_fd);
+	b2RevoluteJointDef jd0; //! Define the revolute joint
+	b2Vec2 anchor0;
+	anchor0.Set(g1_x + offset1 - offset2*3, g1_y); //! Set the anchor of the body (around which the pendulum will rotate)
+	jd0.Initialize(g1_b2, sphere1_body, anchor0); //! Initialise the joint to be between g1_b2 and sphere1_body
+	m_world->CreateJoint(&jd0);
 
     // for g2
     b2PolygonShape g2_shape; //! Define a polygon g2_shape

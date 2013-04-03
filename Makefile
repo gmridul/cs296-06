@@ -205,7 +205,7 @@ compile:
 	@javac BookAnalysisG06.java
 	@java BookAnalysisG06 oliver_twist.txt
 
-doc:
+javadoc:
 	@cd cs296BookAnalysis; \
 	javadoc *.java
 
