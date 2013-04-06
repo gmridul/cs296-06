@@ -353,7 +353,7 @@ namespace cs296
 		b2RevoluteJointDef jointDef; // this code block will join the plank with the ball
 		jointDef.bodyA = plank_body;
 		jointDef.bodyB = sphere6_body;
-		jointDef.localAnchorA.Set(0.0f,0.0f);
+		jointDef.localAnchorA.Set(0.0f,0.0f); //SUDIPTO I added added these two lines
 		jointDef.localAnchorB.Set(0.0f,0.0f);
 
 		b2RevoluteJoint* joint = (b2RevoluteJoint*)m_world->CreateJoint(&jointDef);
@@ -388,7 +388,8 @@ namespace cs296
 		box2_bd.position.Set(box_x+2*(plank_x-box_x), box_y);
 		b2Body* box2_body = m_world->CreateBody(&box2_bd);
 		box2_body->CreateFixture(&box2_fd);       
-
+/*******************************
+this is code which Mridul added*/
 		// defining the lower pulley components
 		//this is the pulplank (pulley plank) 
 		b2PolygonShape pulplank_shape;
@@ -437,7 +438,7 @@ namespace cs296
 	//	myjoint->Initialize(box1, spherebody, worldAnchorGround1, worldAnchorGround2, worldAnchorOnBody1, worldAnchorOnBody2, ratio); //! Initialize the joint with the above values spherebody->GetWorldCenter()
 	//	m_world->CreateJoint(myjoint);	
 
-
+/******************************/
 	}
 
 	sim_t *sim = new sim_t("Dominos", dominos_t::create);
