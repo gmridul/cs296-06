@@ -47,6 +47,7 @@ namespace cs296
     float stick_x=g5_x-stick_l, stick_y=g6_y+g6_b+stick_b;
     float plank_l=6.0, plank_b=0.2, plank_x=g1_x, plank_y=-4.0;
     float box_l=1.5, box_b=1.5, box_x=plank_x-plank_l+box_l/2.0, box_y=plank_y+plank_b+box_b;
+    float pulplank_x=plank_x+plank_l+1.0,pulplank_y= 3.0-box_y;
 		
 		/*float slide1_l=17, slide1_b=0.2, slide1_x=-0.75, slide1_y=26;
 		float slide2_l=17, slide2_b=0.2, slide2_x=17, slide2_y=7;*/
@@ -396,7 +397,7 @@ b2BodyDef ballbd0;
     
     b2BodyDef ball6_bd;
     ball6_bd.type = b2_staticBody;
-    ball6_bd.position.Set (com.x, com.y);
+    ball6_bd.position.Set (plank_x, com.y);
     sphere6_body = m_world->CreateBody(&ball6_bd);
     sphere6_body->CreateFixture(&ball6_fd);
 
@@ -406,24 +407,39 @@ b2BodyDef ballbd0;
 		jointDef.localAnchorA.Set(0.0f,0.0f); //SUDIPTO I added added these two lines
 		jointDef.localAnchorB.Set(0.0f,0.0f);
 
-		//b2RevoluteJoint* joint = (b2RevoluteJoint*)m_world->CreateJoint(&jointDef);
+		b2RevoluteJoint* joint = (b2RevoluteJoint*)m_world->CreateJoint(&jointDef);
 
-    b2PolygonShape box_shape;
-    box_shape.SetAsBox(box_l, box_b);
-    
-    b2FixtureDef box_fd;
-    box_fd.shape = &box_shape;
-    box_fd.density = 1.0f;
-    box_fd.friction = 0.01f;
-    box_fd.restitution = 0.0f;
-    
-    b2BodyDef box_bd;
-    box_bd.type = b2_dynamicBody;
-    box_bd.position.Set(box_x, box_y);
-    b2Body* box_body = m_world->CreateBody(&box_bd);
-    box_body->CreateFixture(&box_fd);  
 
-		/*******************************
+		b2PolygonShape box_shape; // code for the left block placed on the plank
+		box_shape.SetAsBox(box_l, box_b);
+
+		b2FixtureDef box_fd;
+		box_fd.shape = &box_shape;
+		box_fd.density = 1.0f;
+		box_fd.friction = 0.01f;
+		box_fd.restitution = 0.0f;
+
+		b2BodyDef box_bd;
+		box_bd.type = b2_dynamicBody;
+		box_bd.position.Set(box_x, box_y);
+		b2Body* box_body = m_world->CreateBody(&box_bd);
+		box_body->CreateFixture(&box_fd);        
+
+		b2PolygonShape box2_shape;         // code for the right block on the plank.
+		box2_shape.SetAsBox(box_l, box_b); // this is placed so that the plank remains as it is until the ball falls on it.
+
+		b2FixtureDef box2_fd;              // all the properties of ball2 are same as the ball
+		box2_fd.shape = &box_shape;
+		box2_fd.density = 1.0f;
+		box2_fd.friction = 0.01f;
+		box2_fd.restitution = 0.0f;
+
+		b2BodyDef box2_bd;
+		box2_bd.type = b2_dynamicBody;
+		box2_bd.position.Set(box_x+2*(plank_x-box_x), box_y);
+		b2Body* box2_body = m_world->CreateBody(&box2_bd);
+		box2_body->CreateFixture(&box2_fd);       
+/*******************************
 this is code which Mridul added*/
 		// defining the lower pulley components
 		//this is the pulplank (pulley plank) 
@@ -439,14 +455,36 @@ this is code which Mridul added*/
 		b2BodyDef pulplank_bd;
 		pulplank_bd.type = b2_dynamicBody;
 		pulplank_bd.fixedRotation = false;
-		pulplank_bd.position.Set(plank_x+plank_l+1.0, 3.0-box_y);
+		pulplank_bd.position.Set(pulplank_x, pulplank_y);
 		b2Body* pulplank_body = m_world->CreateBody(&pulplank_bd);
-		pulplank_body->CreateFixture(&pulplank_fd);   
+		pulplank_body->CreateFixture(&pulplank_fd);  
+
+		//Now defining the sphere to hinge pulplank
+		b2Body* sphere8_body;
+
+		b2FixtureDef ball8_fd;
+		ball8_fd.shape = &circle6;
+		ball8_fd.density = 5.0f; //! Set the density to be unity
+		ball8_fd.friction = 0.0f; //! No friction to allow the balls to roll freely
+		ball8_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
+
+		b2BodyDef ball8_bd;
+		ball8_bd.type = b2_staticBody;
+		ball8_bd.position.Set(pulplank_x,pulplank_y+plank_b);
+		sphere8_body = m_world->CreateBody(&ball8_bd);
+		sphere8_body->CreateFixture(&ball8_fd);
+
+		b2RevoluteJointDef jointDef2; // this code block will join the plank with the ball
+		jointDef2.bodyA = pulplank_body;
+		jointDef2.bodyB = sphere8_body;
+		jointDef2.localAnchorA.Set(0.0f,0.0f); //SUDIPTO I added added these two lines
+		jointDef2.localAnchorB.Set(0.0f,0.0f);
+
+		b2RevoluteJoint* joint2 = (b2RevoluteJoint*)m_world->CreateJoint(&jointDef2);
+
 
 		// now placing sphere7 on pulplank	
 		b2Body* sphere7_body;
-		//b2CircleShape circle7 //Create a circle shape
-		//circle6.m_radius = r7; //! Set the radius of the balls to be r7 m
 
 		b2FixtureDef ball7_fd;
 		ball7_fd.shape = &circle4;
@@ -457,7 +495,7 @@ this is code which Mridul added*/
 		b2BodyDef ball7_bd;
 
 		ball7_bd.type = b2_dynamicBody;
-		ball7_bd.position.Set(plank_x+plank_l+1.0,3.0-box_y+plank_b+r6 );
+		ball7_bd.position.Set(pulplank_x,pulplank_y+plank_b+r6 );
 		sphere7_body = m_world->CreateBody(&ball7_bd);
 		sphere7_body->CreateFixture(&ball7_fd);
 
@@ -473,9 +511,8 @@ this is code which Mridul added*/
 	//	myjoint->Initialize(box1, spherebody, worldAnchorGround1, worldAnchorGround2, worldAnchorOnBody1, worldAnchorOnBody2, ratio); //! Initialize the joint with the above values spherebody->GetWorldCenter()
 	//	m_world->CreateJoint(myjoint);	
 
-/******************************/      
+/******************************/
+	}
 
-  }
-
-  sim_t *sim = new sim_t("Dominos", dominos_t::create);
+	sim_t *sim = new sim_t("Dominos", dominos_t::create);
 }
