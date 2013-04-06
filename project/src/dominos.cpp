@@ -346,7 +346,7 @@ namespace cs296
 
 		b2BodyDef ball6_bd;
 		ball6_bd.type = b2_staticBody;
-		ball6_bd.position.Set (com.x, com.y);
+		ball6_bd.position.Set(plank_x, com.y);
 		sphere6_body = m_world->CreateBody(&ball6_bd);
 		sphere6_body->CreateFixture(&ball6_fd);
 
@@ -373,6 +373,21 @@ namespace cs296
 		box_bd.position.Set(box_x, box_y);
 		b2Body* box_body = m_world->CreateBody(&box_bd);
 		box_body->CreateFixture(&box_fd);        
+
+		b2PolygonShape box2_shape;
+		box2_shape.SetAsBox(box_l, box_b);
+
+		b2FixtureDef box2_fd;
+		box2_fd.shape = &box_shape;
+		box2_fd.density = 1.0f;
+		box2_fd.friction = 0.01f;
+		box2_fd.restitution = 0.0f;
+
+		b2BodyDef box2_bd;
+		box2_bd.type = b2_dynamicBody;
+		box2_bd.position.Set(box_x+2*(plank_x-box_x), box_y);
+		b2Body* box2_body = m_world->CreateBody(&box2_bd);
+		box2_body->CreateFixture(&box2_fd);        
 
 	}
 
