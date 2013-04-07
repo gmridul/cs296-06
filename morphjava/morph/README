@@ -1,0 +1,10 @@
+1. Make sure ImageMagick libraries are installed. In particular libMAgick++ and Magick++.h. Adjust the paths in the makefile to these files.
+
+2. Run make
+
+3. In this implementation the names of the source and target images are hadcoded, as are their widths and heights. You should not do this in the assignment.
+
+4. Pairs of left clicks create lines on the source, pairs of right clicks create lines on the target.
+
+5. Press m to start the morph. This will create 11 images named test_00.jpg to test_10.jpg.  
+
