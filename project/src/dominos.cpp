@@ -47,7 +47,7 @@ namespace cs296
 		float stick_x=g5_x-stick_l, stick_y=g6_y+g6_b+stick_b;
 		float plank_l=6.0, plank_b=0.2, plank_x=g1_x, plank_y=-4.0;
 		float box_l=1.5, box_b=1.5, box_x=plank_x-plank_l+box_l/2.0, box_y=plank_y+plank_b+box_b;
-		float pulplank_x=plank_x+plank_l+1.0,pulplank_y= 3.0-box_y;
+		float pulplank_x=plank_x+plank_l+1.0,pulplank_y= 3.0-box_y, r8 = 2.0;
 
 		/*float slide1_l=17, slide1_b=0.2, slide1_x=-0.75, slide1_y=26;
 		  float slide2_l=17, slide2_b=0.2, slide2_x=17, slide2_y=7;*/
@@ -180,7 +180,7 @@ namespace cs296
 		b2FixtureDef ball2_fd;
 		ball2_fd.shape = &circle2;
 		ball2_fd.density = 5.0f; //! Set the density to be unity
-		ball2_fd.friction = 0.005f; //! No friction to allow the balls to roll freely
+		ball2_fd.friction = 0.005f; //! low friction to allow the balls to roll freely
 		ball2_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
 		b2BodyDef ball2_bd;
@@ -557,6 +557,62 @@ namespace cs296
 		pendjointDef.localAnchorB.Set(0.0f,0.0f);
 
 		b2RevoluteJoint* pendjoint = (b2RevoluteJoint*)m_world->CreateJoint(&pendjointDef);
+
+
+		// b2Body* gear_body;
+		// b2CircleShape circle11; //! Create a circle shape
+		// circle11.m_radius = r8; //! Set the radius of the balls to be r2 m
+
+		// b2FixtureDef ball11_fd;
+		// ball11_fd.shape = &circle11;
+		// ball11_fd.density = 5.0f; //! Set the density to be unity
+		// ball11_fd.friction = 0.000f; //! No friction to allow the balls to roll freely
+		// ball11_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
+
+		// b2BodyDef ball11_bd;
+		// ball11_bd.type = b2_dynamicBody;
+		// ball11_bd.position.Set (0,0);
+		// gear_body = m_world->CreateBody(&ball11_bd);
+		// gear_body->CreateFixture(&ball2_fd);		
+
+		// b2Body* sphere11_body;
+
+		// b2BodyDef ball12_bd;
+		// ball12_bd.type = b2_staticBody;
+		// ball12_bd.position.Set (0,0);
+		// sphere11_body = m_world->CreateBody(&ball12_bd);
+		// sphere11_body->CreateFixture(&ball6_fd);
+		
+		// b2FixtureDef *gear_proj = new b2FixtureDef; //! Define two new fixtures representing the right and left walls of the box
+		// gear_proj->density = 10.0;//! Set their density to be zero
+		// gear_proj->friction = 0.5; //! Set the friction coefficient
+		// gear_proj->restitution = 0.f; //! Allow for elastic collision
+		// gear_proj->shape = new b2PolygonShape; //! Define a new polygon shape
+		// b2PolygonShape stick1; //! Define another polygon shape variable
+		// stick1.SetAsBox(2, 0.2, b2Vec2(4, 0), 0); //! Set the right and left walls as rectangular boxes
+		// gear_proj->shape = &stick1;
+		// gear_body->CreateFixture(gear_proj);
+		
+		// stick1.SetAsBox(2, 0.2, b2Vec2(-4,0), 0);
+		// // b2FixtureDef *gear_proj_2 = new b2FixtureDef; //! Define two new fixtures representing the right and left walls of the box
+		// // gear_proj_2->density = 0.0;//! Set their density to be zero
+		// // gear_proj_2->friction = 0; //! Set the friction coefficient
+		// // gear_proj_2->restitution = 0.f; //! Allow for elastic collision
+		// // gear_proj_2->shape = new b2PolygonShape; //! Define a new polygon shape
+		// // b2PolygonShape stick2; //! Define another polygon shape variable
+		// // stick2.SetAsBox(4, 0.2, b2Vec2(-4-0.1, -4), 0); //! Set the right and left walls as rectangular boxes
+		// gear_proj->shape = &stick1;
+		// // gear_proj->shape = &stick2;
+		// gear_body->CreateFixture(gear_proj);
+		// // gear_body->CreateFixture(gear_proj_2);
+		
+		// b2RevoluteJointDef gearjointDef; // this code block will join the plank with the ball
+		// gearjointDef.bodyA = gear_body;
+		// gearjointDef.bodyB = sphere11_body;
+		// gearjointDef.localAnchorA.Set(0.0f,0.0f);
+		// gearjointDef.localAnchorB.Set(0.0f,0.0f);
+
+		// b2RevoluteJoint* gearjoint = (b2RevoluteJoint*)m_world->CreateJoint(&gearjointDef);
 
 		//implementing pulley. First define the left part that is the part that is attached to pulplank.
 
