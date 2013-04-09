@@ -36,7 +36,7 @@ namespace cs296
 		float g5_l=3.0, g5_b=0.2, g5_x=42.0, g5_y=21.0;
 		float g6_l=7.0, g6_b=14, g6_x=40.0, g6_y=0.0;
 
-		float offset1=2.0, offset2=1.5, pendulum1_l=6.0, r1=0.5; //pendulum    
+		float offset1=2.0, offset2=1.5, pendulum1_l=6.9, r1=0.5; //pendulum    
 
 		float domino1_l=0.1, domino1_b=1.5, offset3=1.5, offset4=1.25; //dominos
 
@@ -47,13 +47,12 @@ namespace cs296
 		float stick_x=g5_x-stick_l, stick_y=g6_y+g6_b+stick_b;
 		float plank_l=6.0, plank_b=0.2, plank_x=g1_x, plank_y=-4.0;
 		float box_l=1.5, box_b=1.5, box_x=plank_x-plank_l+box_l/2.0, box_y=plank_y+plank_b+box_b;
-		float pulplank_x=plank_x+plank_l+1.0,pulplank_y= 3.0-box_y, r8 = 2.0;
-
-		/*float slide1_l=17, slide1_b=0.2, slide1_x=-0.75, slide1_y=26;
-		  float slide2_l=17, slide2_b=0.2, slide2_x=17, slide2_y=7;*/
-		float slide1_i=0.25;
+		float pulplank_x=plank_x+plank_l+1.0,pulplank_y= 3.0-box_y;
+		float box2_x=pulplank_x+plank_l+2.0, box2_y=plank_y;
+		float slide1_i=0.25,r8=2.0;
+		float gear_x=-14.0f, gear_y=6.0f, offset8=2.0f;
 		/* *****************************Parabolic curved slide1 --SUDIPTO--  */
-		for(float left=-8;left!=18;left=left+slide1_i)
+		for(float left=-12;left!=18;left=left+slide1_i)
 		{
 			b2PolygonShape p_shape;				
 			p_shape.SetAsBox(dist(left,left*left/18,left+slide1_i,(left+slide1_i)*(left+slide1_i)/18)/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
@@ -87,25 +86,6 @@ namespace cs296
 		b2Body* g1_b2 = m_world->CreateBody(&g1_bd); //! Create the body
 		g1_b2->CreateFixture(&g1_shape, 0.0f); //! Create the fixture of the body
 
-		/*/ for slide1
-		  b2PolygonShape slide1;
-		  slide1.SetAsBox(slide1_l,slide1_b); 
-		  b2BodyDef slide1_bd;
-		  slide1_bd.position.Set(slide1_x, slide1_y); //! Position the body on (g1_x, g1_y)
-		  slide1_bd.angle=0.925f*b2_pi;
-		  b2Body* slide1_b2 = m_world->CreateBody(&slide1_bd); //! Create the body
-		  slide1_b2->CreateFixture(&slide1, 0.0f); //! Create the fixture of the body
-		 */		
-		/*
-		// for slide2
-		b2PolygonShape slide2;
-		slide2.SetAsBox(slide2_l,slide2_b); 
-		b2BodyDef slide2_bd;
-		slide2_bd.position.Set(slide2_x, slide2_y); //! Position the body on (g1_x, g1_y)
-		slide2_bd.angle=0.12f*b2_pi;
-		b2Body* slide2_b2 = m_world->CreateBody(&slide2_bd); //! Create the body
-		slide2_b2->CreateFixture(&slide2, 0.0f); //! Create the fixture of the body*/
-
 		// for sphere1
 		b2Body* sphere1_body;
 		b2CircleShape circle1; //! Create a circle shape
@@ -113,14 +93,14 @@ namespace cs296
 
 		b2FixtureDef ball1_fd;
 		ball1_fd.shape = &circle1;
-		ball1_fd.density = 1.0f; //! Set the density to be unity
+		ball1_fd.density = 0.1f; //! Set the density to be unity
 		ball1_fd.friction = 0.00f; //! No friction to allow the balls to roll freely
 		ball1_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
 		//create four pendulums in the loop
 
 
-		for (int i = 0; i < 3; ++i)
+		for (int i = 0; i < 4; ++i)
 		{
 			b2BodyDef ballbd;
 			ballbd.type = b2_dynamicBody;
@@ -133,17 +113,6 @@ namespace cs296
 			jd.Initialize(g1_b2, sphere1_body, anchor); //! Initialise the joint to be between g1_b2 and sphere1_body
 			m_world->CreateJoint(&jd); //! Create the joint
 		}
-
-		b2BodyDef ballbd0;
-		ballbd0.type = b2_dynamicBody;
-		ballbd0.position.Set (g1_x + offset1 - offset2*3 - pendulum1_l, g1_y);
-		sphere1_body = m_world->CreateBody(&ballbd0);
-		sphere1_body->CreateFixture(&ball1_fd);
-		b2RevoluteJointDef jd0; //! Define the revolute joint
-		b2Vec2 anchor0;
-		anchor0.Set(g1_x + offset1 - offset2*3, g1_y); //! Set the anchor of the body (around which the pendulum will rotate)
-		jd0.Initialize(g1_b2, sphere1_body, anchor0); //! Initialise the joint to be between g1_b2 and sphere1_body
-		m_world->CreateJoint(&jd0);
 
 		// for g2
 		b2PolygonShape g2_shape; //! Define a polygon g2_shape
@@ -161,7 +130,7 @@ namespace cs296
 		b2FixtureDef fd;
 		fd.shape = &domino_shape;
 		fd.density = 20.0f; //! Since the dominos are not static and also rotating, the density is non-zero
-		fd.friction = 0.1f; //! Non-zero friction will help the dominos come to a halt on the top horizontal shelf when they are hit by the pendulum
+		fd.friction = 0.5f; //! Non-zero friction will help the dominos come to a halt on the top horizontal shelf when they are hit by the pendulum
 
 		//! define the 15 dominos
 		for (int i = 0; i < 15; ++i)
@@ -180,7 +149,7 @@ namespace cs296
 		b2FixtureDef ball2_fd;
 		ball2_fd.shape = &circle2;
 		ball2_fd.density = 5.0f; //! Set the density to be unity
-		ball2_fd.friction = 0.005f; //! low friction to allow the balls to roll freely
+		ball2_fd.friction = 0.5f; //! No friction to allow the balls to roll freely
 		ball2_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
 		b2BodyDef ball2_bd;
@@ -487,7 +456,7 @@ namespace cs296
 
 		b2FixtureDef ball7_fd;
 		ball7_fd.shape = &circle4;
-		ball7_fd.density = 5.0f; //! Set the density to be unity
+		ball7_fd.density = 55.0f; //! Set the density to be unity
 		ball7_fd.friction = 0.0f; //! No friction to allow the balls to roll freely
 		ball7_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
@@ -502,7 +471,7 @@ namespace cs296
 
 		b2BodyDef plankfly_bd;
 		plankfly_bd.type = b2_dynamicBody;
-		plankfly_bd.angle=b2_pi*0.5f;
+		plankfly_bd.angle=b2_pi*0.25f;
 		plankfly_bd.fixedRotation = false;
 		plankfly_bd.position.Set((plank_x+pulplank_x)/2.0, plank_y+20.0);
 		b2Body* plankfly_body = m_world->CreateBody(&plankfly_bd);
@@ -530,7 +499,7 @@ namespace cs296
 
 		b2FixtureDef plankpend_fd;
 		plankpend_fd.shape = &plankpend_shape;
-		plankpend_fd.density = 1.0f;
+		plankpend_fd.density =0.5f;
 		plankpend_fd.friction = 0.01f;
 		plankpend_fd.restitution = 0.0f;
 
@@ -557,73 +526,136 @@ namespace cs296
 		pendjointDef.localAnchorB.Set(0.0f,0.0f);
 
 		b2RevoluteJoint* pendjoint = (b2RevoluteJoint*)m_world->CreateJoint(&pendjointDef);
-
-
-		// b2Body* gear_body;
-		// b2CircleShape circle11; //! Create a circle shape
-		// circle11.m_radius = r8; //! Set the radius of the balls to be r2 m
-
-		// b2FixtureDef ball11_fd;
-		// ball11_fd.shape = &circle11;
-		// ball11_fd.density = 5.0f; //! Set the density to be unity
-		// ball11_fd.friction = 0.000f; //! No friction to allow the balls to roll freely
-		// ball11_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
-
-		// b2BodyDef ball11_bd;
-		// ball11_bd.type = b2_dynamicBody;
-		// ball11_bd.position.Set (0,0);
-		// gear_body = m_world->CreateBody(&ball11_bd);
-		// gear_body->CreateFixture(&ball2_fd);		
-
-		// b2Body* sphere11_body;
-
-		// b2BodyDef ball12_bd;
-		// ball12_bd.type = b2_staticBody;
-		// ball12_bd.position.Set (0,0);
-		// sphere11_body = m_world->CreateBody(&ball12_bd);
-		// sphere11_body->CreateFixture(&ball6_fd);
 		
-		// b2FixtureDef *gear_proj = new b2FixtureDef; //! Define two new fixtures representing the right and left walls of the box
-		// gear_proj->density = 10.0;//! Set their density to be zero
-		// gear_proj->friction = 0.5; //! Set the friction coefficient
-		// gear_proj->restitution = 0.f; //! Allow for elastic collision
-		// gear_proj->shape = new b2PolygonShape; //! Define a new polygon shape
-		// b2PolygonShape stick1; //! Define another polygon shape variable
-		// stick1.SetAsBox(2, 0.2, b2Vec2(4, 0), 0); //! Set the right and left walls as rectangular boxes
-		// gear_proj->shape = &stick1;
-		// gear_body->CreateFixture(gear_proj);
-		
-		// stick1.SetAsBox(2, 0.2, b2Vec2(-4,0), 0);
-		// // b2FixtureDef *gear_proj_2 = new b2FixtureDef; //! Define two new fixtures representing the right and left walls of the box
-		// // gear_proj_2->density = 0.0;//! Set their density to be zero
-		// // gear_proj_2->friction = 0; //! Set the friction coefficient
-		// // gear_proj_2->restitution = 0.f; //! Allow for elastic collision
-		// // gear_proj_2->shape = new b2PolygonShape; //! Define a new polygon shape
-		// // b2PolygonShape stick2; //! Define another polygon shape variable
-		// // stick2.SetAsBox(4, 0.2, b2Vec2(-4-0.1, -4), 0); //! Set the right and left walls as rectangular boxes
-		// gear_proj->shape = &stick1;
-		// // gear_proj->shape = &stick2;
-		// gear_body->CreateFixture(gear_proj);
-		// // gear_body->CreateFixture(gear_proj_2);
-		
-		// b2RevoluteJointDef gearjointDef; // this code block will join the plank with the ball
-		// gearjointDef.bodyA = gear_body;
-		// gearjointDef.bodyB = sphere11_body;
-		// gearjointDef.localAnchorA.Set(0.0f,0.0f);
-		// gearjointDef.localAnchorB.Set(0.0f,0.0f);
+		b2Body* gear_body;
+		 b2CircleShape circle11; //! Create a circle shape
+		 circle11.m_radius = r8; //! Set the radius of the balls to be r2 m
 
-		// b2RevoluteJoint* gearjoint = (b2RevoluteJoint*)m_world->CreateJoint(&gearjointDef);
+		 b2FixtureDef ball11_fd;
+		 ball11_fd.shape = &circle11;
+		 ball11_fd.density = 5.0f; //! Set the density to be unity
+		 ball11_fd.friction = 0.000f; //! No friction to allow the balls to roll freely
+		 ball11_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
+		 b2BodyDef ball11_bd;
+		 ball11_bd.type = b2_dynamicBody;
+		 ball11_bd.position.Set (gear_x,gear_y);
+		 gear_body = m_world->CreateBody(&ball11_bd);
+		 gear_body->CreateFixture(&ball2_fd);		
+
+		 b2Body* sphere11_body;
+
+		 b2BodyDef ball12_bd;
+		 ball12_bd.type = b2_staticBody;
+		 ball12_bd.position.Set (gear_x,gear_y);
+		 sphere11_body = m_world->CreateBody(&ball12_bd);
+		 sphere11_body->CreateFixture(&ball6_fd);
+		
+		 b2FixtureDef *gear_proj = new b2FixtureDef; //! Define two new fixtures representing the right and left walls of the box
+		 gear_proj->density = 10.0;//! Set their density to be zero
+		 gear_proj->friction = 0.5; //! Set the friction coefficient
+		 gear_proj->restitution = 0.f; //! Allow for elastic collision
+		 gear_proj->shape = new b2PolygonShape; //! Define a new polygon shape
+		 b2PolygonShape stick1; //! Define another polygon shape variable
+		 stick1.SetAsBox(2, 0.2, b2Vec2(4, 0), 0); //! Set the right and left walls as rectangular boxes
+		 gear_proj->shape = &stick1;
+		 gear_body->CreateFixture(gear_proj);
+		 stick1.SetAsBox(4, 0.2, b2Vec2(-2.7, 0.0), 1.0);
+		 // b2FixtureDef *gear_proj_2 = new b2FixtureDef; //! Define two new fixtures representing the right and left walls of the box
+		 // gear_proj_2->density = 0.0;//! Set their density to be zero
+		 // gear_proj_2->friction = 0; //! Set the friction coefficient
+		 // gear_proj_2->restitution = 0.f; //! Allow for elastic collision
+		 // gear_proj_2->shape = new b2PolygonShape; //! Define a new polygon shape
+		 // b2PolygonShape stick2; //! Define another polygon shape variable
+		 // stick2.SetAsBox(4, 0.2, b2Vec2(-4-0.1, -4), 0); //! Set the right and left walls as rectangular boxes
+		 gear_proj->shape = &stick1;
+		 // gear_proj->shape = &stick2;
+		 gear_body->CreateFixture(gear_proj);
+		 // gear_body->CreateFixture(gear_proj_2);
+	
+
+		// this is the rod which will drive the gear into motion
+		 b2RevoluteJointDef gearjointDef; // this code block will join the plank with the ball
+		 gearjointDef.bodyA = gear_body;
+		 gearjointDef.bodyB = sphere11_body;
+		 gearjointDef.localAnchorA.Set(0.0f,0.0f);
+		 gearjointDef.localAnchorB.Set(0.0f,0.0f);
+
+		 b2RevoluteJoint* gearjoint = (b2RevoluteJoint*)m_world->CreateJoint(&gearjointDef);
+
+		 b2BodyDef plankgear_bd;
+		plankgear_bd.type = b2_dynamicBody;
+		plankgear_bd.fixedRotation = false;
+		plankgear_bd.position.Set(-3.0,8.0);
+		b2Body* plankgear_body = m_world->CreateBody(&plankgear_bd);
+		plankgear_body->CreateFixture(&plank_fd);    
+
+		b2Body* sphere12_body;
+
+		b2BodyDef ball13_bd;
+		ball13_bd.type = b2_staticBody;
+		ball13_bd.position.Set (-3.0,8.0);
+		sphere12_body = m_world->CreateBody(&ball13_bd);
+		sphere12_body->CreateFixture(&ball6_fd);
+
+		b2RevoluteJointDef geardriverjointDef; // this code block will join the plank with the ball
+		geardriverjointDef.bodyA = plankgear_body;
+		geardriverjointDef.bodyB = sphere12_body;
+		geardriverjointDef.localAnchorA.Set(0.0f,0.0f);
+		geardriverjointDef.localAnchorB.Set(0.0f,0.0f);
+
+		// b2PolygonShape puller_shape;
+		// puller_shape.SetAsBox(0.1,5); // Create a puller_shape as a box domino1_x m wide and domino1_y m high
+
+		// b2FixtureDef puller_fd;
+		// puller_fd.shape = &puller_shape;
+		// puller_fd.density = 20.0f; //! Since the dominos are not static and also rotating, the density is non-zero
+		// puller_fd.friction = 0.5f; //! Non-zero friction will help the dominos come to a halt on the top horizontal shelf when they are hit by the pendulum
+
+		// b2BodyDef puller_bd;
+		// puller_bd.type = b2_dynamicBody; //! Define the domino to be a dynamic body
+		// puller_bd.position.Set(g2_x - g2_l + offset3 + offset4 * i, g2_y+ g2_b + domino1_b); //! Set the positions of the dominos starting at (g2_x - g2_l + offset3, 22.85f) and separated by a horizontal distance of offset4 m
+		// b2Body* body = m_world->CreateBody(&puller_bd);
+		// body->CreateFixture(&puller_fd);
+
+		b2RevoluteJoint* geardriverjoint = (b2RevoluteJoint*)m_world->CreateJoint(&geardriverjointDef);
+
+		 b2BodyDef ballgr_bd;
+		ballgr_bd.fixedRotation = false;
+		ballgr_bd.position.Set(-18.0,1.1);
+		ballgr_bd.angle=b2_pi*0.25/3.0;
+		b2Body* ballgr_body = m_world->CreateBody(&ballgr_bd);
+
+		b2PolygonShape ballgr_shape;
+		ballgr_shape.SetAsBox(plank_l, plank_b);
+
+		b2FixtureDef ballgr_fd;
+		ballgr_fd.shape = &ballgr_shape;
+		ballgr_fd.density = 1.0f;
+		ballgr_fd.friction = 0.01f;
+		ballgr_fd.restitution = 0.0f;
+
+		ballgr_body->CreateFixture(&ballgr_fd);    
+
+		//! The open box2
+		b2BodyDef *dynamic_bd2 = new b2BodyDef; //! Define a new body
+		dynamic_bd2->type = b2_dynamicBody; //! Set its type as dynamic
+		dynamic_bd2->position.Set(box2_x+offset8,box2_y); //! Set its initial position at (g3_x+ g3_l + offset5, g3_y - offset6)
+		dynamic_bd2->fixedRotation = true; //! Set the rotational inertia of the block to be zero, i.e. Don't allow the block to rotate when the ball fall on the block
+
+		b2Body* box2 = m_world->CreateBody(dynamic_bd2); //! Create the body
+		box2->CreateFixture(dynamic_fd1); //! Add the fixtures of the base and the two walls to the body
+		box2->CreateFixture(dynamic_fd2);
+		box2->CreateFixture(dynamic_fd3);
 		//implementing pulley. First define the left part that is the part that is attached to pulplank.
 
-		//	b2PulleyJointDef* ljoint = new b2PulleyJointDef();
-		//	b2Vec2 worldAnchorOnBody1(plank_x+2.0*plank_l, 3.0-box_y+plank_b); //! Anchor point on body 1 in world axis
-		//	b2Vec2 worldAnchorOnBody2(g3_x+ g3_l + offset5 + r4*2.0, pulley_y); //! Anchor point on body 2 in world axis
-		//	b2Vec2 worldAnchorGround1(g3_x+ g3_l + offset5, pulley_y + rope_l/2.0); //! Anchor point for ground 1 in world axis
-		//	b2Vec2 worldAnchorGround2(g3_x+ g3_l + offset5 + r4*2.0, pulley_y + rope_l/2.0); //! Anchor point for ground 2 in world axis
-		//	float32 ratio = 1.0f; //! Define ratio of the two sides for the pulley to go up and down
-		//	myjoint->Initialize(box1, spherebody, worldAnchorGround1, worldAnchorGround2, worldAnchorOnBody1, worldAnchorOnBody2, ratio); //! Initialize the joint with the above values spherebody->GetWorldCenter()
-		//	m_world->CreateJoint(myjoint);	
+		b2PulleyJointDef* ljoint2 = new b2PulleyJointDef();
+		b2Vec2 worldAnchorOnBodyA(pulplank_x+plank_l/2.0,pulplank_y); //! Anchor point on body 1 in world axis
+		b2Vec2 worldAnchorOnBodyB(box2_x+offset8,box2_y); //! Anchor point on body 2 in world axis
+		b2Vec2 worldAnchorGroundA(pulplank_x+plank_l/2.0, pulplank_y+5.0); //! Anchor point for ground 1 in world axis
+		b2Vec2 worldAnchorGroundB(box2_x+offset8,pulplank_y+5.0); //! Anchor point for ground 2 in world axis
+		ljoint2->Initialize(pulplank_body, box2, worldAnchorGroundA, worldAnchorGroundB, worldAnchorOnBodyA, worldAnchorOnBodyB, ratio); //! Initialize the joint with the above values spherebody->GetWorldCenter()
+		m_world->CreateJoint(ljoint2);	
 
 		/******************************/
 	}
