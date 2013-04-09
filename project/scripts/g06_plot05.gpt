@@ -1,0 +1,20 @@
+#Consider the variation in time over reruns to be the deviation in the time measurement and plot the step time for various iteration values with error bars corresponding to the deviation. 
+
+set title 'deviation in the various time measurements'
+set xlabel 'Number of Iterations'
+set ylabel 'Time(in miliseconds)'
+set datafile separator ','
+datafile = 'data/avg_deviation.csv'
+set terminal png
+set output 'plots/g06_plot05.png'
+
+set xrange[0:101]
+
+set style data yerrorbars
+
+plot datafile using 1:2:3, \
+     '' using 1:4:5, \
+     '' using 1:6:7, \
+     '' using 1:8:9
+
+reset
