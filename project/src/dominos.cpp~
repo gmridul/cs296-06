@@ -56,7 +56,7 @@ namespace cs296
 		float slide1_i=0.25,r8=2.0;
 		float gear_x=-14.0f, gear_y=6.0f, offset8=2.0f;
 		/* *****************************Parabolic curved slide1 --SUDIPTO--  */
-		for(float left=-12;left!=18;left=left+slide1_i)
+		for(float left=-8;left!=18;left=left+slide1_i)
 		{
 			b2PolygonShape p_shape;				
 			p_shape.SetAsBox(dist(left,parabola(left,18),left+slide1_i,parabola(left+slide1_i,18))/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
