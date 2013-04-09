@@ -20,14 +20,10 @@ float dist(float x1, float y1, float x2, float y2)
 float theta(float x1, float y1, float x2, float y2)
 {
 	if (x1==x2)
-		return 0.5;
+	  return 0.5;
 	return atan((y2-y1)/(x2-x1))/3.1415942;
 }
 
-float parabola(float x,int c)
-{
-	return x*x/c;
-}
 
 namespace cs296
 {
@@ -59,10 +55,10 @@ namespace cs296
 		for(float left=-12;left!=18;left=left+slide1_i)
 		{
 			b2PolygonShape p_shape;				
-			p_shape.SetAsBox(dist(left,parabola(left,18),left+slide1_i,parabola(left+slide1_i,18))/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
+			p_shape.SetAsBox(dist(left,left*left/18,left+slide1_i,(left+slide1_i)*(left+slide1_i)/18)/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
 			b2BodyDef p_bd;
-			p_bd.position.Set(15+left+slide1_i/2.0, -4 + (parabola(left,18) + parabola(left+slide1_i,18))/2.0); //! Position the body on (g1_x, g1_y)
-			p_bd.angle=theta(left,parabola(left,18),left+slide1_i,parabola(left+slide1_i,18))*b2_pi;
+			p_bd.position.Set(15+left+slide1_i/2.0, -4 + (left*left/18 + (left+slide1_i)*(left+slide1_i)/18)/2.0); //! Position the body on (g1_x, g1_y)
+			p_bd.angle=theta(left,left*left/18,left+slide1_i,left+slide1_i*left+slide1_i/4)*b2_pi;
 			b2Body* p_b2 = m_world->CreateBody(&p_bd); //! Create the body
 			p_b2->CreateFixture(&p_shape, 0.0f);
 		}
@@ -73,10 +69,10 @@ namespace cs296
 		for(float left=-20;left!=14;left=left+slide1_i)
 		{
 			b2PolygonShape p_shape;				
-			p_shape.SetAsBox(dist(left,parabola(left,22),left+slide1_i,parabola(left+slide1_i,22))/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
+			p_shape.SetAsBox(dist(left,left*left/22,left+slide1_i,(left+slide1_i)*(left+slide1_i)/22)/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
 			b2BodyDef p_bd;
-			p_bd.position.Set(2 +left+slide1_i/2.0, 11 + (parabola(left,22) + parabola(left+slide1_i,18))/2.0); //! Position the body on (g1_x, g1_y)
-			p_bd.angle=theta(left,parabola(left,22),left+slide1_i,parabola(left+slide1_i,22))*b2_pi;
+			p_bd.position.Set(2 +left+slide1_i/2.0, 11 + (left*left/22 + (left+slide1_i)*(left+slide1_i)/18)/2.0); //! Position the body on (g1_x, g1_y)
+			p_bd.angle=theta(left,left*left/22,left+slide1_i,left+slide1_i*left+slide1_i/4)*b2_pi;
 			b2Body* p_b2 = m_world->CreateBody(&p_bd); //! Create the body
 			p_b2->CreateFixture(&p_shape, 0.0f);
 		}
@@ -608,6 +604,20 @@ namespace cs296
 		geardriverjointDef.localAnchorA.Set(0.0f,0.0f);
 		geardriverjointDef.localAnchorB.Set(0.0f,0.0f);
 
+		// b2PolygonShape puller_shape;
+		// puller_shape.SetAsBox(0.1,5); // Create a puller_shape as a box domino1_x m wide and domino1_y m high
+
+		// b2FixtureDef puller_fd;
+		// puller_fd.shape = &puller_shape;
+		// puller_fd.density = 20.0f; //! Since the dominos are not static and also rotating, the density is non-zero
+		// puller_fd.friction = 0.5f; //! Non-zero friction will help the dominos come to a halt on the top horizontal shelf when they are hit by the pendulum
+
+		// b2BodyDef puller_bd;
+		// puller_bd.type = b2_dynamicBody; //! Define the domino to be a dynamic body
+		// puller_bd.position.Set(g2_x - g2_l + offset3 + offset4 * i, g2_y+ g2_b + domino1_b); //! Set the positions of the dominos starting at (g2_x - g2_l + offset3, 22.85f) and separated by a horizontal distance of offset4 m
+		// b2Body* body = m_world->CreateBody(&puller_bd);
+		// body->CreateFixture(&puller_fd);
+
 		b2RevoluteJoint* geardriverjoint = (b2RevoluteJoint*)m_world->CreateJoint(&geardriverjointDef);
 
 		 b2BodyDef ballgr_bd;
@@ -627,6 +637,7 @@ namespace cs296
 
 		ballgr_body->CreateFixture(&ballgr_fd);    
 
+		
 		for (int i = 0; i < 8; ++i)
 		{
 			b2BodyDef ballbd;
