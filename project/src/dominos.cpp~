@@ -77,7 +77,7 @@ namespace cs296
 			b2PolygonShape p_shape;				
 			p_shape.SetAsBox(dist(left,parabola(left,30),left+slide1_i,parabola(left+slide1_i,30))/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
 			b2BodyDef p_bd;
-			p_bd.position.Set(4 +left+slide1_i/2.0, 15 + (parabola(left,30) + parabola(left+slide1_i,30))/2.0); //! Position the body on (g1_x, g1_y)
+			p_bd.position.Set(4 +left+slide1_i/2.0, 14 + (parabola(left,30) + parabola(left+slide1_i,30))/2.0); //! Position the body on (g1_x, g1_y)
 			p_bd.angle=theta(left,parabola(left,30),left+slide1_i,parabola(left+slide1_i,30))*b2_pi;
 			b2Body* p_b2 = m_world->CreateBody(&p_bd); //! Create the body
 			p_b2->CreateFixture(&p_shape, 0.0f);
