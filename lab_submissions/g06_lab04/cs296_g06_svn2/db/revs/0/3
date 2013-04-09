@@ -1,0 +1,65 @@
+PLAIN
+END
+ENDREP
+id: d-1.0.r3/17
+type: dir
+pred: d-1.0.r1/2859150
+count: 1
+text: 3 0 4 4 2d2977d1c96f487abe4a1e202dd03b4e
+cpath: /trunk/doc
+copyroot: 0 /
+
+PLAIN
+K 8
+Makefile
+V 18
+file 2-2.0.r2/1367
+K 13
+Makefile.orig
+V 21
+file 13-1.0-2.r2/1137
+K 10
+README.txt
+V 22
+file 11-1.0.r1/2861566
+K 3
+doc
+V 15
+dir d-1.0.r3/17
+K 8
+external
+V 20
+dir 2-1.0.r1/2858766
+K 3
+src
+V 20
+dir h-1.0.r1/2861436
+END
+ENDREP
+id: 0-1.0.r3/401
+type: dir
+pred: 0-1.0.r2/1795
+count: 2
+text: 3 155 233 233 3f94ec2eb364201f4d809aa9058cd24d
+cpath: /trunk
+copyroot: 0 /
+
+PLAIN
+K 5
+trunk
+V 16
+dir 0-1.0.r3/401
+END
+ENDREP
+id: 0.0.r3/588
+type: dir
+pred: 0.0.r2/1988
+count: 3
+text: 3 539 36 36 3bf5ae0fa3296fc0c22982e6c1703c55
+cpath: /
+copyroot: 0 /
+
+e-1.0.r1/2858901 delete-file false false /trunk/doc/Doxyfile
+
+
+588 715

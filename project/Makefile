@@ -13,13 +13,17 @@ DOXYGEN = doxygen
 ######################################
 # Project Name (generate executable with this name)
 TARGET = cs296_base
+TARGETANALYSIS = cs296_base_analysis
 
 # Project Paths
 PROJECT_ROOT=$(HOME)/cs296-06/project/
 EXTERNAL_ROOT=$(PROJECT_ROOT)/external
-SRCDIR = $(PROJECT_ROOT)/src
+SRCDIR = $(PROJECT_ROOT)/src/
+SRCDIRANALYSIS = $(PROJECT_ROOT)/src/analysis
 OBJDIR = $(PROJECT_ROOT)/obj
+OBJDIRANALYSIS = $(PROJECT_ROOT)/objanalysis
 BINDIR = $(PROJECT_ROOT)/bin
+BINDIRANALYSIS = $(PROJECT_ROOT)/binanalysis
 DOCDIR = $(PROJECT_ROOT)/doc
 
 # Library Paths
@@ -53,22 +57,37 @@ WARN_FMT="${WARN_COLOR}%30s\n${NO_COLOR}"
 ######################################
 
 SRCS := $(wildcard $(SRCDIR)/*.cpp)
+SRCSANALYSIS := $(wildcard $(SRCDIRANALYSIS)/*.cpp)
 INCS := $(wildcard $(SRCDIR)/*.hpp)
 OBJS := $(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
-
+OBJSANALYSIS := $(SRCSANALYSIS:$(SRCDIRANALYSIS)/%.cpp=$(OBJDIRANALYSIS)/%.o)
 
 .PHONY: all setup doc clean distclean
 
 all: setup $(BINDIR)/$(TARGET)
 
+analysis: setup $(BINDIR)/$(TARGETANALYSIS)
+
 setup:
 	@$(ECHO) "Setting up compilation..."
 	@mkdir -p obj
 	@mkdir -p bin
+	@mkdir -p objanalysis
 
 $(BINDIR)/$(TARGET): $(OBJS)
 	@$(PRINTF) "$(MESG_COLOR)Building executable:$(NO_COLOR) $(FILE_COLOR) %16s$(NO_COLOR)" "$(notdir $@)"
 	@$(CC) -o $@ $(LDFLAGS) $(OBJS) $(LIBS) 2> temp.log || touch temp.err
+	@if test -e temp.err; \
+	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
+	elif test -s temp.log; \
+	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
+	else $(PRINTF) $(OK_FMT) $(OK_STRING); \
+	fi;
+	@$(RM) -f temp.log temp.err
+
+$(BINDIR)/$(TARGETANALYSIS): $(OBJSANALYSIS)
+	@$(PRINTF) "$(MESG_COLOR)Building executable:$(NO_COLOR) $(FILE_COLOR) %16s$(NO_COLOR)" "$(notdir $@)"
+	@$(CC) -o $@ $(LDFLAGS) $(OBJSANALYSIS) $(LIBS) 2> temp.log || touch temp.err
 	@if test -e temp.err; \
 	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
 	elif test -s temp.log; \
@@ -90,6 +109,17 @@ $(OBJS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	fi;
 	@$(RM) -f temp.log temp.err
 
+$(OBJSANALYSIS): $(OBJDIRANALYSIS)/%.o : $(SRCDIRANALYSIS)/%.cpp
+	@$(PRINTF) "$(MESG_COLOR)Compiling: $(NO_COLOR) $(FILE_COLOR) %25s$(NO_COLOR)" "$(notdir $<)"
+	@$(CC) $(CPPFLAGS) -c $< -o $@ -MD 2> temp.log || touch temp.err
+	@if test -e temp.err; \
+	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
+	elif test -s temp.log; \
+	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
+	else printf "${OK_COLOR}%30s\n${NO_COLOR}" "[OK]"; \
+	fi;
+	@$(RM) -f temp.log temp.err
+
 doc:
 	@$(ECHO) -n "Generating Doxygen Documentation ...  "
 	@$(RM) -rf doc/html
@@ -99,6 +129,7 @@ doc:
 clean:
 	@$(ECHO) -n "Cleaning up..."
 	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~
+	@$(RM) -rf $(OBJDIRANALYSIS) *~ $(DEPS) $(SRCDIR)/*~
 	@$(ECHO) "Done"
 
 distclean: clean

@@ -1,0 +1,54 @@
+id: 0-1.0-12.r12/0
+type: dir
+pred: 0-1.0.r5/5266
+count: 5
+text: 5 5020 233 233 bf763e9301bc8644e945b657e9d00aee
+cpath: /branch/g0603
+copyfrom: 11 /trunk
+
+PLAIN
+K 5
+g0601
+V 20
+dir 0-1.0-7.r11/1472
+K 5
+g0602
+V 20
+dir 0-1.0-9.r10/1273
+K 5
+g0603
+V 18
+dir 0-1.0-12.r12/0
+END
+ENDREP
+id: 0-6.0.r12/277
+type: dir
+pred: 0-6.0.r11/1726
+count: 6
+text: 12 154 110 110 3c22af34742a00a5dc17440b10d7b7dd
+cpath: /branch
+copyroot: 0 /
+
+PLAIN
+K 6
+branch
+V 17
+dir 0-6.0.r12/277
+K 5
+trunk
+V 17
+dir 0-1.0.r5/5266
+END
+ENDREP
+id: 0.0.r12/503
+type: dir
+pred: 0.0.r11/1953
+count: 12
+text: 12 419 71 71 bc15861d83d8ccd4aa2bd2b7dbcc5282
+cpath: /
+copyroot: 0 /
+
+0-1._0.t11-b add-dir false false /branch/g0603
+11 /trunk
+
+503 634

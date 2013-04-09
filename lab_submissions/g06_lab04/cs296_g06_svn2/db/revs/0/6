@@ -1,0 +1,29 @@
+id: 0-6.0.r6/0
+type: dir
+count: 0
+cpath: /branch
+copyroot: 0 /
+
+PLAIN
+K 6
+branch
+V 14
+dir 0-6.0.r6/0
+K 5
+trunk
+V 17
+dir 0-1.0.r5/5266
+END
+ENDREP
+id: 0.0.r6/145
+type: dir
+pred: 0.0.r5/5457
+count: 6
+text: 6 64 68 68 b2d054cbb4213b4cab4716cade09132c
+cpath: /
+copyroot: 0 /
+
+_0.0.t5-5 add-dir false false /branch
+
+
+145 271

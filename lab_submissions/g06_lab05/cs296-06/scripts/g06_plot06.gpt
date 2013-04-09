@@ -1,0 +1,21 @@
+#For a iteration value corresponding to the lowest rollnumber in your group (by the last two digits), if the step time variation with the number of reruns is considered a frequency plot, then plot frequency values as a bar graph and the cumulative frequency values as a curve. 
+
+set title 'Step time variation with number of reruns for iterations value 24 \n Cumulative frequency of reruns'
+set xlabel 'Step times(in milliseconds)'
+set ylabel 'No. of reruns'
+set datafile separator ','
+datafile = 'data/freq.csv'
+set terminal png
+set output 'plots/g06_plot6.png'
+
+set xtics(1)
+set boxwidth 1 relative
+set style data histograms
+set style fill solid 1.0 border -1
+set datafile separator "," 
+set yrange[1:101]
+set xrange[0:2]
+plot datafile using 2:(1) smooth frequency with boxes 
+     #'' using 1:(($0)+1) with linespoints
+
+reset
