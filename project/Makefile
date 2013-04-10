@@ -35,6 +35,10 @@ GL_ROOT=/usr
 LIBS = -lBox2D -lglui -lglut -lGLU -lGL
 
 # Compiler and Linker flags
+CPPFLAGS_debug = -g -Wall
+CPPFLAGS_release = -g -O3 -Wall
+CPPFLAGS_debug+=-I $(BOX2D_ROOT)/include -I $(GLUI_ROOT)/include
+CPPFLAGS_release+=-I $(BOX2D_ROOT)/include -I $(GLUI_ROOT)/include
 CPPFLAGS =-g -O3 -Wall 
 CPPFLAGS+=-I $(BOX2D_ROOT)/include -I $(GLUI_ROOT)/include
 LDFLAGS+=-L $(BOX2D_ROOT)/lib -L $(GLUI_ROOT)/lib
@@ -67,6 +71,12 @@ OBJSANALYSIS := $(SRCSANALYSIS:$(SRCDIRANALYSIS)/%.cpp=$(OBJDIRANALYSIS)/%.o)
 all: setup $(BINDIR)/$(TARGET)
 
 analysis: setup $(BINDIR)/$(TARGETANALYSIS)
+
+exe_debug: setup $(OBJSANALYSIS)
+	@g++ -o $(BINDIR)/$(TARGETANALYSIS) $(CPPFLAGS_debug) $(LDFLAGS) $(OBJSANALYSIS) $(LIBS) -MD -pg
+
+exe_release: setup $(OBJSANALYSIS)
+	@g++ -o $(BINDIR)/$(TARGETANALYSIS) $(CPPFLAGS_release) $(LDFLAGS) $(OBJSANALYSIS) $(LIBS) -MD -pg
 
 setup:
 	@mkdir -p obj
@@ -147,6 +157,36 @@ plot01:
 	@gnuplot 'scripts/g06_plot06.gpt'
 	@cd data; \
 	rm avg_rerun.csv avg_iteration.csv avg_deviation.csv freq.csv
+
+debug_prof:
+	@cd external/src/; \
+	tar zxvf Box2D.tgz -k; \
+	cd Box2D; \
+	mkdir -p build296; \
+	cd build296/; \
+	rm -rf *; \
+	cmake -DCMAKE_BUILD_TYPE=Debug ../; \
+	make install; \
+	make
+	@make exe_debug
+	@cd scripts; \
+	chmod +x profile.sh; \
+	./profile.sh 2
+
+release_prof:
+	@cd external/src/; \
+	tar zxvf Box2D.tgz -k; \
+	cd Box2D; \
+	mkdir -p build296; \
+	cd build296/; \
+	rm -r *; \
+	cmake -DCMAKE_BUILD_TYPE=Release ../; \
+	make install; \
+	make
+	@make exe_release
+	@cd scripts; \
+	chmod +x profile.sh; \
+	./profile.sh 1
 
 doc:
 	@$(ECHO) -n "Generating Doxygen Documentation ...  "

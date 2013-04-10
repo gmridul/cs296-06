@@ -1,5 +1,5 @@
 #----------------------------------------------------------------
-# Generated CMake target import file for configuration "".
+# Generated CMake target import file for configuration "Debug".
 #----------------------------------------------------------------
 
 # Commands may need to know the format version.
@@ -10,11 +10,11 @@ GET_FILENAME_COMPONENT(_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
 GET_FILENAME_COMPONENT(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
 GET_FILENAME_COMPONENT(_IMPORT_PREFIX "${_IMPORT_PREFIX}" PATH)
 
-# Import target "Box2D" for configuration ""
-SET_PROPERTY(TARGET Box2D APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "Box2D" for configuration "Debug"
+SET_PROPERTY(TARGET Box2D APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 SET_TARGET_PROPERTIES(Box2D PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "${_IMPORT_PREFIX}/lib/libBox2D.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/lib/libBox2D.a"
   )
 
 LIST(APPEND _IMPORT_CHECK_TARGETS Box2D )
