@@ -120,7 +120,7 @@ $(OBJSANALYSIS): $(OBJDIRANALYSIS)/%.o : $(SRCDIRANALYSIS)/%.cpp
 	fi;
 	@$(RM) -f temp.log temp.err
 
-plot02:
+plot02: analysis
 	@mkdir -p data plots
 	@cd scripts; \
 	python g06_gen_csv.py; \
@@ -160,6 +160,7 @@ install: installBox2D setup $(BINDIR)/$(TARGET)
 
 installBox2D: 
 	@cd external/src; \
+	rm -rf Box2D; \
 	tar zxvf Box2D.tgz; \
 	cd Box2D; \
 	mkdir build296; \

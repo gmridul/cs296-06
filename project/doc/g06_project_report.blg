@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: g06_project_report.aux
+The style file: plain.bst
+Database file #1: mybib.bib
+Warning--to sort, need author or key in rube_g
+Warning--to sort, need author or key in pendulum
+Warning--to sort, need author or key in pulley
+Warning--to sort, need author or key in seesaw
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            505 strings with 4199 characters,
+and the built_in function-call counts, 612 in all, are:
+= -- 48
+> -- 4
+< -- 0
++ -- 4
+- -- 0
+* -- 22
+:= -- 65
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 28
+empty$ -- 93
+format.name$ -- 0
+if$ -- 149
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 0
+newline$ -- 15
+num.names$ -- 0
+pop$ -- 32
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 20
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 4
+while$ -- 0
+width$ -- 5
+write$ -- 22
+(There were 4 warnings)
