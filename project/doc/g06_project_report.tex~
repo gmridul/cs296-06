@@ -34,12 +34,12 @@ The next section gives the detailed description of all the physical elements imp
 \begin{center}
 \includegraphics[scale=0.5]{pendulum}
 \end{center}
-The project simulation consists of 5 pendulums out of which 4 form a Newton's cradle like structure. The bob of the one independent pendulum initiates the Rube Goldberg machine. The physics of a pendulum is given below : \\*
-Let the bob of the pendulum\cite{pendulum} be released at an initial angle $\theta_o$  from vertical. Then the speed of the bob, $v$ at an angle $\theta$  will be given by the formula :
-\begin{equation}
-                                                  v = \sqrt{\frac{2gl}{m}(\cos\theta - \cos\theta_o)}
-\end{equation}
-where $v$ is in \emph{meters/second}, $g$ is acceleration due to gravity in \emph{meters/second$^2$}, $l$ is the length of the string of pendulum in \emph{meters}, $m$ is the mass of bob in \emph{kilograms}, $\theta$ and $\theta_o$ are in \emph{radian}.\\*
+The project simulation consists of 5 pendulums out of which 4 form a Newton's cradle like structure. The bob of the one independent pendulum initiates the Rube Goldberg machine. %The physics of a pendulum is given below : \\*
+%Let the bob of the pendulum\cite{pendulum} be released at an initial angle $\theta_o$  from vertical. Then the speed of the bob, $v$ at an angle $\theta$  will be given by the formula :
+%\begin{equation}
+%                                                  v = \sqrt{\frac{2gl}{m}(\cos\theta - \cos\theta_o)}
+%\end{equation}
+%where $v$ is in \emph{meters/second}, $g$ is acceleration due to gravity in \emph{meters/second$^2$}, $l$ is the length of the string of pendulum in \emph{meters}, $m$ is the mass of bob in \emph{kilograms}, $\theta$ and $\theta_o$ are in \emph{radian}.\\*
 
 \subsection{Pulley System}
 The project simulation consists of two pulley system out of which one pulley system is three pulleys joined together i.e. a triple pulley system.
@@ -47,29 +47,29 @@ The project simulation consists of two pulley system out of which one pulley sys
 \includegraphics[scale=0.5]{pulley1}
 \includegraphics[scale=0.5]{pulley2}
 \end{center}
-The physics of the a general pulley system is given below :\\*
-This pulley\cite{pulley} system contains weights on both sides. Let the masses be $m_1$ and $m_2$. Then the acceleration $a$ of the weights will be :
-\begin{equation}
-                                                   a = \frac{m_1 - m_2}{m_1 + m_2}g \mbox{ (assuming $m_1 \geq m_2$)}
-\end{equation}
-where $a$ is in \emph{meters/second$^2$}, $m_1$ and $m_2$ are in \emph{kilograms} and $g$ is acceleration due to gravity in \emph{meters/second$^2$}.\\*\\*
-When the weights have travelled a distance of height $h$, then the speed of the weights, $v$ will be given by the following equation :
-\begin{equation}
-                                                 v = \sqrt{\frac{2a}{h}} \mbox{ (where $a$ is as used in (2))}
-\end{equation}
-where $v$ is in \emph{meters/second} and $h$ is in \emph{meters}.
+%The physics of the a general pulley system is given below :\\*
+%This pulley\cite{pulley} system contains weights on both sides. Let the masses be $m_1$ and $m_2$. Then the acceleration $a$ of the weights will be :
+%\begin{equation}
+%                                                   a = \frac{m_1 - m_2}{m_1 + m_2}g \mbox{ (assuming $m_1 \geq m_2$)}
+%\end{equation}
+%where $a$ is in \emph{meters/second$^2$}, $m_1$ and $m_2$ are in \emph{kilograms} and $g$ is acceleration due to gravity in \emph{meters/second$^2$}.\\*\\*
+%When the weights have travelled a distance of height $h$, then the speed of the weights, $v$ will be given by the following equation :
+%\begin{equation}
+%                                                 v = \sqrt{\frac{2a}{h}} \mbox{ (where $a$ is as used in (2))}
+%\end{equation}
+%where $v$ is in \emph{meters/second} and $h$ is in \emph{meters}.
 \\*
 \subsection{Hinged Rod System}
 The project simulation consists of four such hinged rod systems out of which two of them are connected to pulley systems. The hinged rods provide free rotation of the rods about the hinges and when connected to the pulleys can trigger required simulation.
 \begin{center}
 \includegraphics[scale=0.5]{hinge}
 \end{center}
-The physics of hinged rods and torque is given below :\\*
-When torque\cite{seesaw} is applied to a rod which is hinged at the centre, then the object of mass $m$ kept at some distance $l$ from the hinge experience force. Thus the equation governig this system is as follows :
-\begin{equation}
-  \vec{\tau} = \frac{ml^2}{12} \times \vec{\alpha}
-\end{equation}
-where $\vec{\tau}$ is a vector whose magnitude is the torque applied and is measured in \emph{Newton.meter}, $m$ is in \emph{kilograms}, $l$ is in \emph{meters}, $\vec{\alpha}$ is the angular acceleration vector of the object and its magnitude is measured in \emph{radian/second$^2$}.\\*
+%The physics of hinged rods and torque is given below :\\*
+%When torque\cite{seesaw} is applied to a rod which is hinged at the centre, then the object of mass $m$ kept at some distance $l$ from the hinge experience force. Thus the equation governig this system is as follows :
+%\begin{equation}
+%  \vec{\tau} = \frac{ml^2}{12} \times \vec{\alpha}
+%\end{equation}
+%where $\vec{\tau}$ is a vector whose magnitude is the torque applied and is measured in \emph{Newton.meter}, $m$ is in \emph{kilograms}, $l$ is in \emph{meters}, $\vec{\alpha}$ is the angular acceleration vector of the object and its magnitude is measured in \emph{radian/second$^2$}.\\*
 \subsection{Gear System}
 The project simulation consists of a gear like system in which there is a rotating disc hinged at center and two rods attached to it. One rod is attached in such a way that it holds a collection of small balls in an inclined ground. As soon as the other rod is disturbed or hit by a dynamic object, the other rod holding the balls get disturbed and let the collection of balls it was holding to fall which carries on with the trajectory.
 \begin{center}
@@ -129,7 +129,7 @@ Same is the case with this plot of collision time, velocity update time and posi
 \section{Simulation Performance}
 
 \section{Conclusions}
-We mentioned three systems in the report, namely pendulum, pulley and see-saw, and explained their functioning using mathematical equations which they follow.
+
 \bibliographystyle{plain}
 \bibliography{mybib}
 \end{document}
