@@ -29,6 +29,18 @@ float parabola(float x,int c)
 	return x*x/c;
 }
 
+b2Body* make_box (b2World* m_world, float l, float b, float x, float y, bool if_static)
+{
+  b2PolygonShape box_shape; //! Define a polygon box_shape
+  box_shape.SetAsBox(l, b); //! Create a box_shape as a box l m wide and b m high
+
+  b2BodyDef box_bd;
+  box_bd.position.Set(x, y); //! Position the body on (x, y)
+  b2Body* box_b2 = m_world->CreateBody(&box_bd); //! Create the body
+  box_b2->CreateFixture(&box_shape, 0.0f); //! Create the fixture of the body
+  return box_b2;
+}
+
 namespace cs296
 {
 	dominos_t::dominos_t()
@@ -83,14 +95,8 @@ namespace cs296
 			p_b2->CreateFixture(&p_shape, 0.0f);
 		}
 		/*************************************************************/
-		// for g1
-		b2PolygonShape g1_shape; //! Define a polygon g1_shape
-		g1_shape.SetAsBox(g1_l, g1_b); //! Create a g1_shape as a box g1_l m wide and g1_b m high
 
-		b2BodyDef g1_bd;
-		g1_bd.position.Set(g1_x, g1_y); //! Position the body on (g1_x, g1_y)
-		b2Body* g1_b2 = m_world->CreateBody(&g1_bd); //! Create the body
-		g1_b2->CreateFixture(&g1_shape, 0.0f); //! Create the fixture of the body
+		b2Body* g1_b2 = make_box (m_world, g1_l, g1_b, g1_x, g1_y, true);
 
 		// for sphere1
 		b2Body* sphere1_body;
@@ -120,14 +126,7 @@ namespace cs296
 			m_world->CreateJoint(&jd); //! Create the joint
 		}
 
-		// for g2
-		b2PolygonShape g2_shape; //! Define a polygon g2_shape
-		g2_shape.SetAsBox(g2_l, g2_b); //! Create a g2_shape as a box g2_l m wide and g2_b m high
-
-		b2BodyDef g2_bd;
-		g2_bd.position.Set(g2_x, g2_y); //! Position the body on (g2_x, g2_y)
-		b2Body* g2_b2 = m_world->CreateBody(&g2_bd); //! Create the body
-		g2_b2->CreateFixture(&g2_shape, 0.0f); //! Create the fixture of the body
+		make_box (m_world, g2_l, g2_b, g2_x, g2_y, true);
 
 		//! Dominos
 		b2PolygonShape domino_shape;
@@ -164,14 +163,7 @@ namespace cs296
 		sphere2_body = m_world->CreateBody(&ball2_bd);
 		sphere2_body->CreateFixture(&ball2_fd);
 
-		// for g3
-		b2PolygonShape g3_shape; //! Define a polygon g3_shape
-		g3_shape.SetAsBox(g3_l, g3_b); //! Create a g3_shape as a box g3_l m wide and g3_b m high
-
-		b2BodyDef g3_bd;
-		g3_bd.position.Set(g3_x, g3_y); //! Position the body on (g3_x, g3_y)
-		b2Body* g3_b2 = m_world->CreateBody(&g3_bd); //! Create the body
-		g3_b2->CreateFixture(&g3_shape, 0.0f); //! Create the fixture of the body
+		make_box (m_world, g3_l, g3_b, g3_x, g3_y, true);
 
 		b2Body* sphere3_body;
 		b2CircleShape circle3; //! Create a circle shape
@@ -252,14 +244,7 @@ namespace cs296
 		myjoint->Initialize(box1, spherebody, worldAnchorGround1, worldAnchorGround2, worldAnchorOnBody1, worldAnchorOnBody2, ratio); //! Initialize the joint with the above values spherebody->GetWorldCenter()
 		m_world->CreateJoint(myjoint);
 
-		// for g4    
-		b2PolygonShape g4_shape; //! Define a polygon g4_shape
-		g4_shape.SetAsBox(g4_l, g4_b); //! Create a g4_shape as a box g4_l m wide and g4_b m high
-
-		b2BodyDef g4_bd;
-		g4_bd.position.Set(g4_x, g4_y); //! Position the body on (g4_x, g4_y)
-		b2Body* g4_b2 = m_world->CreateBody(&g4_bd); //! Create the body
-		g4_b2->CreateFixture(&g4_shape, 0.0f); //! Create the fixture of the body
+		b2Body* g4_b2 = make_box (m_world, g4_l, g4_b, g4_x, g4_y, true);
 
 		//! The pulley joint
 		b2PulleyJointDef* myjoint2 = new b2PulleyJointDef();
@@ -271,14 +256,7 @@ namespace cs296
 		myjoint2->Initialize(spherebody, g4_b2, worldAnchorGround3, worldAnchorGround4, worldAnchorOnBody3, worldAnchorOnBody4, ratio2); //! Initialize the joint with the above values spherebody->GetWorldCenter()
 		m_world->CreateJoint(myjoint2);
 
-		// for g5    
-		b2PolygonShape g5_shape; //! Define a polygon g5_shape
-		g5_shape.SetAsBox(g5_l, g5_b); //! Create a g5_shape as a box g5_l m wide and g5_b m high
-
-		b2BodyDef g5_bd;
-		g5_bd.position.Set(g5_x, g5_y); //! Position the body on (g5_x, g5_y)
-		b2Body* g5_b2 = m_world->CreateBody(&g5_bd); //! Create the body
-		g5_b2->CreateFixture(&g5_shape, 0.0f); //! Create the fixture of the body
+		b2Body* g5_b2 = make_box (m_world, g5_l, g5_b, g5_x, g5_y, true);
 
 		b2Body* sphere4_body;
 		b2CircleShape circle4; //! Create a circle shape
@@ -301,15 +279,7 @@ namespace cs296
 		pendulum2_jd.Initialize(g5_b2, sphere4_body, pendulum2_anchor); //! Initialise the joint to be between g5_b2 and sphere4_body
 		m_world->CreateJoint(&pendulum2_jd); //! Create the joint
 
-
-		// for g6    
-		b2PolygonShape g6_shape; //! Define a polygon g6_shape
-		g6_shape.SetAsBox(g6_l, g6_b); //! Create a g6_shape as a box g6_l m wide and g6_b m high
-
-		b2BodyDef g6_bd;
-		g6_bd.position.Set(g6_x, g6_y); //! Position the body on (g6_x, g6_y)
-		b2Body* g6_b2 = m_world->CreateBody(&g6_bd); //! Create the body
-		g6_b2->CreateFixture(&g6_shape, 0.0f); //! Create the fixture of the body
+		make_box (m_world, g6_l, g6_b, g6_x, g6_y, true);
 
 		b2Body* sphere5_body;
 		b2CircleShape circle5; //! Create a circle shape

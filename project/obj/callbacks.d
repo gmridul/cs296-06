@@ -1,6 +1,6 @@
-/home/sagar/cs296-06/project//obj/dominos.o: \
- /home/sagar/cs296-06/project//src//dominos.cpp \
- /home/sagar/cs296-06/project//src//cs296_base.hpp \
+/home/sagar/cs296-06/project//obj/callbacks.o: \
+ /home/sagar/cs296-06/project//src//callbacks.cpp \
+ /home/sagar/cs296-06/project//src//callbacks.hpp \
  /home/sagar/cs296-06/project//src//render.hpp \
  /home/sagar/cs296-06/project//external/include/Box2D/Box2D.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Common/b2Settings.h \
@@ -112,9 +112,45 @@
  /home/sagar/cs296-06/project//external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
- /usr/include/GL/freeglut.h /usr/include/GL/freeglut_std.h \
+ /home/sagar/cs296-06/project//src//cs296_base.hpp /usr/include/GL/glui.h \
+ /usr/include/GL/glut.h /usr/include/GL/freeglut_std.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
  /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
  /usr/include/i386-linux-gnu/bits/wchar.h /usr/include/GL/glu.h \
- /usr/include/GL/freeglut_ext.h \
- /home/sagar/cs296-06/project//src//dominos.hpp
+ /usr/include/c++/4.6/cstdio /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
+ /usr/include/i386-linux-gnu/bits/sys_errlist.h \
+ /usr/include/i386-linux-gnu/bits/stdio.h \
+ /usr/include/i386-linux-gnu/bits/stdio2.h /usr/include/c++/4.6/string \
+ /usr/include/c++/4.6/bits/stringfwd.h \
+ /usr/include/c++/4.6/bits/char_traits.h \
+ /usr/include/c++/4.6/bits/postypes.h /usr/include/c++/4.6/cwchar \
+ /usr/include/i386-linux-gnu/bits/wchar2.h \
+ /usr/include/c++/4.6/bits/localefwd.h \
+ /usr/include/c++/4.6/i686-linux-gnu/./bits/c++locale.h \
+ /usr/include/c++/4.6/clocale /usr/include/locale.h \
+ /usr/include/i386-linux-gnu/bits/locale.h /usr/include/c++/4.6/iosfwd \
+ /usr/include/c++/4.6/cctype /usr/include/ctype.h \
+ /usr/include/c++/4.6/bits/ostream_insert.h \
+ /usr/include/c++/4.6/bits/cxxabi_forced.h \
+ /usr/include/c++/4.6/bits/stl_function.h \
+ /usr/include/c++/4.6/backward/binders.h \
+ /usr/include/c++/4.6/bits/range_access.h \
+ /usr/include/c++/4.6/bits/basic_string.h \
+ /usr/include/c++/4.6/ext/atomicity.h \
+ /usr/include/c++/4.6/i686-linux-gnu/./bits/gthr.h \
+ /usr/include/c++/4.6/i686-linux-gnu/./bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h \
+ /usr/include/i386-linux-gnu/bits/sched.h \
+ /usr/include/i386-linux-gnu/bits/timex.h \
+ /usr/include/i386-linux-gnu/bits/setjmp.h /usr/include/unistd.h \
+ /usr/include/i386-linux-gnu/bits/posix_opt.h \
+ /usr/include/i386-linux-gnu/bits/environments.h \
+ /usr/include/i386-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/i386-linux-gnu/bits/unistd.h \
+ /usr/include/c++/4.6/i686-linux-gnu/./bits/atomic_word.h \
+ /usr/include/c++/4.6/bits/basic_string.tcc /usr/include/c++/4.6/vector \
+ /usr/include/c++/4.6/bits/stl_vector.h \
+ /usr/include/c++/4.6/bits/stl_bvector.h \
+ /usr/include/c++/4.6/bits/vector.tcc

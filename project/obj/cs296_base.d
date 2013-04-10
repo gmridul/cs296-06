@@ -1,5 +1,5 @@
-/home/sagar/cs296-06/project//obj/dominos.o: \
- /home/sagar/cs296-06/project//src//dominos.cpp \
+/home/sagar/cs296-06/project//obj/cs296_base.o: \
+ /home/sagar/cs296-06/project//src//cs296_base.cpp \
  /home/sagar/cs296-06/project//src//cs296_base.hpp \
  /home/sagar/cs296-06/project//src//render.hpp \
  /home/sagar/cs296-06/project//external/include/Box2D/Box2D.h \
@@ -112,9 +112,9 @@
  /home/sagar/cs296-06/project//external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
- /usr/include/GL/freeglut.h /usr/include/GL/freeglut_std.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
- /usr/include/i386-linux-gnu/bits/wchar.h /usr/include/GL/glu.h \
- /usr/include/GL/freeglut_ext.h \
- /home/sagar/cs296-06/project//src//dominos.hpp
+ /usr/include/c++/4.6/cstdio /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
+ /usr/include/i386-linux-gnu/bits/sys_errlist.h \
+ /usr/include/i386-linux-gnu/bits/stdio.h \
+ /usr/include/i386-linux-gnu/bits/stdio2.h
