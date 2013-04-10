@@ -50,7 +50,7 @@ namespace cs296
 		float r5=1.6, r6=0.5, r7=0.2, offset7=0.2, stick_l=g6_l-2*r5-g5_l/2.0, stick_b=0.4;
 		float stick_x=g5_x-stick_l, stick_y=g6_y+g6_b+stick_b;
 		float plank_l=6.0, plank_b=0.2, plank_x=g1_x, plank_y=-4.0;
-		float box_l=1.5, box_b=1.5, box_x=plank_x-plank_l+box_l/2.0, box_y=plank_y+plank_b+box_b;
+		float box_l=1.5, box_b=1.5, box_x=plank_x-plank_l+box_l/5.0, box_y=plank_y+plank_b+box_b;
 		float pulplank_x=plank_x+plank_l+1.0,pulplank_y= 3.0-box_y;
 		float box2_x=pulplank_x+plank_l+2.0, box2_y=plank_y;
 		float slide1_i=0.25,r8=2.0;
@@ -133,7 +133,7 @@ namespace cs296
 
 		b2FixtureDef fd;
 		fd.shape = &domino_shape;
-		fd.density = 20.0f; //! Since the dominos are not static and also rotating, the density is non-zero
+		fd.density = 10.0f; //! Since the dominos are not static and also rotating, the density is non-zero
 		fd.friction = 0.5f; //! Non-zero friction will help the dominos come to a halt on the top horizontal shelf when they are hit by the pendulum
 
 		//! define the 15 dominos
@@ -285,7 +285,7 @@ namespace cs296
 		b2FixtureDef ball4_fd;
 		ball4_fd.shape = &circle4;
 		ball4_fd.density = 20.0f; //! Set the density to be 20
-		ball4_fd.friction = 0.5f; //! No friction to allow the balls to roll freely
+		ball4_fd.friction = 9.5f; //! No friction to allow the balls to roll freely
 		ball4_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
 		b2BodyDef pendulum2_bd;
@@ -442,7 +442,7 @@ namespace cs296
 
 		b2BodyDef ball8_bd;
 		ball8_bd.type = b2_staticBody;
-		ball8_bd.position.Set(pulplank_x,pulplank_y+plank_b);
+		ball8_bd.position.Set(pulplank_x,pulplank_y);
 		sphere8_body = m_world->CreateBody(&ball8_bd);
 		sphere8_body->CreateFixture(&ball8_fd);
 
@@ -460,7 +460,7 @@ namespace cs296
 
 		b2FixtureDef ball7_fd;
 		ball7_fd.shape = &circle4;
-		ball7_fd.density = 55.0f; //! Set the density to be unity
+		ball7_fd.density = 70.0f; //! Set the density to be unity
 		ball7_fd.friction = 0.0f; //! No friction to allow the balls to roll freely
 		ball7_fd.restitution = 0.0f; //! Zero restitution to allow elastic collision
 
@@ -646,6 +646,7 @@ namespace cs296
 		box2->CreateFixture(dynamic_fd1); //! Add the fixtures of the base and the two walls to the body
 		box2->CreateFixture(dynamic_fd2);
 		box2->CreateFixture(dynamic_fd3);
+		box2->SetGravityScale(0);
 		//implementing pulley. First define the left part that is the part that is attached to pulplank.
 
 		b2PulleyJointDef* ljoint2 = new b2PulleyJointDef();
