@@ -1,4 +1,4 @@
-The system is: Linux - 3.2.0-39-generic-pae - i686
+The system is: Linux - 3.2.0-40-generic-pae - i686
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/gcc 
 Build flags: 
@@ -29,14 +29,16 @@ Determining if the C compiler works passed with the following output:
 Change Dir: /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
 make[1]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[2]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building C object CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o
 /usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o   -c /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/testCCompiler.c
 Linking C executable cmTryCompileExec
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
 /usr/bin/gcc         CMakeFiles/cmTryCompileExec.dir/testCCompiler.c.o  -o cmTryCompileExec -rdynamic 
+make[2]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 
 
@@ -44,8 +46,9 @@ Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
 make[1]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[2]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o
 /usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
@@ -63,6 +66,7 @@ COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/4.6/:/usr/lib/gcc/i686-linux-gnu/4.6/:
 LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/4.6/:/usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.6/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/4.6/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-mtune=generic' '-march=i686'
  /usr/lib/gcc/i686-linux-gnu/4.6/collect2 --sysroot=/ --build-id --no-add-needed --as-needed --eh-frame-hdr -m elf_i386 --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.6 -L/usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.6/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.6/../../.. CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+make[2]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 
 
@@ -71,8 +75,9 @@ Parsed C implicit link information from above output:
   ignore line: [Change Dir: /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp]
   ignore line: []
   ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
   ignore line: [make[1]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [make[2]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/CMakeFiles 1]
   ignore line: [Building C object CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o]
   ignore line: [/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
@@ -148,14 +153,16 @@ Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
 make[1]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[2]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building CXX object CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o
 /usr/bin/c++     -o CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o -c /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
 Linking CXX executable cmTryCompileExec
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
 /usr/bin/c++          CMakeFiles/cmTryCompileExec.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec -rdynamic 
+make[2]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 
 
@@ -163,8 +170,9 @@ Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
 make[1]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[2]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o
 /usr/bin/c++     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
@@ -182,6 +190,7 @@ COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/4.6/:/usr/lib/gcc/i686-linux-gnu/4.6/:
 LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/4.6/:/usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.6/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/4.6/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686'
  /usr/lib/gcc/i686-linux-gnu/4.6/collect2 --sysroot=/ --build-id --no-add-needed --as-needed --eh-frame-hdr -m elf_i386 --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.6 -L/usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.6/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.6/../../.. CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+make[2]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp'
 
 
@@ -190,8 +199,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [Change Dir: /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp]
   ignore line: []
   ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
   ignore line: [make[1]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build]
+  ignore line: [make[2]: Entering directory `/home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/sagar/cs296-06/project/external/src/Box2D/build296/CMakeFiles/CMakeTmp/CMakeFiles 1]
   ignore line: [Building CXX object CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]

@@ -31,6 +31,14 @@
  /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h \
  /usr/include/c++/4.6/limits \
  /home/sagar/cs296-06/project//external/include/Box2D/Common/b2Timer.h \
+ /usr/include/i386-linux-gnu/sys/time.h \
+ /usr/include/i386-linux-gnu/bits/types.h \
+ /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/i386-linux-gnu/bits/time.h \
+ /usr/include/i386-linux-gnu/sys/select.h \
+ /usr/include/i386-linux-gnu/bits/select.h \
+ /usr/include/i386-linux-gnu/bits/sigset.h \
+ /usr/include/i386-linux-gnu/bits/select2.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Collision/Shapes/b2CircleShape.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Collision/Shapes/b2Shape.h \
  /home/sagar/cs296-06/project//external/include/Box2D/Common/b2BlockAllocator.h \
@@ -69,13 +77,6 @@
  /usr/include/i386-linux-gnu/bits/endian.h \
  /usr/include/i386-linux-gnu/bits/byteswap.h \
  /usr/include/i386-linux-gnu/sys/types.h \
- /usr/include/i386-linux-gnu/bits/types.h \
- /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/time.h \
- /usr/include/i386-linux-gnu/sys/select.h \
- /usr/include/i386-linux-gnu/bits/select.h \
- /usr/include/i386-linux-gnu/bits/sigset.h \
- /usr/include/i386-linux-gnu/bits/time.h \
- /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h \

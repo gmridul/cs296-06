@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-datafile = open('../data/lab05_g06_data.csv')
+datafile = open('../data/g06_data.csv')
 
 rerun_number, iteration_value, step_time, collision_time, velocity_time, position_time, loop_time = [],[],[],[],[],[],[]
 

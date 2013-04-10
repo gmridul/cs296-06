@@ -69,7 +69,6 @@ all: setup $(BINDIR)/$(TARGET)
 analysis: setup $(BINDIR)/$(TARGETANALYSIS)
 
 setup:
-	@$(ECHO) "Setting up compilation..."
 	@mkdir -p obj
 	@mkdir -p bin
 	@mkdir -p objanalysis
@@ -124,19 +123,8 @@ $(OBJSANALYSIS): $(OBJDIRANALYSIS)/%.o : $(SRCDIRANALYSIS)/%.cpp
 plot02:
 	@mkdir -p data plots
 	@cd scripts; \
-	./gen_data_csv.sh; \
-	./avg-iteration.sh; \
-	./avg-rerun.sh; \
-	./avg-iteration.sh; \
-	./avg-deviation.sh; \
-	./freq.sh; \
-	./avg-iteration.sh
-	@gnuplot 'scripts/g06_plot01.gpt'
-	@gnuplot 'scripts/g06_plot02.gpt'
-	@gnuplot 'scripts/g06_plot03.gpt'
-	@gnuplot 'scripts/g06_plot04.gpt'
-	@gnuplot 'scripts/g06_plot05.gpt'
-	@gnuplot 'scripts/g06_plot06.gpt'
+	python g06_gen_csv.py; \
+	python g06_gen_plots.py;
 	@cd data; \
 	rm avg_rerun.csv avg_iteration.csv avg_deviation.csv freq.csv
 
@@ -166,9 +154,23 @@ doc:
 	@$(DOXYGEN) $(DOCDIR)/Doxyfile 2 > /dev/null
 	@$(ECHO) "Done"
 
+install: installBox2D setup $(BINDIR)/$(TARGET)
+	@mkdir -p install
+	@cp -r $(BINDIR) scripts/ doc/ install/ ;
+
+installBox2D: 
+	@cd external/src; \
+	tar zxvf Box2D.tgz; \
+	cd Box2D; \
+	mkdir build296; \
+	cd build296; \
+	cmake ..; \
+	make; \
+	make install;
+
 dist: clean distclean cleanBox2d
 	@cd ..; \
-	@tar zcvf project.tar.gz project
+	tar zcvf project.tgz project
 
 clean:
 	@$(ECHO) -n "Cleaning up..."
@@ -181,4 +183,7 @@ distclean:
 
 cleanBox2d:
 	@cd external/src; \
-	@rm -rf Box2D;
+	rm -rf Box2D; \
+	cd ../; \
+	rm -rf include/*; \
+	rm -rf lib/*;
