@@ -33,12 +33,10 @@ b2Body* make_box (b2World* m_world, float l, float b, float x, float y, bool if_
 {
   b2PolygonShape box_shape; //! Define a polygon box_shape
   box_shape.SetAsBox(l, b); //! Create a box_shape as a box l m wide and b m high
-
   b2BodyDef box_bd;
   if (if_static == false)
     box_bd.type = b2_dynamicBody;
-  if (angle != 0.0f)
-    box_bd.angle = b2_pi * angle;
+  box_bd.angle = b2_pi * angle;
   box_bd.fixedRotation = if_fixedRotation;
   box_bd.position.Set(x, y); //! Position the body on (x, y)
   b2Body* box_b2 = m_world->CreateBody(&box_bd); //! Create the body
@@ -105,32 +103,25 @@ namespace cs296
     make_box (m_world, b_box1l, b_box1b, b_box1x, b_box1y + b_box2l * 2.0f);
     make_box (m_world, b_box2l, b_box2b, b_box2x - b_box1l * 2.0f, b_box2y, true, true, 0.5f);
 
-    /* *****************************Parabolic curved slide1 --SUDIPTO--  */
+    /* *****************************Parabolic curved slide1 */
     for(float left=-12;left!=18;left=left+slide1_i)
       {
-	b2PolygonShape p_shape;				
-	p_shape.SetAsBox(dist(left,parabola(left,18),left+slide1_i,parabola(left+slide1_i,18))/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
-	b2BodyDef p_bd;
-	p_bd.position.Set(15+left+slide1_i/2.0, -4 + (parabola(left,18) + parabola(left+slide1_i,18))/2.0); //! Position the body on (g1_x, g1_y)
-	p_bd.angle=theta(left,parabola(left,18),left+slide1_i,parabola(left+slide1_i,18))*b2_pi;
-			
-	b2Body* p_b2 = m_world->CreateBody(&p_bd); //! Create the body
-	p_b2->CreateFixture(&p_shape, 0.0f);
-	//p_b2.restitution = 0.2f;
+	float parabola_l = dist(left,parabola(left,18),left+slide1_i,parabola(left+slide1_i,18))/2.0, 
+	  parabola_x = 15+left+slide1_i/2.0,
+	  parabola_y = -4 + (parabola(left,18) + parabola(left+slide1_i,18))/2.0, 
+	  angle = theta (left, parabola(left,18), left+slide1_i, parabola(left+slide1_i,18));
+	make_box (m_world, parabola_l, 0.05, parabola_x, parabola_y, true, true, angle);
       }
     /*****************************************************/
 
-
-    /* *****************************Parabolic curved slide2 --SUDIPTO--  */
+    /* *****************************Parabolic curved slide2 */
     for(float left=-22;left!=12.5;left=left+slide1_i)
       {
-	b2PolygonShape p_shape;				
-	p_shape.SetAsBox(dist(left,parabola(left,30),left+slide1_i,parabola(left+slide1_i,30))/2.0, 0.05); //! Create a g1_shape as a box g1_l m wide and g1_b m high
-	b2BodyDef p_bd;
-	p_bd.position.Set(4 +left+slide1_i/2.0, 15 + (parabola(left,30) + parabola(left+slide1_i,30))/2.0); //! Position the body on (g1_x, g1_y)
-	p_bd.angle=theta(left,parabola(left,30),left+slide1_i,parabola(left+slide1_i,30))*b2_pi;
-	b2Body* p_b2 = m_world->CreateBody(&p_bd); //! Create the body
-	p_b2->CreateFixture(&p_shape, 0.0f);
+	float parabola_l = dist(left,parabola(left,30),left+slide1_i,parabola(left+slide1_i,30))/2.0,
+	  parabola_x = 4 +left+slide1_i/2.0,
+	  parabola_y = 15 + (parabola(left,30) + parabola(left+slide1_i,30))/2.0,
+	  angle = theta (left,parabola(left,30),left+slide1_i,parabola(left+slide1_i,30));
+	make_box (m_world, parabola_l, 0.05, parabola_x, parabola_y, true, true, angle);
       }
     /*************************************************************/
 
@@ -160,11 +151,11 @@ namespace cs296
     //! define the 15 dominos
     for (int i = 0; i < 15; ++i)
       {
-	b2BodyDef bd;
-	bd.type = b2_dynamicBody; //! Define the domino to be a dynamic body
-	bd.position.Set(g2_x - g2_l + offset3 + offset4 * i, g2_y+ g2_b + domino1_b); //! Set the positions of the dominos starting at (g2_x - g2_l + offset3, 22.85f) and separated by a horizontal distance of offset4 m
-	b2Body* body = m_world->CreateBody(&bd);
-	body->CreateFixture(&fd);
+    	b2BodyDef bd;
+    	bd.type = b2_dynamicBody; //! Define the domino to be a dynamic body
+    	bd.position.Set(g2_x - g2_l + offset3 + offset4 * i, g2_y+ g2_b + domino1_b); //! Set the positions of the dominos starting at (g2_x - g2_l + offset3, 22.85f) and separated by a horizontal distance of offset4 m
+    	b2Body* body = m_world->CreateBody(&bd);
+    	body->CreateFixture(&fd);
       }
     
     make_sphere (m_world, r2, g2_x + g2_l, g2_y + g2_b + r2, 5.0f, 0.5f, 0.0f, false);
@@ -284,7 +275,7 @@ namespace cs296
 
     for (int i = 0; i < 50; ++i)
       {
-	make_sphere (m_world, 0.05, g4_x + 10.0, g4_y - 10.0f + g4_b + 0.05, 0.02f, 0.0f, 1.0f, false);
+	make_sphere (m_world, 0.05, g4_x + 10.0, g4_y - 10.0f + g4_b + 0.05, 0.02f, 0.0f, 1.5f, false);
       }
 
     b2Body* g5_b2 = make_box (m_world, g5_l, g5_b, g5_x, g5_y, true);

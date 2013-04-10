@@ -166,11 +166,19 @@ doc:
 	@$(DOXYGEN) $(DOCDIR)/Doxyfile 2 > /dev/null
 	@$(ECHO) "Done"
 
+dist: clean distclean cleanBox2d
+	@cd ..; \
+	@tar zcvf project.tar.gz project
+
 clean:
 	@$(ECHO) -n "Cleaning up..."
 	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~
 	@$(RM) -rf $(OBJDIRANALYSIS) *~ $(DEPS) $(SRCDIR)/*~
 	@$(ECHO) "Done"
 
-distclean: clean
+distclean: 
 	@$(RM) -rf $(BINDIR) $(DOCDIR)/html
+
+cleanBox2d:
+	@cd external/src; \
+	@rm -rf Box2D;
