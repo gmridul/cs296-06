@@ -380,8 +380,7 @@ namespace cs296
 		jointDef.localAnchorA.Set(0.0f,0.0f); //SUDIPTO I added added these two lines
 		jointDef.localAnchorB.Set(0.0f,0.0f);
 
-		b2RevoluteJoint* joint = (b2RevoluteJoint*)m_world->CreateJoint(&jointDef);
-
+		m_world->CreateJoint(&jointDef);
 
 		b2PolygonShape box_shape; // code for the left block placed on the plank
 		box_shape.SetAsBox(box_l, box_b);
@@ -452,8 +451,7 @@ namespace cs296
 		jointDef2.localAnchorA.Set(0.0f,0.0f); 
 		jointDef2.localAnchorB.Set(0.0f,0.0f);
 
-		b2RevoluteJoint* joint2 = (b2RevoluteJoint*)m_world->CreateJoint(&jointDef2);
-
+		m_world->CreateJoint(&jointDef2);
 
 		// now placing sphere7 on pulplank	
 		b2Body* sphere7_body;
@@ -495,7 +493,7 @@ namespace cs296
 		flyjointDef.localAnchorA.Set(0.0f,0.0f);
 		flyjointDef.localAnchorB.Set(0.0f,0.0f);
 
-		b2RevoluteJoint* flyjoint = (b2RevoluteJoint*)m_world->CreateJoint(&flyjointDef);
+		m_world->CreateJoint(&flyjointDef);
 
 		// defining the rod system which will hit the pendulum
 		b2PolygonShape plankpend_shape;
@@ -529,7 +527,7 @@ namespace cs296
 		pendjointDef.localAnchorA.Set(0.0f,0.0f);
 		pendjointDef.localAnchorB.Set(0.0f,0.0f);
 
-		b2RevoluteJoint* pendjoint = (b2RevoluteJoint*)m_world->CreateJoint(&pendjointDef);
+		m_world->CreateJoint(&pendjointDef);
 		
 		b2Body* gear_body;
 		 b2CircleShape circle11; //! Create a circle shape
@@ -585,7 +583,8 @@ namespace cs296
 		 gearjointDef.localAnchorA.Set(0.0f,0.0f);
 		 gearjointDef.localAnchorB.Set(0.0f,0.0f);
 
-		 b2RevoluteJoint* gearjoint = (b2RevoluteJoint*)m_world->CreateJoint(&gearjointDef);
+		 m_world->CreateJoint(&gearjointDef);
+
 
 		 b2BodyDef plankgear_bd;
 		plankgear_bd.type = b2_dynamicBody;
@@ -608,7 +607,8 @@ namespace cs296
 		geardriverjointDef.localAnchorA.Set(0.0f,0.0f);
 		geardriverjointDef.localAnchorB.Set(0.0f,0.0f);
 
-		b2RevoluteJoint* geardriverjoint = (b2RevoluteJoint*)m_world->CreateJoint(&geardriverjointDef);
+		m_world->CreateJoint(&geardriverjointDef);
+
 
 		 b2BodyDef ballgr_bd;
 		ballgr_bd.fixedRotation = false;
