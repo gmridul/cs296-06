@@ -69,6 +69,8 @@ for x in boldlist:
 citelist=re.findall(r'\\cite[^\}]*\}',string)
 #print(citelist)
 for x in citelist:	
+	y='<b>'+inside_brace(x)+'</b>'
+	#print(x)
 	string=string.replace(x, '')
 #..................................................................................
 

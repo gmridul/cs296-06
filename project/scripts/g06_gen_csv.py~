@@ -4,8 +4,8 @@ import re
 
 f=open('../data/g06_data.csv','w+')
 
-for rerun in range(1,21):
-    for iter in range(1,21):
+for rerun in range(1,101):
+    for iter in range(1,101):
         data=[]
         out=subprocess.check_output(["../bin/cs296_base_analysis",str(iter)])
         out=out.decode("utf-8")
