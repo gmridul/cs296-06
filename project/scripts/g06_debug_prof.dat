@@ -2678,3 +2678,723 @@ Each sample counts as 0.01 seconds.
 
 profile for iteration no. 80 and rerun no. 50 ::
 
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 21.05      0.24     0.24                             b2ContactSolver::SolveVelocityConstraints()
+ 10.96      0.36     0.12                             b2Vec2::b2Vec2(float, float)
+  5.70      0.43     0.07                             operator-(b2Vec2 const&, b2Vec2 const&)
+  5.26      0.49     0.06                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  5.26      0.55     0.06                             b2ContactSolver::SolvePositionConstraints()
+  5.26      0.61     0.06                             b2Vec2::operator-=(b2Vec2 const&)
+  4.39      0.66     0.05                             b2Cross(float, b2Vec2 const&)
+  4.39      0.71     0.05                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  4.39      0.76     0.05                             b2Vec2::operator+=(b2Vec2 const&)
+  3.51      0.80     0.04                             operator+(b2Vec2 const&, b2Vec2 const&)
+  3.07      0.83     0.04                             operator*(float, b2Vec2 const&)
+  2.63      0.86     0.03                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.19      0.89     0.03                             b2Vec2::SetZero()
+  1.75      0.91     0.02                             b2Mul(b2Transform const&, b2Vec2 const&)
+  1.75      0.93     0.02                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.75      0.95     0.02                             b2ContactSolver::WarmStart()
+  1.75      0.97     0.02                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  1.32      0.98     0.01                             float b2Max<float>(float, float)
+  0.88      0.99     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.88      1.00     0.01                             float b2Min<float>(float, float)
+  0.88      1.01     0.01                             b2Transform::b2Transform()
+  0.88      1.02     0.01                             b2ContactSolver::StoreImpulses()
+  0.88      1.03     0.01                             b2ContactSolver::InitializeVelocityConstraints()
+  0.88      1.04     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  0.88      1.05     0.01                             b2WorldManifold::b2WorldManifold()
+  0.88      1.06     0.01                             b2World::Solve(b2TimeStep const&)
+  0.88      1.07     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.88      1.08     0.01                             b2Contact::Update(b2ContactListener*)
+  0.88      1.09     0.01                             b2DistanceProxy::GetVertex(int) const
+  0.88      1.10     0.01                             b2Body::IsAwake() const
+  0.88      1.11     0.01                             b2Pair* std::__unguarded_partition<b2Pair*, b2Pair, bool (*)(b2Pair const&, b2Pair const&)>(b2Pair*, b2Pair*, b2Pair const&, bool (*)(b2Pair const&, b2Pair const&))
+  0.88      1.12     0.01                             std::sqrt(float)
+  0.44      1.13     0.01                             float b2Clamp<float>(float, float, float)
+  0.44      1.14     0.01                             b2Body::GetContactList()
+  0.44      1.14     0.01                             b2Fixture::GetBody()
+*************************************************************
+
+profile for iteration no. 80 and rerun no. 60 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 17.60      0.22     0.22                             b2ContactSolver::SolveVelocityConstraints()
+  9.60      0.34     0.12                             operator-(b2Vec2 const&, b2Vec2 const&)
+  9.20      0.46     0.12                             b2Vec2::b2Vec2(float, float)
+  7.20      0.55     0.09                             b2ContactSolver::SolvePositionConstraints()
+  6.40      0.62     0.08                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  6.40      0.70     0.08                             operator*(float, b2Vec2 const&)
+  3.60      0.75     0.04                             b2Mul(b2Transform const&, b2Vec2 const&)
+  3.20      0.79     0.04                             b2Vec2::operator-=(b2Vec2 const&)
+  3.20      0.83     0.04                             b2World::Solve(b2TimeStep const&)
+  2.80      0.86     0.04                             b2Mul(b2Rot const&, b2Vec2 const&)
+  2.80      0.90     0.04                             b2Cross(b2Vec2 const&, float)
+  2.80      0.94     0.04                             b2Vec2::operator+=(b2Vec2 const&)
+  2.40      0.96     0.03                             b2Cross(float, b2Vec2 const&)
+  2.40      0.99     0.03                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.40      1.02     0.03                             operator+(b2Vec2 const&, b2Vec2 const&)
+  1.60      1.04     0.02                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  1.60      1.06     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  1.60      1.08     0.02                             b2ContactManager::Collide()
+  1.60      1.10     0.02                             b2Rot::Set(float)
+  1.60      1.12     0.02                             b2Contact::Update(b2ContactListener*)
+  1.20      1.14     0.01                             b2Vec2::SetZero()
+  0.80      1.15     0.01                             float b2Max<float>(float, float)
+  0.80      1.16     0.01                             int b2Max<int>(int, int)
+  0.80      1.17     0.01                             float b2Min<float>(float, float)
+  0.80      1.18     0.01                             b2Transform::b2Transform()
+  0.80      1.19     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.80      1.20     0.01                             b2World::SolveTOI(b2TimeStep const&)
+  0.80      1.21     0.01                             b2Island::Report(b2ContactVelocityConstraint const*)
+  0.80      1.22     0.01                             b2Fixture::IsSensor() const
+  0.80      1.23     0.01                             std::sqrt(float)
+  0.80      1.24     0.01                             operator new(unsigned int, void*)
+  0.40      1.25     0.01                             b2Vec2::operator*=(float)
+  0.40      1.25     0.01                             b2PolygonShape::ComputeMass(b2MassData*, float) const
+*************************************************************
+
+profile for iteration no. 80 and rerun no. 70 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 20.60      0.41     0.41                             b2ContactSolver::SolveVelocityConstraints()
+  7.54      0.56     0.15                             b2Vec2::b2Vec2(float, float)
+  7.04      0.70     0.14                             b2Cross(float, b2Vec2 const&)
+  6.28      0.82     0.12                             operator-(b2Vec2 const&, b2Vec2 const&)
+  5.53      0.94     0.11                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  5.53      1.04     0.11                             b2Vec2::operator+=(b2Vec2 const&)
+  5.03      1.15     0.10                             operator*(float, b2Vec2 const&)
+  3.27      1.21     0.07                             b2Vec2::operator-=(b2Vec2 const&)
+  3.02      1.27     0.06                             float b2Max<float>(float, float)
+  3.02      1.33     0.06                             b2Mul(b2Transform const&, b2Vec2 const&)
+  3.02      1.39     0.06                             operator+(b2Vec2 const&, b2Vec2 const&)
+  2.51      1.44     0.05                             b2Mul(b2Rot const&, b2Vec2 const&)
+  2.51      1.49     0.05                             b2ContactSolver::InitializeVelocityConstraints()
+  2.51      1.54     0.05                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.51      1.59     0.05                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  2.01      1.63     0.04                             b2World::Solve(b2TimeStep const&)
+  1.76      1.67     0.04                             b2Contact::Update(b2ContactListener*)
+  1.51      1.70     0.03                             b2Vec2::SetZero()
+  1.51      1.73     0.03                             std::sqrt(float)
+  1.26      1.75     0.03                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  1.01      1.77     0.02                             b2ContactSolver::SolvePositionConstraints()
+  1.01      1.79     0.02                             b2ContactSolver::WarmStart()
+  1.01      1.81     0.02                             b2Body::GetTransform() const
+  0.50      1.82     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.50      1.83     0.01                             b2DistanceSquared(b2Vec2 const&, b2Vec2 const&)
+  0.50      1.84     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.50      1.85     0.01                             b2Min(b2Vec2 const&, b2Vec2 const&)
+  0.50      1.86     0.01                             b2Cross(b2Vec2 const&, float)
+  0.50      1.87     0.01                             b2Transform::b2Transform()
+  0.50      1.88     0.01                             b2PulleyJoint::SolvePositionConstraints(b2SolverData const&)
+  0.50      1.89     0.01                             b2ContactManager::Collide()
+  0.50      1.90     0.01                             b2Rot::Set(float)
+  0.50      1.91     0.01                             b2Vec2::b2Vec2()
+  0.50      1.92     0.01                             b2Mat22::SetZero()
+  0.50      1.93     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.50      1.94     0.01                             b2Vec2::Length() const
+  0.50      1.95     0.01                             b2Contact::IsEnabled() const
+  0.50      1.96     0.01                             b2Fixture::IsSensor() const
+  0.50      1.97     0.01                             b2Simplex::GetMetric() const
+  0.50      1.98     0.01                             operator new(unsigned int, void*)
+  0.25      1.99     0.01                             b2Vec3::b2Vec3()
+  0.25      1.99     0.01                             b2Contact::b2Contact(b2Fixture*, int, b2Fixture*, int)
+*************************************************************
+
+profile for iteration no. 80 and rerun no. 80 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 15.18      0.17     0.17                             b2ContactSolver::SolveVelocityConstraints()
+ 12.50      0.31     0.14                             b2Vec2::b2Vec2(float, float)
+  8.04      0.40     0.09                             operator+(b2Vec2 const&, b2Vec2 const&)
+  7.14      0.48     0.08                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  6.25      0.55     0.07                             b2Cross(float, b2Vec2 const&)
+  5.80      0.61     0.07                             operator-(b2Vec2 const&, b2Vec2 const&)
+  4.46      0.67     0.05                             b2Vec2::SetZero()
+  3.57      0.70     0.04                             b2ContactSolver::InitializeVelocityConstraints()
+  2.68      0.73     0.03                             b2Mul(b2Transform const&, b2Vec2 const&)
+  2.68      0.77     0.03                             b2ContactSolver::SolvePositionConstraints()
+  2.68      0.80     0.03                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.68      0.82     0.03                             b2Vec2::operator+=(b2Vec2 const&)
+  2.23      0.85     0.03                             operator*(float, b2Vec2 const&)
+  1.79      0.87     0.02                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.79      0.89     0.02                             float b2Clamp<float>(float, float, float)
+  1.79      0.91     0.02                             b2Vec2::operator-=(b2Vec2 const&)
+  1.79      0.93     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  1.79      0.95     0.02                             b2Island::Report(b2ContactVelocityConstraint const*)
+  1.34      0.96     0.01                             b2Vec2::Normalize()
+  0.89      0.97     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.89      0.98     0.01                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  0.89      0.99     0.01                             float b2Max<float>(float, float)
+  0.89      1.00     0.01                             b2Cross(b2Vec2 const&, float)
+  0.89      1.01     0.01                             b2ContactSolver::WarmStart()
+  0.89      1.02     0.01                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.89      1.03     0.01                             b2Rot::Set(float)
+  0.89      1.04     0.01                             b2Sweep::Normalize()
+  0.89      1.05     0.01                             b2Contact::GetNext()
+  0.89      1.06     0.01                             b2Simplex::Solve3()
+  0.89      1.07     0.01                             b2BroadPhase::TestOverlap(int, int) const
+  0.89      1.08     0.01                             b2DistanceProxy::GetSupport(b2Vec2 const&) const
+  0.89      1.09     0.01                             b2Mat33::Solve22(b2Vec2 const&) const
+  0.89      1.10     0.01                             b2Pair* std::__unguarded_partition<b2Pair*, b2Pair, bool (*)(b2Pair const&, b2Pair const&)>(b2Pair*, b2Pair*, b2Pair const&, bool (*)(b2Pair const&, b2Pair const&))
+  0.89      1.11     0.01                             operator new(unsigned int, void*)
+  0.45      1.12     0.01                             b2Vec2::LengthSquared() const
+*************************************************************
+
+profile for iteration no. 80 and rerun no. 90 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 21.30      0.23     0.23                             b2ContactSolver::SolveVelocityConstraints()
+  9.26      0.33     0.10                             b2Vec2::b2Vec2(float, float)
+  7.41      0.41     0.08                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  7.41      0.49     0.08                             b2ContactSolver::SolvePositionConstraints()
+  5.56      0.55     0.06                             b2ContactSolver::InitializeVelocityConstraints()
+  5.56      0.61     0.06                             operator-(b2Vec2 const&, b2Vec2 const&)
+  4.63      0.66     0.05                             b2Vec2::operator+=(b2Vec2 const&)
+  3.70      0.70     0.04                             b2Cross(float, b2Vec2 const&)
+  3.70      0.74     0.04                             operator*(float, b2Vec2 const&)
+  2.78      0.77     0.03                             float b2Min<float>(float, float)
+  2.78      0.80     0.03                             b2Vec2::operator-=(b2Vec2 const&)
+  1.85      0.82     0.02                             b2Mul(b2Transform const&, b2Vec2 const&)
+  1.85      0.84     0.02                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.85      0.86     0.02                             b2Cross(b2Vec2 const&, float)
+  1.85      0.88     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  1.85      0.90     0.02                             operator+(b2Vec2 const&, b2Vec2 const&)
+  0.93      0.91     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.93      0.92     0.01                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  0.93      0.93     0.01                             float b2Clamp<float>(float, float, float)
+  0.93      0.94     0.01                             b2ContactSolver::WarmStart()
+  0.93      0.95     0.01                             b2DistanceProxy::b2DistanceProxy()
+  0.93      0.96     0.01                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.93      0.97     0.01                             b2AABB::Combine(b2AABB const&, b2AABB const&)
+  0.93      0.98     0.01                             b2Vec2::SetZero()
+  0.93      0.99     0.01                             b2World::Solve(b2TimeStep const&)
+  0.93      1.00     0.01                             b2Contact::Update(b2ContactListener*)
+  0.93      1.01     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  0.93      1.02     0.01                             b2Simplex::ReadCache(b2SimplexCache const*, b2DistanceProxy const*, b2Transform const&, b2DistanceProxy const*, b2Transform const&)
+  0.93      1.03     0.01                             b2CircleShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.93      1.04     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.93      1.05     0.01                             b2Vec2::Length() const
+  0.93      1.06     0.01                             void std::__unguarded_linear_insert<b2Pair*, bool (*)(b2Pair const&, b2Pair const&)>(b2Pair*, bool (*)(b2Pair const&, b2Pair const&))
+  0.93      1.07     0.01                             std::sqrt(float)
+  0.46      1.07     0.01                             b2Body::GetContactList()
+  0.46      1.08     0.01                             b2Fixture::GetBody()
+*************************************************************
+
+profile for iteration no. 80 and rerun no. 100 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 20.24      0.50     0.50                             b2ContactSolver::SolveVelocityConstraints()
+ 13.97      0.84     0.34                             b2Vec2::b2Vec2(float, float)
+  6.07      0.99     0.15                             operator-(b2Vec2 const&, b2Vec2 const&)
+  5.26      1.12     0.13                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  4.86      1.25     0.12                             b2Cross(float, b2Vec2 const&)
+  4.66      1.36     0.12                             b2Mul(b2Transform const&, b2Vec2 const&)
+  4.45      1.47     0.11                             b2ContactSolver::SolvePositionConstraints()
+  3.64      1.56     0.09                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  3.24      1.64     0.08                             b2ContactSolver::InitializeVelocityConstraints()
+  3.24      1.72     0.08                             operator+(b2Vec2 const&, b2Vec2 const&)
+  2.83      1.79     0.07                             operator*(float, b2Vec2 const&)
+  2.43      1.85     0.06                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.23      1.91     0.06                             b2Vec2::SetZero()
+  2.02      1.96     0.05                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.02      2.00     0.05                             b2Vec2::operator-=(b2Vec2 const&)
+  2.02      2.06     0.05                             b2Vec2::operator+=(b2Vec2 const&)
+  1.82      2.10     0.04                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.21      2.13     0.03                             float b2Min<float>(float, float)
+  1.21      2.16     0.03                             b2World::Solve(b2TimeStep const&)
+  1.21      2.19     0.03                             b2World::SolveTOI(b2TimeStep const&)
+  1.01      2.21     0.03                             float b2Max<float>(float, float)
+  0.81      2.23     0.02                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.81      2.25     0.02                             b2ContactSolver::WarmStart()
+  0.81      2.27     0.02                             b2Vec2::operator-() const
+  0.61      2.29     0.01                             float b2Clamp<float>(float, float, float)
+  0.61      2.31     0.01                             b2DynamicTree::GetFatAABB(int) const
+  0.40      2.31     0.01                             b2DistanceSquared(b2Vec2 const&, b2Vec2 const&)
+  0.40      2.33     0.01                             b2Cross(b2Vec2 const&, float)
+  0.40      2.33     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.40      2.35     0.01                             b2ContactManager::AddPair(void*, void*)
+  0.40      2.35     0.01                             b2Timer::Reset()
+  0.40      2.37     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.40      2.38     0.01                             b2Island::Report(b2ContactVelocityConstraint const*)
+  0.40      2.38     0.01                             b2Fixture::GetBody()
+  0.40      2.40     0.01                             b2Fixture::GetShape()
+  0.40      2.40     0.01                             b2Simplex::b2Simplex()
+  0.40      2.42     0.01                             b2BroadPhase::TestOverlap(int, int) const
+  0.40      2.42     0.01                             b2Vec2::Length() const
+  0.40      2.44     0.01                             b2Contact::IsEnabled() const
+  0.40      2.44     0.01                             operator new(unsigned int, void*)
+  0.20      2.45     0.01                             b2TestOverlap(b2AABB const&, b2AABB const&)
+  0.20      2.46     0.01                             b2Vec2::Normalize()
+  0.20      2.46     0.01                             b2TreeNode::IsLeaf() const
+  0.20      2.46     0.01                             b2DynamicTree::GetUserData(int) const
+  0.20      2.47     0.01                             b2Vec2::LengthSquared() const
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 10 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 21.98      0.40     0.40                             b2ContactSolver::SolveVelocityConstraints()
+ 10.71      0.59     0.20                             b2Vec2::b2Vec2(float, float)
+  7.14      0.72     0.13                             b2ContactSolver::SolvePositionConstraints()
+  5.77      0.83     0.10                             operator-(b2Vec2 const&, b2Vec2 const&)
+  5.77      0.94     0.10                             operator*(float, b2Vec2 const&)
+  4.40      1.01     0.08                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  4.40      1.09     0.08                             b2Vec2::operator-=(b2Vec2 const&)
+  3.30      1.16     0.06                             b2Cross(float, b2Vec2 const&)
+  3.30      1.22     0.06                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.30      1.27     0.06                             b2Vec2::operator+=(b2Vec2 const&)
+  2.75      1.32     0.05                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.20      1.36     0.04                             float b2Min<float>(float, float)
+  2.20      1.41     0.04                             b2Mul(b2Transform const&, b2Vec2 const&)
+  1.92      1.44     0.04                             b2Vec2::SetZero()
+  1.65      1.47     0.03                             float b2Max<float>(float, float)
+  1.65      1.50     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  1.65      1.53     0.03                             b2Contact::Update(b2ContactListener*)
+  1.65      1.56     0.03                             b2Vec2::Length() const
+  1.65      1.59     0.03                             operator+(b2Vec2 const&, b2Vec2 const&)
+  1.10      1.61     0.02                             b2Cross(b2Vec2 const&, float)
+  1.10      1.63     0.02                             b2ContactSolver::StoreImpulses()
+  1.10      1.65     0.02                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.55      1.66     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.55      1.67     0.01                             int b2Max<int>(int, int)
+  0.55      1.68     0.01                             b2Mul(b2Rot const&, b2Vec2 const&)
+  0.55      1.69     0.01                             float b2Clamp<float>(float, float, float)
+  0.55      1.70     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  0.55      1.71     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  0.55      1.72     0.01                             b2ContactSolver::WarmStart()
+  0.55      1.73     0.01                             b2Body::SetAwake(bool)
+  0.55      1.74     0.01                             b2Vec2::Set(float, float)
+  0.55      1.75     0.01                             b2World::Solve(b2TimeStep const&)
+  0.55      1.76     0.01                             b2Island::Report(b2ContactVelocityConstraint const*)
+  0.55      1.77     0.01                             b2Contact::GetFixtureB()
+  0.55      1.78     0.01                             b2DynamicTree::GetFatAABB(int) const
+  0.55      1.79     0.01                             b2Body::GetTransform() const
+  0.27      1.79     0.01                             b2Rot::Set(float)
+  0.27      1.80     0.01                             b2Rot::b2Rot()
+  0.27      1.80     0.01                             b2Vec2::b2Vec2()
+  0.27      1.81     0.01                             b2Body::GetAngle() const
+  0.27      1.81     0.01                             b2Vec2::IsValid() const
+  0.27      1.82     0.01                             std::sqrt(float)
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 20 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 18.97      0.55     0.55                             b2ContactSolver::SolveVelocityConstraints()
+ 10.34      0.85     0.30                             b2Vec2::b2Vec2(float, float)
+  9.48      1.12     0.28                             operator-(b2Vec2 const&, b2Vec2 const&)
+  6.03      1.30     0.17                             operator*(float, b2Vec2 const&)
+  5.17      1.45     0.15                             b2Cross(float, b2Vec2 const&)
+  5.17      1.60     0.15                             b2ContactSolver::SolvePositionConstraints()
+  3.97      1.72     0.12                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  3.62      1.82     0.10                             b2Mul(b2Transform const&, b2Vec2 const&)
+  3.45      1.92     0.10                             b2Vec2::operator-=(b2Vec2 const&)
+  2.76      2.00     0.08                             b2Vec2::SetZero()
+  2.76      2.08     0.08                             b2Vec2::operator+=(b2Vec2 const&)
+  2.24      2.15     0.07                             b2Mul(b2Rot const&, b2Vec2 const&)
+  2.07      2.21     0.06                             b2ContactSolver::InitializeVelocityConstraints()
+  2.07      2.27     0.06                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  1.72      2.31     0.05                             operator+(b2Vec2 const&, b2Vec2 const&)
+  1.21      2.35     0.04                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  1.21      2.38     0.04                             float b2Min<float>(float, float)
+  1.21      2.42     0.04                             float b2Clamp<float>(float, float, float)
+  1.03      2.45     0.03                             float b2Max<float>(float, float)
+  1.03      2.48     0.03                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  1.03      2.51     0.03                             b2World::Solve(b2TimeStep const&)
+  1.03      2.54     0.03                             b2Vec2::Length() const
+  0.86      2.56     0.03                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.86      2.59     0.03                             std::sqrt(float)
+  0.69      2.61     0.02                             b2ContactSolver::StoreImpulses()
+  0.69      2.63     0.02                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.69      2.65     0.02                             b2Vec2::Normalize()
+  0.52      2.67     0.01                             b2Vec2::b2Vec2()
+  0.52      2.68     0.01                             b2Fixture::GetBody()
+  0.34      2.69     0.01                             b2TestOverlap(b2AABB const&, b2AABB const&)
+  0.34      2.70     0.01                             b2Transform::b2Transform()
+  0.34      2.71     0.01                             b2GrowableStack<int, 256>::Pop()
+  0.34      2.72     0.01                             b2ManifoldPoint::b2ManifoldPoint()
+  0.34      2.73     0.01                             b2RevoluteJoint::InitVelocityConstraints(b2SolverData const&)
+  0.34      2.74     0.01                             b2ContactManager::Collide()
+  0.34      2.75     0.01                             b2Rot::Set(float)
+  0.34      2.76     0.01                             b2Body::SynchronizeFixtures()
+  0.34      2.77     0.01                             b2Vec3::b2Vec3()
+  0.34      2.78     0.01                             b2Island::Solve(b2Profile*, b2TimeStep const&, b2Vec2 const&, bool)
+  0.34      2.79     0.01                             b2Contact::Update(b2ContactListener*)
+  0.34      2.80     0.01                             b2Simplex::ReadCache(b2SimplexCache const*, b2DistanceProxy const*, b2Transform const&, b2DistanceProxy const*, b2Transform const&)
+  0.34      2.81     0.01                             b2BroadPhase::TestOverlap(int, int) const
+  0.34      2.82     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.34      2.83     0.01                             b2SeparationFunction::FindMinSeparation(int*, int*, float) const
+  0.34      2.84     0.01                             b2AABB::Contains(b2AABB const&) const
+  0.34      2.85     0.01                             b2Body::IsAwake() const
+  0.34      2.86     0.01                             b2Vec2::LengthSquared() const
+  0.34      2.87     0.01                             b2Contact::IsTouching() const
+  0.34      2.88     0.01                             b2Contact::IsEnabled() const
+  0.34      2.89     0.01                             b2Fixture::IsSensor() const
+  0.17      2.90     0.01                             b2CollidePolygonAndCircle(b2Manifold*, b2PolygonShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.17      2.90     0.01                             b2ContactFilter::~b2ContactFilter()
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 30 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 19.41      0.59     0.59                             b2ContactSolver::SolveVelocityConstraints()
+ 10.36      0.91     0.32                             b2Vec2::b2Vec2(float, float)
+ 10.20      1.22     0.31                             operator-(b2Vec2 const&, b2Vec2 const&)
+  5.92      1.40     0.18                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  4.61      1.53     0.14                             b2ContactSolver::SolvePositionConstraints()
+  4.44      1.67     0.14                             b2Cross(float, b2Vec2 const&)
+  4.44      1.80     0.14                             operator*(float, b2Vec2 const&)
+  3.78      1.92     0.12                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  3.62      2.03     0.11                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  3.29      2.13     0.10                             b2ContactSolver::InitializeVelocityConstraints()
+  2.96      2.22     0.09                             b2Vec2::operator-=(b2Vec2 const&)
+  2.47      2.29     0.07                             float b2Min<float>(float, float)
+  2.47      2.37     0.07                             b2Vec2::SetZero()
+  1.97      2.43     0.06                             b2Mul(b2Transform const&, b2Vec2 const&)
+  1.81      2.48     0.06                             operator+(b2Vec2 const&, b2Vec2 const&)
+  1.64      2.54     0.05                             float b2Max<float>(float, float)
+  1.32      2.58     0.04                             b2Mul(b2Rot const&, b2Vec2 const&)
+  0.99      2.60     0.03                             b2Transform::b2Transform()
+  0.99      2.63     0.03                             b2Vec2::Normalize()
+  0.99      2.67     0.03                             b2Contact::Update(b2ContactListener*)
+  0.66      2.69     0.02                             b2TestOverlap(b2AABB const&, b2AABB const&)
+  0.66      2.71     0.02                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.66      2.73     0.02                             b2Cross(b2Vec2 const&, float)
+  0.66      2.75     0.02                             b2ContactSolver::WarmStart()
+  0.66      2.77     0.02                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.66      2.79     0.02                             b2Vec2::operator+=(b2Vec2 const&)
+  0.66      2.81     0.02                             b2Vec3::b2Vec3()
+  0.66      2.83     0.02                             b2World::Solve(b2TimeStep const&)
+  0.66      2.85     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  0.66      2.87     0.02                             b2Island::Add(b2Contact*)
+  0.66      2.88     0.02                             b2Contact::IsEnabled() const
+  0.49      2.90     0.01                             b2Body::GetTransform() const
+  0.33      2.91     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  0.33      2.92     0.01                             b2Min(b2Vec2 const&, b2Vec2 const&)
+  0.33      2.93     0.01                             b2DynamicTree::InsertLeaf(int)
+  0.33      2.94     0.01                             b2DynamicTree::RemoveLeaf(int)
+  0.33      2.95     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.33      2.96     0.01                             b2Rot::Set(float)
+  0.33      2.97     0.01                             void b2DynamicTree::Query<b2BroadPhase>(b2BroadPhase*, b2AABB const&) const
+  0.33      2.98     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.33      2.99     0.01                             b2Body::IsBullet() const
+  0.33      3.00     0.01                             b2Vec2::Length() const
+  0.33      3.01     0.01                             b2Vec2::operator-() const
+  0.33      3.02     0.01                             b2Sweep::GetTransform(b2Transform*, float) const
+  0.33      3.03     0.01                             std::sqrt(float)
+  0.16      3.04     0.01                             float b2Clamp<float>(float, float, float)
+  0.16      3.04     0.01                             b2Body::GetType() const
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 40 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 21.89      0.44     0.44                             b2ContactSolver::SolveVelocityConstraints()
+ 10.45      0.65     0.21                             b2Vec2::b2Vec2(float, float)
+  7.96      0.81     0.16                             operator-(b2Vec2 const&, b2Vec2 const&)
+  6.72      0.94     0.14                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  5.97      1.06     0.12                             b2ContactSolver::SolvePositionConstraints()
+  5.22      1.17     0.10                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  5.22      1.27     0.10                             b2Vec2::operator+=(b2Vec2 const&)
+  5.22      1.38     0.10                             operator*(float, b2Vec2 const&)
+  4.48      1.47     0.09                             b2Cross(float, b2Vec2 const&)
+  4.23      1.55     0.09                             operator+(b2Vec2 const&, b2Vec2 const&)
+  1.99      1.59     0.04                             b2Mul(b2Transform const&, b2Vec2 const&)
+  1.49      1.62     0.03                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.49      1.66     0.03                             b2Fixture::IsSensor() const
+  1.24      1.68     0.03                             float b2Min<float>(float, float)
+  1.00      1.70     0.02                             b2ContactSolver::StoreImpulses()
+  1.00      1.72     0.02                             b2ContactSolver::InitializeVelocityConstraints()
+  1.00      1.74     0.02                             b2Vec2::SetZero()
+  1.00      1.76     0.02                             b2Vec2::operator-=(b2Vec2 const&)
+  1.00      1.78     0.02                             b2World::Solve(b2TimeStep const&)
+  1.00      1.80     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  1.00      1.82     0.02                             b2Contact::Update(b2ContactListener*)
+  0.50      1.83     0.01                             b2Distance(b2DistanceOutput*, b2SimplexCache*, b2DistanceInput const*)
+  0.50      1.84     0.01                             b2TestOverlap(b2AABB const&, b2AABB const&)
+  0.50      1.85     0.01                             b2PairLessThan(b2Pair const&, b2Pair const&)
+  0.50      1.86     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.50      1.87     0.01                             b2DistanceSquared(b2Vec2 const&, b2Vec2 const&)
+  0.50      1.88     0.01                             b2Transform::b2Transform()
+  0.50      1.89     0.01                             b2ContactSolver::WarmStart()
+  0.50      1.90     0.01                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  0.50      1.91     0.01                             b2SeparationFunction::Initialize(b2SimplexCache const*, b2DistanceProxy const*, b2Sweep const&, b2DistanceProxy const*, b2Sweep const&, float)
+  0.50      1.92     0.01                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.50      1.93     0.01                             b2Rot::Set(float)
+  0.50      1.94     0.01                             b2Vec2::Set(float, float)
+  0.50      1.95     0.01                             b2Vec2::b2Vec2()
+  0.50      1.96     0.01                             b2Fixture::GetBody()
+  0.50      1.97     0.01                             b2Fixture::GetShape()
+  0.50      1.98     0.01                             b2Body::IsAwake() const
+  0.50      1.99     0.01                             b2Vec2::Length() const
+  0.25      2.00     0.01                             float b2Max<float>(float, float)
+  0.25      2.00     0.01                             b2Vec2::operator*=(float)
+  0.25      2.00     0.01                             b2Body::GetTransform() const
+  0.25      2.01     0.01                             b2Body::GetType() const
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 50 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 19.25      0.51     0.51                             b2ContactSolver::SolveVelocityConstraints()
+ 11.32      0.81     0.30                             b2Vec2::b2Vec2(float, float)
+  8.30      1.03     0.22                             operator-(b2Vec2 const&, b2Vec2 const&)
+  6.04      1.19     0.16                             b2ContactSolver::SolvePositionConstraints()
+  5.66      1.34     0.15                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  5.28      1.48     0.14                             operator*(float, b2Vec2 const&)
+  3.58      1.57     0.10                             b2Vec2::operator-=(b2Vec2 const&)
+  3.02      1.66     0.08                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.64      1.73     0.07                             b2Mul(b2Transform const&, b2Vec2 const&)
+  2.64      1.79     0.07                             b2Cross(float, b2Vec2 const&)
+  2.64      1.86     0.07                             operator+(b2Vec2 const&, b2Vec2 const&)
+  2.26      1.93     0.06                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.08      1.98     0.06                             float b2Max<float>(float, float)
+  1.89      2.03     0.05                             b2Vec2::SetZero()
+  1.89      2.08     0.05                             b2Vec2::operator+=(b2Vec2 const&)
+  1.51      2.12     0.04                             b2ContactSolver::InitializeVelocityConstraints()
+  1.51      2.16     0.04                             b2ContactSolver::WarmStart()
+  1.51      2.20     0.04                             b2Contact::Update(b2ContactListener*)
+  1.13      2.23     0.03                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  1.13      2.26     0.03                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.13      2.29     0.03                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.75      2.31     0.02                             b2TestOverlap(b2AABB const&, b2AABB const&)
+  0.75      2.33     0.02                             float b2Min<float>(float, float)
+  0.75      2.35     0.02                             b2Cross(b2Vec2 const&, float)
+  0.75      2.37     0.02                             b2PositionSolverManifold::b2PositionSolverManifold()
+  0.75      2.39     0.02                             b2World::Solve(b2TimeStep const&)
+  0.75      2.41     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  0.75      2.43     0.02                             b2Contact::GetFixtureA()
+  0.38      2.44     0.01                             b2EdgeSeparation(b2PolygonShape const*, b2Transform const&, int, b2PolygonShape const*, b2Transform const&)
+  0.38      2.45     0.01                             b2ContactSolver::StoreImpulses()
+  0.38      2.46     0.01                             b2ContactManager::Collide()
+  0.38      2.47     0.01                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.38      2.48     0.01                             b2AABB::Combine(b2AABB const&, b2AABB const&)
+  0.38      2.49     0.01                             b2Vec2::Set(float, float)
+  0.38      2.50     0.01                             b2Island::Report(b2ContactVelocityConstraint const*)
+  0.38      2.51     0.01                             b2TreeNode::IsLeaf() const
+  0.38      2.52     0.01                             b2DynamicTree::GetFatAABB(int) const
+  0.38      2.53     0.01                             b2PolygonShape::ComputeAABB(b2AABB*, b2Transform const&, int) const
+  0.38      2.54     0.01                             b2Body::IsAwake() const
+  0.38      2.55     0.01                             b2Vec2::Length() const
+  0.38      2.56     0.01                             b2Sweep::GetTransform(b2Transform*, float) const
+  0.38      2.57     0.01                             b2Contact::IsEnabled() const
+  0.38      2.58     0.01                             b2Fixture::IsSensor() const
+  0.38      2.59     0.01                             b2Pair* std::__unguarded_partition_pivot<b2Pair*, bool (*)(b2Pair const&, b2Pair const&)>(b2Pair*, b2Pair*, bool (*)(b2Pair const&, b2Pair const&))
+  0.38      2.60     0.01                             std::sqrt(float)
+  0.38      2.61     0.01                             operator new(unsigned int, void*)
+  0.19      2.62     0.01                             b2DistanceSquared(b2Vec2 const&, b2Vec2 const&)
+  0.19      2.62     0.01                             float b2Clamp<float>(float, float, float)
+  0.19      2.62     0.01                             b2ContactSolver::SolveTOIPositionConstraints(int, int)
+  0.19      2.63     0.01                             b2DistanceInput::b2DistanceInput()
+  0.19      2.63     0.01                             b2Vec2::Normalize()
+  0.19      2.64     0.01                             b2Vec3::b2Vec3()
+  0.19      2.65     0.01                             b2Mat22::SetZero()
+  0.19      2.65     0.01                             b2Vec2::LengthSquared() const
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 60 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 16.94      0.21     0.21                             b2ContactSolver::SolveVelocityConstraints()
+ 11.69      0.35     0.14                             b2Vec2::b2Vec2(float, float)
+  8.06      0.46     0.10                             operator-(b2Vec2 const&, b2Vec2 const&)
+  6.45      0.54     0.08                             b2ContactSolver::SolvePositionConstraints()
+  5.65      0.60     0.07                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  4.84      0.67     0.06                             operator*(float, b2Vec2 const&)
+  4.03      0.71     0.05                             b2Mul(b2Transform const&, b2Vec2 const&)
+  4.03      0.77     0.05                             b2Cross(float, b2Vec2 const&)
+  3.23      0.81     0.04                             float b2Min<float>(float, float)
+  3.23      0.84     0.04                             operator+(b2Vec2 const&, b2Vec2 const&)
+  2.42      0.88     0.03                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.42      0.91     0.03                             b2ContactSolver::InitializeVelocityConstraints()
+  2.42      0.94     0.03                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.42      0.96     0.03                             b2Vec2::operator-=(b2Vec2 const&)
+  2.42      0.99     0.03                             b2Vec2::operator+=(b2Vec2 const&)
+  2.02      1.02     0.03                             b2Vec2::SetZero()
+  1.61      1.04     0.02                             b2Rot::b2Rot()
+  1.61      1.06     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  1.61      1.08     0.02                             b2Contact::Update(b2ContactListener*)
+  0.81      1.09     0.01                             b2PairLessThan(b2Pair const&, b2Pair const&)
+  0.81      1.10     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.81      1.11     0.01                             float b2Max<float>(float, float)
+  0.81      1.12     0.01                             b2Mul(b2Rot const&, b2Vec2 const&)
+  0.81      1.13     0.01                             float b2Clamp<float>(float, float, float)
+  0.81      1.14     0.01                             b2Transform::b2Transform()
+  0.81      1.15     0.01                             b2CircleContact::Evaluate(b2Manifold*, b2Transform const&, b2Transform const&)
+  0.81      1.16     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.81      1.17     0.01                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.81      1.18     0.01                             b2PositionSolverManifold::b2PositionSolverManifold()
+  0.81      1.19     0.01                             b2Rot::Set(float)
+  0.81      1.20     0.01                             b2Contact::GetFixtureA()
+  0.81      1.21     0.01                             b2Contact::IsTouching() const
+  0.81      1.22     0.01                             b2Contact::IsEnabled() const
+  0.40      1.23     0.01                             b2Body::GetContactList()
+  0.40      1.23     0.01                             b2Mat22::SetZero()
+  0.40      1.24     0.01                             b2Contact::GetManifold()
+  0.40      1.24     0.01                             b2Fixture::GetBody()
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 70 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 18.35      0.51     0.51                             b2ContactSolver::SolveVelocityConstraints()
+ 10.79      0.81     0.30                             b2Vec2::b2Vec2(float, float)
+  9.35      1.07     0.26                             operator-(b2Vec2 const&, b2Vec2 const&)
+  6.12      1.24     0.17                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  5.76      1.40     0.16                             b2ContactSolver::SolvePositionConstraints()
+  4.50      1.52     0.12                             operator*(float, b2Vec2 const&)
+  3.42      1.62     0.10                             operator+(b2Vec2 const&, b2Vec2 const&)
+  3.06      1.71     0.09                             b2Vec2::operator+=(b2Vec2 const&)
+  2.88      1.78     0.08                             b2Mul(b2Transform const&, b2Vec2 const&)
+  2.88      1.86     0.08                             b2Cross(float, b2Vec2 const&)
+  2.52      1.94     0.07                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  2.16      2.00     0.06                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.16      2.06     0.06                             b2ContactSolver::InitializeVelocityConstraints()
+  2.16      2.12     0.06                             b2Vec2::SetZero()
+  2.16      2.17     0.06                             b2Vec2::operator-=(b2Vec2 const&)
+  1.80      2.23     0.05                             float b2Max<float>(float, float)
+  1.80      2.27     0.05                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.44      2.31     0.04                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  1.08      2.35     0.03                             float b2Min<float>(float, float)
+  1.08      2.38     0.03                             b2Cross(b2Vec2 const&, float)
+  1.08      2.40     0.03                             b2ContactManager::Collide()
+  1.08      2.44     0.03                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  1.08      2.46     0.03                             b2World::SolveTOI(b2TimeStep const&)
+  1.08      2.50     0.03                             b2Contact::Update(b2ContactListener*)
+  0.72      2.52     0.02                             float b2Clamp<float>(float, float, float)
+  0.72      2.54     0.02                             b2ContactSolver::WarmStart()
+  0.72      2.56     0.02                             b2Body::IsAwake() const
+  0.54      2.57     0.01                             b2Vec2::b2Vec2()
+  0.54      2.58     0.01                             b2Vec2::operator*=(float)
+  0.54      2.60     0.01                             std::sqrt(float)
+  0.36      2.61     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.36      2.62     0.01                             b2Abs(b2Vec2 const&)
+  0.36      2.63     0.01                             b2Transform::b2Transform()
+  0.36      2.64     0.01                             b2RevoluteJoint::SolveVelocityConstraints(b2SolverData const&)
+  0.36      2.65     0.01                             b2PositionSolverManifold::b2PositionSolverManifold()
+  0.36      2.66     0.01                             b2Rot::Set(float)
+  0.36      2.67     0.01                             b2Vec2::Set(float, float)
+  0.36      2.68     0.01                             b2Vec2::Normalize()
+  0.36      2.69     0.01                             b2Mat22::SetZero()
+  0.36      2.70     0.01                             b2World::Solve(b2TimeStep const&)
+  0.36      2.71     0.01                             b2Contact::GetManifold()
+  0.36      2.72     0.01                             b2Fixture::GetShape()
+  0.36      2.73     0.01                             b2SeparationFunction::FindMinSeparation(int*, int*, float) const
+  0.36      2.74     0.01                             b2Vec2::Length() const
+  0.36      2.75     0.01                             b2Vec2::operator-() const
+  0.36      2.76     0.01                             b2Sweep::GetTransform(b2Transform*, float) const
+  0.36      2.77     0.01                             b2Pair* std::__unguarded_partition<b2Pair*, b2Pair, bool (*)(b2Pair const&, b2Pair const&)>(b2Pair*, b2Pair*, b2Pair const&, bool (*)(b2Pair const&, b2Pair const&))
+  0.18      2.77     0.01                             b2Contact::GetFixtureA()
+  0.18      2.78     0.01                             b2Contact::GetFixtureB()
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 80 ::
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 20.10      0.39     0.39                             b2ContactSolver::SolveVelocityConstraints()
+ 10.05      0.58     0.20                             operator-(b2Vec2 const&, b2Vec2 const&)
+  7.99      0.74     0.15                             b2Vec2::b2Vec2(float, float)
+  6.70      0.87     0.13                             b2ContactSolver::SolvePositionConstraints()
+  4.90      0.96     0.10                             b2Cross(b2Vec2 const&, b2Vec2 const&)
+  4.38      1.05     0.09                             b2Cross(float, b2Vec2 const&)
+  4.38      1.14     0.09                             operator*(float, b2Vec2 const&)
+  3.61      1.21     0.07                             b2ContactSolver::InitializeVelocityConstraints()
+  2.84      1.26     0.06                             b2Vec2::operator+=(b2Vec2 const&)
+  2.58      1.31     0.05                             float b2Min<float>(float, float)
+  2.58      1.36     0.05                             b2Contact::Update(b2ContactListener*)
+  2.06      1.40     0.04                             b2Dot(b2Vec2 const&, b2Vec2 const&)
+  2.06      1.44     0.04                             b2Transform::b2Transform()
+  2.06      1.48     0.04                             b2Vec2::operator-=(b2Vec2 const&)
+  1.80      1.51     0.04                             b2Vec2::SetZero()
+  1.55      1.54     0.03                             float b2Max<float>(float, float)
+  1.55      1.57     0.03                             b2Cross(b2Vec2 const&, float)
+  1.55      1.60     0.03                             operator+(b2Vec2 const&, b2Vec2 const&)
+  1.03      1.62     0.02                             b2Mul(b2Transform const&, b2Vec2 const&)
+  1.03      1.65     0.02                             b2Mul(b2Rot const&, b2Vec2 const&)
+  1.03      1.67     0.02                             b2ContactSolver::WarmStart()
+  1.03      1.69     0.02                             b2ContactSolver::b2ContactSolver(b2ContactSolverDef*)
+  1.03      1.71     0.02                             b2ContactManager::Collide()
+  1.03      1.73     0.02                             b2Vec2::Normalize()
+  1.03      1.75     0.02                             b2World::SolveTOI(b2TimeStep const&)
+  0.52      1.75     0.01                             b2PairLessThan(b2Pair const&, b2Pair const&)
+  0.52      1.76     0.01                             b2CollideCircles(b2Manifold*, b2CircleShape const*, b2Transform const&, b2CircleShape const*, b2Transform const&)
+  0.52      1.77     0.01                             int b2Max<int>(int, int)
+  0.52      1.78     0.01                             float b2Clamp<float>(float, float, float)
+  0.52      1.79     0.01                             b2ContactSolver::StoreImpulses()
+  0.52      1.80     0.01                             b2WorldManifold::Initialize(b2Manifold const*, b2Transform const&, float, b2Transform const&, float)
+  0.52      1.81     0.01                             b2PositionSolverManifold::Initialize(b2ContactPositionConstraint*, b2Transform const&, b2Transform const&, int)
+  0.52      1.82     0.01                             b2PositionSolverManifold::b2PositionSolverManifold()
+  0.52      1.83     0.01                             b2Rot::Set(float)
+  0.52      1.84     0.01                             b2World::ClearForces()
+  0.52      1.85     0.01                             b2World::Solve(b2TimeStep const&)
+  0.52      1.86     0.01                             b2Contact::GetManifold()
+  0.52      1.88     0.01                             b2Fixture::Synchronize(b2BroadPhase*, b2Transform const&, b2Transform const&)
+  0.52      1.89     0.01                             b2BroadPhase::TestOverlap(int, int) const
+  0.52      1.90     0.01                             b2DynamicTree::GetFatAABB(int) const
+  0.52      1.91     0.01                             b2SeparationFunction::FindMinSeparation(int*, int*, float) const
+  0.52      1.92     0.01                             b2Vec2::Length() const
+  0.52      1.93     0.01                             b2Fixture::IsSensor() const
+  0.26      1.93     0.01                             b2Vec2::b2Vec2()
+  0.26      1.94     0.01                             b2Vec2::operator*=(float)
+  0.26      1.94     0.01                             std::sqrt(float)
+*************************************************************
+
+profile for iteration no. 90 and rerun no. 90 ::
+
