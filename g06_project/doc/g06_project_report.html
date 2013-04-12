@@ -1,0 +1,121 @@
+
+
+
+<html> 
+<head> 
+<div align="center">
+
+<h1>CS296 Group-06 Project Report : Rube Goldberg Machine Box2D Simulation</h1>
+<h3> 
+Sagar Jha<br>
+110100024<br>
+sagarjha@cse.iitb.ac.in<br><br>
+Mridul Garg<br>
+110050030<br>
+gmridul@cse.iitb.ac.in<br><br>
+Sudipto Biswas <br>
+110050048<br>
+sudipto@cse.iitb.ac.in<br><br>
+</h3>
+2013-04-11
+</div> 
+</head>
+
+<h2>Introduction</h2>
+The purpose of the project is to create a Box2D simulation based on the following pre-conceptualised Rube Goldberg machine design.
+<div align="center">
+<img src=../images/design.png > <br>
+</div>
+The design features many different physical elements like a Newton's cradle like 4-pendulum structure, a gear like structure, two joined pulley system and curved slides. What makes this design interesting is like any other Rube Goldberg machine, the design provides a complicated yet elegant trajectory for the dynamic elements it portrays. The project has tried to follow the original design to its closest approximity. The project differs from the original design in the sense that it ends on a different note. It was learnt that a window cannot be made in Box2D. Thus, an extension of the 2-pulley system was created along with a surprise at the end. <br>
+[Note: Run the simulation to find out what surprise the end has in store]<br> This is a screenshot of the simulation:  
+<div align="center">
+<img src=../images/sim.png > <br>
+</div>
+The next section gives the detailed description of all the physical elements implemented in the project.<br> 
+<h2>Elements of Simulation</h2>
+<h3>Pendulum</h3>
+<div align="center">
+<img src=../images/pendulum.png > <br>
+</div>
+The project simulation consists of 5 pendulums out of which 4 form a Newton's cradle like structure. The bob of the one independent pendulum initiates the Rube Goldberg machine.
+<h3>Pulley System</h3>
+The project simulation consists of two pulley system out of which one pulley system is three pulleys joined together i.e. a triple pulley system.
+<div align="center">
+<img src=../images/pulley1.png > <br>
+<img src=../images/pulley2.png > <br>
+</div>
+<h3>Hinged Rod System</h3>
+The project simulation consists of four such hinged rod systems out of which two of them are connected to pulley systems. The hinged rods provide free rotation of the rods about the hinges and when connected to the pulleys can trigger required simulation.
+<div align="center">
+<img src=../images/hinge.png > <br>
+</div>
+<h3>Gear System</h3>
+The project simulation consists of a gear like system in which there is a rotating disc hinged at center and two rods attached to it. One rod is attached in such a way that it holds a collection of small balls in an inclined ground. As soon as the other rod is disturbed or hit by a dynamic object, the other rod holding the balls get disturbed and let the collection of balls it was holding to fall which carries on with the trajectory.
+<div align="center">
+<img src=../images/gear.png > <br>
+</div> 
+<h3>Domino System</h3>
+The project simulation consists of a long dominoes system containing an array of equally spaced 15 dominoes which are initially stable and standing on a particular ground in the simulation. The 4-pendulum system disturbs the left most domino which in turn takes down all the dominoes one by one and gives velocity to a sphere at the other end.
+<div align="center">
+<img src=../images/domino.png > <br>
+</div>
+<h3>Inclined Curved Plains</h3>
+The project simulation contains two parabolic inclined curved paths. The inclined paths provide an interesting trajecting for the spheres in the simulation to proceed. The curved paths have been created by building tiny tiny ground (fixed) strips together in a loop along the equation of a parabola. With the appropriate limits and the width and angle of inclination of each such tiny ground strip, its been possible to create the curved planes so realistically. 
+<div align="center">
+<img src=../images/curve1.png > <br>
+<img src=../images/curve2.png > <br>
+<img src=../images/curve3.png > <br>
+</div>
+<h3>Other Dynamic Bodies : Blocks and Spheres</h3>
+Other than all the other systems/elements explained till now, there is left all the dynamic bodies which actually translates and rotates all through the simulation to drive the Rube Golberg machine throughout. These dynamic bodies are free to both translate and rotate, ie they have 5 degrees of freedom. Such dynamic bodies that are present in the project simulation are cubical boxes and spheres. Many spheres are there present throughout the simulation canvas. There are two spheres which move on the curved paths and many small spheres to drive the pulley systems. The cubical boxes or blocks are there to hit and drive the hinged rods.
+<div align="center">
+<img src=../images/sphere.png > <br>
+</div>  
+<h2>Simulation Analysis</h2>
+<h3>Plot 01 : Step time and Total Loop time averaged over Reruns</h3>
+<div align="center">
+<img src=../plots/g06_plot01.png > <br>
+</div>
+1. Loop time is greater than the Step time at all points except the first point where both are equal.
+<br> 2. Total Loop time increases with the number of iterations whereas the Step time stays nearly constant or slightly decreases.   This is because the loop executes iteration times but the step time is averaged over total iterations.
+<h3>Plot 02 : Step time, Velocity update time, Position update time and Collision time averaged over Reruns</h3>
+<div align="center">
+<img src=../plots/g06_plot02.png > <br>
+</div>
+1. Step time >  velocity update time >  position update time >  collision time
+<br>2. Each of these decrease slightly with the number of iterations
+<br>3. The time taken to update velocity is highest becuase it involves more calculations than the other two.
+<h3>Plot 03 : Step time and Loop time averaged over Iterations</h3>
+<div align="center">
+<img src=../plots/g06_plot03.png > <br>
+</div>
+Since, there is no difference among the reruns, Step time and Loop time are very closely deviated about the average with the rerun number.
+<h3>Plot 04 : Step time, Velocity update time, Position update time and Collision time averaged over Iterations</h3>
+<div align="center">
+<img src=../plots/g06_plot04.png > <br>
+</div>
+Same is the case with this plot of collision time, velocity update time and position update time. Like the previous plot, all of them are slightly deviated about their respective averages with the rerun number.
+<h3>Plot 05 : Deviation in all the Time measurements</h3>
+<div align="center">
+<img src=../plots/g06_plot05.png > <br>
+</div>
+1. Deviation of Step time >  Velocity update time >  Position update time >  Collision time
+<br>2. This together with the second plot shows that the percentage deviation of all the three is nearly equal.
+<h3>Plot 06 : Frequency Distribution and Cumulative Distribution</h3>
+<div align="center">
+<img src=../plots/g06_plot06.png > <br>
+</div>
+<h2>Simulation Performance</h2>
+In debug mode, the functions SolveVelocityConstraints, operator -, and b2Cross take up the majority of the time whereas in release mode, the functions SolveVelocityConstraints and SolvePositionConstraints take up most of the time. Also, in release mode, the time taken is nearly 1/5th of the time taken in debug mode (175 ms per simulation compaired to 875 ms)
+<div align="center">
+<img src=../images/release.png > <br>
+</div>
+<div align="center">
+<img src=../images/debug.png > <br>
+</div>
+<h2>Conclusions</h2>
+The project thus succeeds in presenting a clean simulation which 
+
+
+</html> 
+ 
